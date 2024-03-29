@@ -17,7 +17,7 @@ AMBIENTATO NEI PRIMI ANNI 2000 DATA LA PRESENZA DI MSN
 5)Un gioco story driven in cui si passa attraverso vari generi videoludici (Shooter, Beat em Up, hack and slash e Picchiaduro) cambiando anche alle volte stile grafico, l'ambientazione di per se è molto psichedelica dai suoni agli effetti intorno a noi
 
 
-##VOTI:
+## VOTI:
 Riccardo: 2
 Davide: 1
 Berna: 1
