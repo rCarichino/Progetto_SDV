@@ -8,11 +8,145 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Reference",
+"class": "SVGArcs",
+"language": "GDScript",
+"path": "res://addons/godot_svg/utility/svg_arcs.gd"
+}, {
+"base": "Reference",
+"class": "SVGAttributeParser",
+"language": "GDScript",
+"path": "res://addons/godot_svg/utility/svg_attribute_parser.gd"
+}, {
+"base": "Resource",
+"class": "SVGClockValue",
+"language": "GDScript",
+"path": "res://addons/godot_svg/resource/svg_clock_value.gd"
+}, {
+"base": "Reference",
+"class": "SVGCollision",
+"language": "GDScript",
+"path": "res://addons/godot_svg/utility/svg_collision.gd"
+}, {
+"base": "Reference",
+"class": "SVGCubics",
+"language": "GDScript",
+"path": "res://addons/godot_svg/utility/svg_cubics.gd"
+}, {
+"base": "Reference",
+"class": "SVGDelaunay",
+"language": "GDScript",
+"path": "res://addons/godot_svg/utility/svg_delaunay.gd"
+}, {
+"base": "Reference",
+"class": "SVGEarcut",
+"language": "GDScript",
+"path": "res://addons/godot_svg/utility/svg_earcut.gd"
+}, {
+"base": "Reference",
+"class": "SVGHelper",
+"language": "GDScript",
+"path": "res://addons/godot_svg/utility/svg_helper.gd"
+}, {
+"base": "Resource",
+"class": "SVGLengthPercentage",
+"language": "GDScript",
+"path": "res://addons/godot_svg/resource/svg_length_percentage.gd"
+}, {
+"base": "Reference",
+"class": "SVGMath",
+"language": "GDScript",
+"path": "res://addons/godot_svg/utility/svg_math.gd"
+}, {
+"base": "Resource",
+"class": "SVGPaint",
+"language": "GDScript",
+"path": "res://addons/godot_svg/resource/svg_paint.gd"
+}, {
+"base": "Reference",
+"class": "SVGPaintServer",
+"language": "GDScript",
+"path": "res://addons/godot_svg/utility/svg_paint_server.gd"
+}, {
+"base": "Reference",
+"class": "SVGPathSolver",
+"language": "GDScript",
+"path": "res://addons/godot_svg/utility/svg_path_solver.gd"
+}, {
+"base": "Reference",
+"class": "SVGPolygonSolver",
+"language": "GDScript",
+"path": "res://addons/godot_svg/utility/svg_polygon_solver.gd"
+}, {
+"base": "Resource",
+"class": "SVGResource",
+"language": "GDScript",
+"path": "res://addons/godot_svg/resource/svg_resource.gd"
+}, {
+"base": "Resource",
+"class": "SVGResourceElement",
+"language": "GDScript",
+"path": "res://addons/godot_svg/resource/svg_resource_element.gd"
+}, {
+"base": "ResourceFormatLoader",
+"class": "SVGResourceFormatLoader",
+"language": "GDScript",
+"path": "res://addons/godot_svg/import/svg_resource_loader.gd"
+}, {
+"base": "ResourceFormatSaver",
+"class": "SVGResourceFormatSaver",
+"language": "GDScript",
+"path": "res://addons/godot_svg/import/svg_resource_saver.gd"
+}, {
+"base": "Reference",
+"class": "SVGTessellation",
+"language": "GDScript",
+"path": "res://addons/godot_svg/utility/svg_tessellation.gd"
+}, {
+"base": "Reference",
+"class": "SVGTriangulation",
+"language": "GDScript",
+"path": "res://addons/godot_svg/utility/svg_triangulation.gd"
+}, {
+"base": "Reference",
+"class": "SVGValueConstant",
+"language": "GDScript",
+"path": "res://addons/godot_svg/utility/svg_value_constant.gd"
+} ]
+_global_script_class_icons={
+"SVGArcs": "",
+"SVGAttributeParser": "",
+"SVGClockValue": "",
+"SVGCollision": "",
+"SVGCubics": "",
+"SVGDelaunay": "",
+"SVGEarcut": "",
+"SVGHelper": "",
+"SVGLengthPercentage": "",
+"SVGMath": "",
+"SVGPaint": "",
+"SVGPaintServer": "",
+"SVGPathSolver": "",
+"SVGPolygonSolver": "",
+"SVGResource": "",
+"SVGResourceElement": "",
+"SVGResourceFormatLoader": "",
+"SVGResourceFormatSaver": "",
+"SVGTessellation": "",
+"SVGTriangulation": "",
+"SVGValueConstant": ""
+}
+
 [application]
 
 config/name="Trillo"
 run/main_scene="res://scena1/Node2D.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [gui]
 
