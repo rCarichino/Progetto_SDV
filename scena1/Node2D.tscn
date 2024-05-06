@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scena1/door.gd" type="Script" id=1]
 [ext_resource path="res://scena1/doorOS.png" type="Texture" id=2]
@@ -12,6 +12,10 @@
 [ext_resource path="res://scena1/Node2D.gd" type="Script" id=10]
 [ext_resource path="res://scena1/pngwing.com.png" type="Texture" id=11]
 [ext_resource path="res://scena1/cursore.gd" type="Script" id=12]
+[ext_resource path="res://messenger.png" type="Texture" id=13]
+[ext_resource path="res://trashbin.png" type="Texture" id=14]
+[ext_resource path="res://folder.png" type="Texture" id=15]
+[ext_resource path="res://internetExplorer.png" type="Texture" id=16]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 10 )
@@ -37,9 +41,9 @@ margin_left = 639.0
 margin_top = 20.0
 margin_right = 781.0
 margin_bottom = 141.0
-texture_normal = ExtResource( 9 )
-texture_pressed = ExtResource( 9 )
-texture_hover = ExtResource( 9 )
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 15 )
+texture_hover = ExtResource( 15 )
 expand = true
 script = ExtResource( 8 )
 
@@ -48,20 +52,20 @@ margin_left = 440.0
 margin_top = 18.0
 margin_right = 582.0
 margin_bottom = 139.0
-texture_normal = ExtResource( 9 )
-texture_pressed = ExtResource( 9 )
-texture_hover = ExtResource( 9 )
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 15 )
+texture_hover = ExtResource( 15 )
 expand = true
 script = ExtResource( 8 )
 
 [node name="impostazioni4" type="TextureButton" parent="Control"]
-margin_left = 248.0
-margin_top = 19.0
-margin_right = 390.0
-margin_bottom = 140.0
-texture_normal = ExtResource( 9 )
-texture_pressed = ExtResource( 9 )
-texture_hover = ExtResource( 9 )
+margin_left = 237.0
+margin_top = 14.0
+margin_right = 379.0
+margin_bottom = 135.0
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 16 )
+texture_hover = ExtResource( 16 )
 expand = true
 script = ExtResource( 8 )
 
@@ -70,18 +74,18 @@ margin_left = 29.0
 margin_top = 19.0
 margin_right = 171.0
 margin_bottom = 140.0
-texture_normal = ExtResource( 9 )
-texture_pressed = ExtResource( 9 )
-texture_hover = ExtResource( 9 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 13 )
 expand = true
 script = ExtResource( 8 )
 
 [node name="impostazioni6" type="TextureButton" parent="Control"]
-margin_left = 35.0
-margin_top = 160.0
-margin_right = 177.0
-margin_bottom = 281.0
-texture_normal = ExtResource( 9 )
+margin_left = 29.0
+margin_top = 154.0
+margin_right = 160.0
+margin_bottom = 295.0
+texture_normal = ExtResource( 14 )
 texture_pressed = ExtResource( 9 )
 texture_hover = ExtResource( 9 )
 expand = true
