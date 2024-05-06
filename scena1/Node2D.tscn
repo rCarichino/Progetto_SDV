@@ -8,14 +8,14 @@
 [ext_resource path="res://scena1/conferma.gd" type="Script" id=6]
 [ext_resource path="res://scena1/Controlspegni.gd" type="Script" id=7]
 [ext_resource path="res://scena1/impostazioni.gd" type="Script" id=8]
-[ext_resource path="res://icon.png" type="Texture" id=9]
 [ext_resource path="res://scena1/Node2D.gd" type="Script" id=10]
 [ext_resource path="res://scena1/pngwing.com.png" type="Texture" id=11]
 [ext_resource path="res://scena1/cursore.gd" type="Script" id=12]
-[ext_resource path="res://messenger.png" type="Texture" id=13]
-[ext_resource path="res://trashbin.png" type="Texture" id=14]
-[ext_resource path="res://folder.png" type="Texture" id=15]
-[ext_resource path="res://internetExplorer.png" type="Texture" id=16]
+[ext_resource path="res://icone/messenger.png" type="Texture" id=13]
+[ext_resource path="res://icone/trashbin.png" type="Texture" id=14]
+[ext_resource path="res://icone/folder.png" type="Texture" id=15]
+[ext_resource path="res://icone/internetExplorer.png" type="Texture" id=16]
+[ext_resource path="res://icone/impostazioni.png" type="Texture" id=17]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 10 )
@@ -30,13 +30,13 @@ margin_left = 842.0
 margin_top = 20.0
 margin_right = 984.0
 margin_bottom = 141.0
-texture_normal = ExtResource( 9 )
-texture_pressed = ExtResource( 9 )
-texture_hover = ExtResource( 9 )
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 17 )
+texture_hover = ExtResource( 17 )
 expand = true
 script = ExtResource( 8 )
 
-[node name="impostazioni2" type="TextureButton" parent="Control"]
+[node name="Cartella1" type="TextureButton" parent="Control"]
 margin_left = 639.0
 margin_top = 20.0
 margin_right = 781.0
@@ -47,7 +47,7 @@ texture_hover = ExtResource( 15 )
 expand = true
 script = ExtResource( 8 )
 
-[node name="impostazioni3" type="TextureButton" parent="Control"]
+[node name="Cartella2" type="TextureButton" parent="Control"]
 margin_left = 440.0
 margin_top = 18.0
 margin_right = 582.0
@@ -58,7 +58,7 @@ texture_hover = ExtResource( 15 )
 expand = true
 script = ExtResource( 8 )
 
-[node name="impostazioni4" type="TextureButton" parent="Control"]
+[node name="Browser" type="TextureButton" parent="Control"]
 margin_left = 237.0
 margin_top = 14.0
 margin_right = 379.0
@@ -69,7 +69,7 @@ texture_hover = ExtResource( 16 )
 expand = true
 script = ExtResource( 8 )
 
-[node name="impostazioni5" type="TextureButton" parent="Control"]
+[node name="Messenger" type="TextureButton" parent="Control"]
 margin_left = 29.0
 margin_top = 19.0
 margin_right = 171.0
@@ -80,14 +80,14 @@ texture_hover = ExtResource( 13 )
 expand = true
 script = ExtResource( 8 )
 
-[node name="impostazioni6" type="TextureButton" parent="Control"]
+[node name="cestino" type="TextureButton" parent="Control"]
 margin_left = 29.0
 margin_top = 154.0
 margin_right = 160.0
 margin_bottom = 295.0
 texture_normal = ExtResource( 14 )
-texture_pressed = ExtResource( 9 )
-texture_hover = ExtResource( 9 )
+texture_pressed = ExtResource( 14 )
+texture_hover = ExtResource( 14 )
 expand = true
 script = ExtResource( 8 )
 
@@ -163,21 +163,21 @@ script = ExtResource( 12 )
 [connection signal="mouse_entered" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_mouse_entered"]
 [connection signal="mouse_exited" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_mouse_exited"]
 [connection signal="pressed" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_pressed"]
-[connection signal="mouse_entered" from="Control/impostazioni2" to="Control/impostazioni2" method="_on_impostazioni_mouse_entered"]
-[connection signal="mouse_exited" from="Control/impostazioni2" to="Control/impostazioni2" method="_on_impostazioni_mouse_exited"]
-[connection signal="pressed" from="Control/impostazioni2" to="Control/impostazioni2" method="_on_impostazioni_pressed"]
-[connection signal="mouse_entered" from="Control/impostazioni3" to="Control/impostazioni3" method="_on_impostazioni_mouse_entered"]
-[connection signal="mouse_exited" from="Control/impostazioni3" to="Control/impostazioni3" method="_on_impostazioni_mouse_exited"]
-[connection signal="pressed" from="Control/impostazioni3" to="Control/impostazioni3" method="_on_impostazioni_pressed"]
-[connection signal="mouse_entered" from="Control/impostazioni4" to="Control/impostazioni4" method="_on_impostazioni_mouse_entered"]
-[connection signal="mouse_exited" from="Control/impostazioni4" to="Control/impostazioni4" method="_on_impostazioni_mouse_exited"]
-[connection signal="pressed" from="Control/impostazioni4" to="Control/impostazioni4" method="_on_impostazioni_pressed"]
-[connection signal="mouse_entered" from="Control/impostazioni5" to="Control/impostazioni5" method="_on_impostazioni_mouse_entered"]
-[connection signal="mouse_exited" from="Control/impostazioni5" to="Control/impostazioni5" method="_on_impostazioni_mouse_exited"]
-[connection signal="pressed" from="Control/impostazioni5" to="Control/impostazioni5" method="_on_impostazioni_pressed"]
-[connection signal="mouse_entered" from="Control/impostazioni6" to="Control/impostazioni6" method="_on_impostazioni_mouse_entered"]
-[connection signal="mouse_exited" from="Control/impostazioni6" to="Control/impostazioni6" method="_on_impostazioni_mouse_exited"]
-[connection signal="pressed" from="Control/impostazioni6" to="Control/impostazioni6" method="_on_impostazioni_pressed"]
+[connection signal="mouse_entered" from="Control/Cartella1" to="Control/Cartella1" method="_on_impostazioni_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Cartella1" to="Control/Cartella1" method="_on_impostazioni_mouse_exited"]
+[connection signal="pressed" from="Control/Cartella1" to="Control/Cartella1" method="_on_impostazioni_pressed"]
+[connection signal="mouse_entered" from="Control/Cartella2" to="Control/Cartella2" method="_on_impostazioni_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Cartella2" to="Control/Cartella2" method="_on_impostazioni_mouse_exited"]
+[connection signal="pressed" from="Control/Cartella2" to="Control/Cartella2" method="_on_impostazioni_pressed"]
+[connection signal="mouse_entered" from="Control/Browser" to="Control/Browser" method="_on_impostazioni_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Browser" to="Control/Browser" method="_on_impostazioni_mouse_exited"]
+[connection signal="pressed" from="Control/Browser" to="Control/Browser" method="_on_impostazioni_pressed"]
+[connection signal="mouse_entered" from="Control/Messenger" to="Control/Messenger" method="_on_impostazioni_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Messenger" to="Control/Messenger" method="_on_impostazioni_mouse_exited"]
+[connection signal="pressed" from="Control/Messenger" to="Control/Messenger" method="_on_impostazioni_pressed"]
+[connection signal="mouse_entered" from="Control/cestino" to="Control/cestino" method="_on_impostazioni_mouse_entered"]
+[connection signal="mouse_exited" from="Control/cestino" to="Control/cestino" method="_on_impostazioni_mouse_exited"]
+[connection signal="pressed" from="Control/cestino" to="Control/cestino" method="_on_impostazioni_pressed"]
 [connection signal="pressed" from="Control/door" to="Control" method="_on_door_pressed"]
 [connection signal="pressed" from="Control/door/SPEGNI" to="Control" method="_on_SPEGNI_pressed"]
 [connection signal="pressed" from="Control/door/SPEGNI/Controlspegni/Si" to="Control/door/SPEGNI/Controlspegni" method="_on_Si_pressed"]

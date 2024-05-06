@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/internetExplorer.png-e6ad9933cbddbbbbebb0f87dbbecbcbf.stex"
+path="res://.import/trashbin.png-c91065b2b1a41a33b5b5d4c6f4563966.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://internetExplorer.png"
-dest_files=[ "res://.import/internetExplorer.png-e6ad9933cbddbbbbebb0f87dbbecbcbf.stex" ]
+source_file="res://icone/trashbin.png"
+dest_files=[ "res://.import/trashbin.png-c91065b2b1a41a33b5b5d4c6f4563966.stex" ]
 
 [params]
 
