@@ -22,10 +22,65 @@ anchor_bottom = 1.0
 script = ExtResource( 4 )
 
 [node name="impostazioni" type="TextureButton" parent="Control"]
-margin_left = 645.0
-margin_top = 153.0
-margin_right = 787.0
-margin_bottom = 274.0
+margin_left = 842.0
+margin_top = 20.0
+margin_right = 984.0
+margin_bottom = 141.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 9 )
+expand = true
+script = ExtResource( 8 )
+
+[node name="impostazioni2" type="TextureButton" parent="Control"]
+margin_left = 639.0
+margin_top = 20.0
+margin_right = 781.0
+margin_bottom = 141.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 9 )
+expand = true
+script = ExtResource( 8 )
+
+[node name="impostazioni3" type="TextureButton" parent="Control"]
+margin_left = 440.0
+margin_top = 18.0
+margin_right = 582.0
+margin_bottom = 139.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 9 )
+expand = true
+script = ExtResource( 8 )
+
+[node name="impostazioni4" type="TextureButton" parent="Control"]
+margin_left = 248.0
+margin_top = 19.0
+margin_right = 390.0
+margin_bottom = 140.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 9 )
+expand = true
+script = ExtResource( 8 )
+
+[node name="impostazioni5" type="TextureButton" parent="Control"]
+margin_left = 29.0
+margin_top = 19.0
+margin_right = 171.0
+margin_bottom = 140.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 9 )
+expand = true
+script = ExtResource( 8 )
+
+[node name="impostazioni6" type="TextureButton" parent="Control"]
+margin_left = 35.0
+margin_top = 160.0
+margin_right = 177.0
+margin_bottom = 281.0
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 9 )
 texture_hover = ExtResource( 9 )
@@ -104,6 +159,21 @@ script = ExtResource( 12 )
 [connection signal="mouse_entered" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_mouse_entered"]
 [connection signal="mouse_exited" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_mouse_exited"]
 [connection signal="pressed" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_pressed"]
+[connection signal="mouse_entered" from="Control/impostazioni2" to="Control/impostazioni2" method="_on_impostazioni_mouse_entered"]
+[connection signal="mouse_exited" from="Control/impostazioni2" to="Control/impostazioni2" method="_on_impostazioni_mouse_exited"]
+[connection signal="pressed" from="Control/impostazioni2" to="Control/impostazioni2" method="_on_impostazioni_pressed"]
+[connection signal="mouse_entered" from="Control/impostazioni3" to="Control/impostazioni3" method="_on_impostazioni_mouse_entered"]
+[connection signal="mouse_exited" from="Control/impostazioni3" to="Control/impostazioni3" method="_on_impostazioni_mouse_exited"]
+[connection signal="pressed" from="Control/impostazioni3" to="Control/impostazioni3" method="_on_impostazioni_pressed"]
+[connection signal="mouse_entered" from="Control/impostazioni4" to="Control/impostazioni4" method="_on_impostazioni_mouse_entered"]
+[connection signal="mouse_exited" from="Control/impostazioni4" to="Control/impostazioni4" method="_on_impostazioni_mouse_exited"]
+[connection signal="pressed" from="Control/impostazioni4" to="Control/impostazioni4" method="_on_impostazioni_pressed"]
+[connection signal="mouse_entered" from="Control/impostazioni5" to="Control/impostazioni5" method="_on_impostazioni_mouse_entered"]
+[connection signal="mouse_exited" from="Control/impostazioni5" to="Control/impostazioni5" method="_on_impostazioni_mouse_exited"]
+[connection signal="pressed" from="Control/impostazioni5" to="Control/impostazioni5" method="_on_impostazioni_pressed"]
+[connection signal="mouse_entered" from="Control/impostazioni6" to="Control/impostazioni6" method="_on_impostazioni_mouse_entered"]
+[connection signal="mouse_exited" from="Control/impostazioni6" to="Control/impostazioni6" method="_on_impostazioni_mouse_exited"]
+[connection signal="pressed" from="Control/impostazioni6" to="Control/impostazioni6" method="_on_impostazioni_pressed"]
 [connection signal="pressed" from="Control/door" to="Control" method="_on_door_pressed"]
 [connection signal="pressed" from="Control/door/SPEGNI" to="Control" method="_on_SPEGNI_pressed"]
 [connection signal="pressed" from="Control/door/SPEGNI/Controlspegni/Si" to="Control/door/SPEGNI/Controlspegni" method="_on_Si_pressed"]
