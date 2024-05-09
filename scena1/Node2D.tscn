@@ -26,15 +26,22 @@ anchor_bottom = 1.0
 script = ExtResource( 4 )
 
 [node name="impostazioni" type="TextureButton" parent="Control"]
-margin_left = 842.0
-margin_top = 20.0
-margin_right = 984.0
-margin_bottom = 141.0
+margin_left = 829.0
+margin_top = 21.0
+margin_right = 971.0
+margin_bottom = 142.0
 texture_normal = ExtResource( 17 )
 texture_pressed = ExtResource( 17 )
 texture_hover = ExtResource( 17 )
 expand = true
 script = ExtResource( 8 )
+
+[node name="ImpostazioniLabel" type="Label" parent="Control/impostazioni"]
+margin_left = 27.0
+margin_top = 119.0
+margin_right = 111.0
+margin_bottom = 133.0
+text = "Impostazioni"
 
 [node name="Cartella1" type="TextureButton" parent="Control"]
 margin_left = 639.0
@@ -47,6 +54,13 @@ texture_hover = ExtResource( 15 )
 expand = true
 script = ExtResource( 8 )
 
+[node name="CartellaFotoLabel" type="Label" parent="Control/Cartella1"]
+margin_left = 52.0
+margin_top = 115.0
+margin_right = 92.0
+margin_bottom = 129.0
+text = "Foto"
+
 [node name="Cartella2" type="TextureButton" parent="Control"]
 margin_left = 440.0
 margin_top = 18.0
@@ -58,21 +72,35 @@ texture_hover = ExtResource( 15 )
 expand = true
 script = ExtResource( 8 )
 
+[node name="CartellaAppuntiLabel" type="Label" parent="Control/Cartella2"]
+margin_left = 46.0
+margin_top = 117.0
+margin_right = 96.0
+margin_bottom = 131.0
+text = "Appunti"
+
 [node name="Browser" type="TextureButton" parent="Control"]
-margin_left = 237.0
-margin_top = 14.0
-margin_right = 379.0
-margin_bottom = 135.0
+margin_left = 221.0
+margin_top = 15.0
+margin_right = 363.0
+margin_bottom = 136.0
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 16 )
 texture_hover = ExtResource( 16 )
 expand = true
 script = ExtResource( 8 )
 
+[node name="BrowserLabel" type="Label" parent="Control/Browser"]
+margin_left = 49.0
+margin_top = 120.0
+margin_right = 101.0
+margin_bottom = 134.0
+text = "Browser"
+
 [node name="Messenger" type="TextureButton" parent="Control"]
-margin_left = 29.0
+margin_left = 37.0
 margin_top = 19.0
-margin_right = 171.0
+margin_right = 179.0
 margin_bottom = 140.0
 texture_normal = ExtResource( 13 )
 texture_pressed = ExtResource( 13 )
@@ -80,16 +108,35 @@ texture_hover = ExtResource( 13 )
 expand = true
 script = ExtResource( 8 )
 
+[node name="MessengerLabel" type="Label" parent="Control/Messenger"]
+margin_left = 42.0
+margin_top = 117.0
+margin_right = 116.0
+margin_bottom = 137.0
+text = "Messenger
+"
+autowrap = true
+clip_text = true
+
 [node name="cestino" type="TextureButton" parent="Control"]
-margin_left = 29.0
-margin_top = 154.0
-margin_right = 160.0
-margin_bottom = 295.0
+margin_left = 39.0
+margin_top = 192.0
+margin_right = 170.0
+margin_bottom = 333.0
 texture_normal = ExtResource( 14 )
 texture_pressed = ExtResource( 14 )
 texture_hover = ExtResource( 14 )
 expand = true
 script = ExtResource( 8 )
+
+[node name="CestinoLabel" type="Label" parent="Control/cestino"]
+margin_left = 46.0
+margin_top = 142.0
+margin_right = 97.0
+margin_bottom = 162.0
+text = "Cestino"
+autowrap = true
+clip_text = true
 
 [node name="door" type="TextureButton" parent="Control"]
 margin_top = 513.0
