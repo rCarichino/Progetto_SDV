@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scena1/door.gd" type="Script" id=1]
 [ext_resource path="res://scena1/doorOS.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://scena1/conferma.gd" type="Script" id=6]
 [ext_resource path="res://scena1/Controlspegni.gd" type="Script" id=7]
 [ext_resource path="res://scena1/impostazioni.gd" type="Script" id=8]
+[ext_resource path="res://scena3/Cartella_Appunti.gd" type="Script" id=9]
 [ext_resource path="res://scena1/Node2D.gd" type="Script" id=10]
 [ext_resource path="res://scena1/pngwing.com.png" type="Texture" id=11]
 [ext_resource path="res://scena1/cursore.gd" type="Script" id=12]
@@ -16,13 +17,13 @@
 [ext_resource path="res://icone/folder.png" type="Texture" id=15]
 [ext_resource path="res://icone/internetExplorer.png" type="Texture" id=16]
 [ext_resource path="res://icone/impostazioni.png" type="Texture" id=17]
+[ext_resource path="res://scena4/Cartella_Foto.gd" type="Script" id=18]
+[ext_resource path="res://scena5/Cestino.gd" type="Script" id=19]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 10 )
 
 [node name="Control" type="Control" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
 script = ExtResource( 4 )
 
 [node name="impostazioni" type="TextureButton" parent="Control"]
@@ -43,7 +44,7 @@ margin_right = 111.0
 margin_bottom = 133.0
 text = "Impostazioni"
 
-[node name="Cartella1" type="TextureButton" parent="Control"]
+[node name="Foto" type="TextureButton" parent="Control"]
 margin_left = 639.0
 margin_top = 20.0
 margin_right = 781.0
@@ -52,16 +53,16 @@ texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 15 )
 texture_hover = ExtResource( 15 )
 expand = true
-script = ExtResource( 8 )
+script = ExtResource( 18 )
 
-[node name="CartellaFotoLabel" type="Label" parent="Control/Cartella1"]
+[node name="CartellaFotoLabel" type="Label" parent="Control/Foto"]
 margin_left = 52.0
 margin_top = 115.0
 margin_right = 92.0
 margin_bottom = 129.0
 text = "Foto"
 
-[node name="Cartella2" type="TextureButton" parent="Control"]
+[node name="Appunti" type="TextureButton" parent="Control"]
 margin_left = 440.0
 margin_top = 18.0
 margin_right = 582.0
@@ -70,9 +71,9 @@ texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 15 )
 texture_hover = ExtResource( 15 )
 expand = true
-script = ExtResource( 8 )
+script = ExtResource( 9 )
 
-[node name="CartellaAppuntiLabel" type="Label" parent="Control/Cartella2"]
+[node name="CartellaAppuntiLabel" type="Label" parent="Control/Appunti"]
 margin_left = 46.0
 margin_top = 117.0
 margin_right = 96.0
@@ -127,7 +128,7 @@ texture_normal = ExtResource( 14 )
 texture_pressed = ExtResource( 14 )
 texture_hover = ExtResource( 14 )
 expand = true
-script = ExtResource( 8 )
+script = ExtResource( 19 )
 
 [node name="CestinoLabel" type="Label" parent="Control/cestino"]
 margin_left = 46.0
@@ -210,12 +211,12 @@ script = ExtResource( 12 )
 [connection signal="mouse_entered" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_mouse_entered"]
 [connection signal="mouse_exited" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_mouse_exited"]
 [connection signal="pressed" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_pressed"]
-[connection signal="mouse_entered" from="Control/Cartella1" to="Control/Cartella1" method="_on_impostazioni_mouse_entered"]
-[connection signal="mouse_exited" from="Control/Cartella1" to="Control/Cartella1" method="_on_impostazioni_mouse_exited"]
-[connection signal="pressed" from="Control/Cartella1" to="Control/Cartella1" method="_on_impostazioni_pressed"]
-[connection signal="mouse_entered" from="Control/Cartella2" to="Control/Cartella2" method="_on_impostazioni_mouse_entered"]
-[connection signal="mouse_exited" from="Control/Cartella2" to="Control/Cartella2" method="_on_impostazioni_mouse_exited"]
-[connection signal="pressed" from="Control/Cartella2" to="Control/Cartella2" method="_on_impostazioni_pressed"]
+[connection signal="mouse_entered" from="Control/Foto" to="Control/Foto" method="_on_impostazioni_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Foto" to="Control/Foto" method="_on_impostazioni_mouse_exited"]
+[connection signal="pressed" from="Control/Foto" to="Control/Foto" method="_on_impostazioni_pressed"]
+[connection signal="mouse_entered" from="Control/Appunti" to="Control/Appunti" method="_on_impostazioni_mouse_entered"]
+[connection signal="mouse_exited" from="Control/Appunti" to="Control/Appunti" method="_on_impostazioni_mouse_exited"]
+[connection signal="pressed" from="Control/Appunti" to="Control/Appunti" method="_on_impostazioni_pressed"]
 [connection signal="mouse_entered" from="Control/Browser" to="Control/Browser" method="_on_impostazioni_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Browser" to="Control/Browser" method="_on_impostazioni_mouse_exited"]
 [connection signal="pressed" from="Control/Browser" to="Control/Browser" method="_on_impostazioni_pressed"]
