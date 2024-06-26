@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cellphone-ringing-6475.mp3-6f68a84237982212444c701cd5193134.mp3str"
+
+[deps]
+
+source_file="res://suoni/cellphone-ringing-6475.mp3"
+dest_files=[ "res://.import/cellphone-ringing-6475.mp3-6f68a84237982212444c701cd5193134.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

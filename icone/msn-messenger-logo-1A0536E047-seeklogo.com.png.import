@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/internetExplorer.png-45cb5d635782be5753176a0befc58b89.stex"
+path="res://.import/msn-messenger-logo-1A0536E047-seeklogo.com.png-cc140a0f52be4f14296ff18c02b308ad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icone/internetExplorer.png"
-dest_files=[ "res://.import/internetExplorer.png-45cb5d635782be5753176a0befc58b89.stex" ]
+source_file="res://icone/msn-messenger-logo-1A0536E047-seeklogo.com.png"
+dest_files=[ "res://.import/msn-messenger-logo-1A0536E047-seeklogo.com.png-cc140a0f52be4f14296ff18c02b308ad.stex" ]
 
 [params]
 

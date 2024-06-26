@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/messenger.png-03e2f736b1442fd84465b47738bc0d2c.stex"
+path="res://.import/Internet_Explorer-Logo.wine.png-75331d53e14a070bf77335809dc7ce87.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icone/messenger.png"
-dest_files=[ "res://.import/messenger.png-03e2f736b1442fd84465b47738bc0d2c.stex" ]
+source_file="res://icone/Internet_Explorer-Logo.wine.png"
+dest_files=[ "res://.import/Internet_Explorer-Logo.wine.png-75331d53e14a070bf77335809dc7ce87.stex" ]
 
 [params]
 

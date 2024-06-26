@@ -12,10 +12,10 @@
 [ext_resource path="res://scena1/Node2D.gd" type="Script" id=10]
 [ext_resource path="res://scena1/pngwing.com.png" type="Texture" id=11]
 [ext_resource path="res://scena1/cursore.gd" type="Script" id=12]
-[ext_resource path="res://icone/messenger.png" type="Texture" id=13]
+[ext_resource path="res://icone/msn-messenger-logo-1A0536E047-seeklogo.com.png" type="Texture" id=13]
 [ext_resource path="res://icone/trashbin.png" type="Texture" id=14]
 [ext_resource path="res://icone/folder.png" type="Texture" id=15]
-[ext_resource path="res://icone/internetExplorer.png" type="Texture" id=16]
+[ext_resource path="res://icone/Internet_Explorer-Logo.wine.png" type="Texture" id=16]
 [ext_resource path="res://icone/impostazioni.png" type="Texture" id=17]
 [ext_resource path="res://scena4/Cartella_Foto.gd" type="Script" id=18]
 [ext_resource path="res://scena5/Cestino.gd" type="Script" id=19]
@@ -27,10 +27,10 @@ script = ExtResource( 10 )
 script = ExtResource( 4 )
 
 [node name="impostazioni" type="TextureButton" parent="Control"]
-margin_left = 829.0
-margin_top = 21.0
-margin_right = 971.0
-margin_bottom = 142.0
+margin_left = 441.0
+margin_top = 336.0
+margin_right = 565.0
+margin_bottom = 435.0
 texture_normal = ExtResource( 17 )
 texture_pressed = ExtResource( 17 )
 texture_hover = ExtResource( 17 )
@@ -38,17 +38,17 @@ expand = true
 script = ExtResource( 8 )
 
 [node name="ImpostazioniLabel" type="Label" parent="Control/impostazioni"]
-margin_left = 27.0
-margin_top = 119.0
-margin_right = 111.0
-margin_bottom = 133.0
+margin_left = 21.0
+margin_top = 113.0
+margin_right = 105.0
+margin_bottom = 127.0
 text = "Impostazioni"
 
 [node name="Foto" type="TextureButton" parent="Control"]
-margin_left = 639.0
-margin_top = 20.0
-margin_right = 781.0
-margin_bottom = 141.0
+margin_left = 682.0
+margin_top = 296.0
+margin_right = 811.0
+margin_bottom = 406.0
 texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 15 )
 texture_hover = ExtResource( 15 )
@@ -57,16 +57,16 @@ script = ExtResource( 18 )
 
 [node name="CartellaFotoLabel" type="Label" parent="Control/Foto"]
 margin_left = 52.0
-margin_top = 115.0
+margin_top = 107.0
 margin_right = 92.0
-margin_bottom = 129.0
+margin_bottom = 121.0
 text = "Foto"
 
 [node name="Appunti" type="TextureButton" parent="Control"]
-margin_left = 440.0
-margin_top = 18.0
-margin_right = 582.0
-margin_bottom = 139.0
+margin_left = 470.0
+margin_top = 113.0
+margin_right = 599.0
+margin_bottom = 223.0
 texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 15 )
 texture_hover = ExtResource( 15 )
@@ -74,17 +74,17 @@ expand = true
 script = ExtResource( 9 )
 
 [node name="CartellaAppuntiLabel" type="Label" parent="Control/Appunti"]
-margin_left = 46.0
-margin_top = 117.0
-margin_right = 96.0
-margin_bottom = 131.0
+margin_left = 40.0
+margin_top = 107.0
+margin_right = 90.0
+margin_bottom = 121.0
 text = "Appunti"
 
 [node name="Browser" type="TextureButton" parent="Control"]
-margin_left = 221.0
-margin_top = 15.0
-margin_right = 363.0
-margin_bottom = 136.0
+margin_left = 737.0
+margin_top = 17.0
+margin_right = 907.0
+margin_bottom = 153.0
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 16 )
 texture_hover = ExtResource( 16 )
@@ -92,17 +92,17 @@ expand = true
 script = ExtResource( 8 )
 
 [node name="BrowserLabel" type="Label" parent="Control/Browser"]
-margin_left = 49.0
-margin_top = 120.0
-margin_right = 101.0
-margin_bottom = 134.0
+margin_left = 66.0
+margin_top = 126.0
+margin_right = 118.0
+margin_bottom = 140.0
 text = "Browser"
 
 [node name="Messenger" type="TextureButton" parent="Control"]
-margin_left = 37.0
-margin_top = 19.0
-margin_right = 179.0
-margin_bottom = 140.0
+margin_left = 142.0
+margin_top = 54.0
+margin_right = 284.0
+margin_bottom = 175.0
 texture_normal = ExtResource( 13 )
 texture_pressed = ExtResource( 13 )
 texture_hover = ExtResource( 13 )
@@ -110,20 +110,20 @@ expand = true
 script = ExtResource( 8 )
 
 [node name="MessengerLabel" type="Label" parent="Control/Messenger"]
-margin_left = 42.0
-margin_top = 117.0
-margin_right = 116.0
-margin_bottom = 137.0
+margin_left = 30.0
+margin_top = 125.0
+margin_right = 104.0
+margin_bottom = 145.0
 text = "Messenger
 "
 autowrap = true
 clip_text = true
 
 [node name="cestino" type="TextureButton" parent="Control"]
-margin_left = 39.0
-margin_top = 192.0
-margin_right = 170.0
-margin_bottom = 333.0
+margin_left = 121.0
+margin_top = 258.0
+margin_right = 252.0
+margin_bottom = 399.0
 texture_normal = ExtResource( 14 )
 texture_pressed = ExtResource( 14 )
 texture_hover = ExtResource( 14 )
@@ -131,10 +131,10 @@ expand = true
 script = ExtResource( 19 )
 
 [node name="CestinoLabel" type="Label" parent="Control/cestino"]
-margin_left = 46.0
-margin_top = 142.0
-margin_right = 97.0
-margin_bottom = 162.0
+margin_left = 47.0
+margin_top = 150.0
+margin_right = 98.0
+margin_bottom = 170.0
 text = "Cestino"
 autowrap = true
 clip_text = true

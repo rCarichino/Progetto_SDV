@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/keyboard-typing-5997.mp3-c165fca3224657200b938cda7edac92d.mp3str"
+
+[deps]
+
+source_file="res://suoni/keyboard-typing-5997.mp3"
+dest_files=[ "res://.import/keyboard-typing-5997.mp3-c165fca3224657200b938cda7edac92d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

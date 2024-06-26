@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/msn_sound.mp3-ef100adc06e0bab44fabd40a92ce55f8.mp3str"
+
+[deps]
+
+source_file="res://suoni/msn_sound.mp3"
+dest_files=[ "res://.import/msn_sound.mp3-ef100adc06e0bab44fabd40a92ce55f8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
