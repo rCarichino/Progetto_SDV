@@ -3,31 +3,33 @@ COSE DA FARE
 stilare il documento di game design (IMPORTANTE)
 
 colonna sonora
-	musica per inizio gioco (creepy-moderato)
-	musica per core del gioco (incalzante)
-	sound
+	musica per inizio gioco (creepy-moderato) (Giuseppe)
+	musica per core del gioco (incalzante) (Giuseppe)
+	sound (Di gruppo ora in chiamata) FATTO
 		colpo pistola
 		soffocamento
 		trillo simil MSN
 		rumore tastiera
 		squillo telefono
-	registrazione amico riccardo - doppiaggio di "carlo"
+	registrazione amico riccardo - doppiaggio di "carlo" (Riccardo)
 
 
 grafiche del gioco
-	menu iniziale desktop
-	chiusura e spegnimento desktop
-	trovare icone migliori (opzionale) - 
+	Foto (Mattia)
+	menu iniziale desktop (Davide)
+	chiusura e spegnimento desktop (Davide)
+	trovare icone migliori - (Giuseppe)
 		Impostazioni Msn Cartella  Cestino Internet Home
-	chat simil MSN
-	diario e mappa	
-	fade in x dialoghi con carlo (tipo sottotitoli)
+	chat simil MSN (Riccardo)
+	diario e mappa	(Mattia)
+	fade in x dialoghi con carlo (tipo sottotitoli) (Francesco)
 
 
 meccaniche di gioco
-	salvataggi (autosave ad ogni atto - manuale in qualsiasi momento -  massimo 3 slot)
-	logica delle impostazioni
-	scelta tramite chat
-	scelta tramite fade-in
-	aggiornamento diario e mappa
+	salvataggi (autosave ad ogni atto - manuale in qualsiasi momento -  massimo 3 slot) (Giuseppe)
+	logica delle impostazioni (Davide)
+	scelta tramite chat (Riccardo)
+	scelta tramite fade-in (Francesco)
+	aggiornamento diario e mappa (Mattia)
 	
+DIALOGIC
