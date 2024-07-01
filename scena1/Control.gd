@@ -7,17 +7,29 @@ func _process(delta):
 
 
 func _on_door_pressed():
-	if $door/Sprite.visible == false:
-		$door/Sprite.visible = true
+	if $door/Sprite.visible == false: 
+		$door/Sprite.visible = true 
+		$door/riavvio.visible = true
+		$door/arresto.visible = true
+		$door/sospendi.visible = true
 	elif $door/Sprite.visible == true:
-		$door/Sprite.visible = false
-	if $door/SPEGNI.visible == false:
-		$door/SPEGNI.visible = true
-	elif $door/SPEGNI.visible == true:
-		$door/SPEGNI.visible = false
+		$door/Sprite.visible = false 
+		$door/riavvio.visible = false
+		$door/arresto.visible = false
+		$door/sospendi.visible = false
 
 
-func _on_SPEGNI_pressed():
-	$door/SPEGNI/Controlspegni.visible = true
-	
+
+func _on_arresto_pressed():
+	$door/arresto/Controlarresto.visible = true
+
+
+func _on_riavvio_pressed():
+	$door/riavvio/Controlriavvio.visible = true
+
+
+func _on_sospendi_pressed():
+	 $door/sospendi/Controlsospendi.visible = true
+
+
 

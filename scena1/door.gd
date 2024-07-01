@@ -15,3 +15,12 @@ func _ready():
 #	pass
 
 
+
+
+func _on_door_mouse_entered():
+	$"../cursore".texture = load("res://scena1/pngwing.com (1).png")
+
+
+
+func _on_door_mouse_exited():
+	$"../cursore".texture = load("res://scena1/pngwing.com.png")
