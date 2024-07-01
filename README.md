@@ -25,6 +25,10 @@ grafiche del gioco
  
 	fade in x dialoghi con carlo (tipo sottotitoli) (Francesco)
 
+ 	effetto mouse nelle finestre
+
+   	sfondo del desktop
+
 
 meccaniche di gioco
 
