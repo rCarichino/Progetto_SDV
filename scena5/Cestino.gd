@@ -29,12 +29,3 @@ func _on_impostazioni_pressed():
 		get_tree().change_scene("res://scena5/Cestino.tscn")
 
 
-
-func _on_impostazioni_mouse_entered():
-	$"../cursore".texture = load("res://scena1/pngwing.com (1).png")
-
-
-
-
-func _on_impostazioni_mouse_exited():
-	$"../cursore".texture = load("res://scena1/pngwing.com.png")

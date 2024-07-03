@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scena1/door.gd" type="Script" id=1]
 [ext_resource path="res://scena1/newdooros.png" type="Texture" id=2]
@@ -10,8 +10,6 @@
 [ext_resource path="res://scena1/impostazioni.gd" type="Script" id=8]
 [ext_resource path="res://scena3/Cartella_Appunti.gd" type="Script" id=9]
 [ext_resource path="res://scena1/Node2D.gd" type="Script" id=10]
-[ext_resource path="res://scena1/pngwing.com.png" type="Texture" id=11]
-[ext_resource path="res://scena1/cursore.gd" type="Script" id=12]
 [ext_resource path="res://icone/msn-messenger-logo-1A0536E047-seeklogo.com.png" type="Texture" id=13]
 [ext_resource path="res://icone/trashbin.png" type="Texture" id=14]
 [ext_resource path="res://icone/folder.png" type="Texture" id=15]
@@ -37,6 +35,7 @@ margin_left = 526.0
 margin_top = 381.0
 margin_right = 650.0
 margin_bottom = 480.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 17 )
 texture_pressed = ExtResource( 17 )
 texture_hover = ExtResource( 17 )
@@ -55,6 +54,7 @@ margin_left = 825.0
 margin_top = 231.0
 margin_right = 954.0
 margin_bottom = 341.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 15 )
 texture_hover = ExtResource( 15 )
@@ -73,6 +73,7 @@ margin_left = 445.0
 margin_top = 116.0
 margin_right = 574.0
 margin_bottom = 226.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 15 )
 texture_pressed = ExtResource( 15 )
 texture_hover = ExtResource( 15 )
@@ -91,6 +92,7 @@ margin_left = 832.0
 margin_top = 30.0
 margin_right = 1002.0
 margin_bottom = 166.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 16 )
 texture_hover = ExtResource( 16 )
@@ -109,6 +111,7 @@ margin_left = 54.0
 margin_top = 23.0
 margin_right = 196.0
 margin_bottom = 144.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 13 )
 texture_pressed = ExtResource( 13 )
 texture_hover = ExtResource( 13 )
@@ -130,6 +133,7 @@ margin_left = 182.0
 margin_top = 230.0
 margin_right = 313.0
 margin_bottom = 371.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 14 )
 texture_pressed = ExtResource( 14 )
 texture_hover = ExtResource( 14 )
@@ -183,6 +187,7 @@ margin_top = -143.0
 margin_right = 569.0
 margin_bottom = -108.0
 rect_pivot_offset = Vector2( 238, 10 )
+mouse_default_cursor_shape = 2
 text = "SI"
 flat = true
 script = ExtResource( 21 )
@@ -193,6 +198,7 @@ margin_top = -146.0
 margin_right = 996.0
 margin_bottom = -107.0
 rect_pivot_offset = Vector2( 238, 10 )
+mouse_default_cursor_shape = 2
 text = "NO"
 flat = true
 script = ExtResource( 22 )
@@ -225,6 +231,7 @@ margin_top = -89.0
 margin_right = 567.0
 margin_bottom = -54.0
 rect_pivot_offset = Vector2( 238, 10 )
+mouse_default_cursor_shape = 2
 text = "SI"
 flat = true
 script = ExtResource( 21 )
@@ -235,6 +242,7 @@ margin_top = -93.0
 margin_right = 994.0
 margin_bottom = -54.0
 rect_pivot_offset = Vector2( 238, 10 )
+mouse_default_cursor_shape = 2
 text = "NO"
 flat = true
 script = ExtResource( 22 )
@@ -267,6 +275,7 @@ margin_top = -129.0
 margin_right = 463.0
 margin_bottom = -90.0
 rect_pivot_offset = Vector2( 238, 10 )
+mouse_default_cursor_shape = 2
 text = "SI"
 flat = true
 script = ExtResource( 21 )
@@ -277,6 +286,7 @@ margin_top = -128.0
 margin_right = 891.0
 margin_bottom = -91.0
 rect_pivot_offset = Vector2( 238, 10 )
+mouse_default_cursor_shape = 2
 text = "NO"
 flat = true
 script = ExtResource( 22 )
@@ -285,12 +295,6 @@ script = ExtResource( 22 )
 position = Vector2( 655.5, -245.5 )
 scale = Vector2( 0.1675, 0.1645 )
 texture = ExtResource( 5 )
-
-[node name="cursore" type="Sprite" parent="Control"]
-position = Vector2( 317.125, 324.5 )
-scale = Vector2( 0.0288743, 0.0205078 )
-texture = ExtResource( 11 )
-script = ExtResource( 12 )
 
 [connection signal="mouse_entered" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_mouse_entered"]
 [connection signal="mouse_exited" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_mouse_exited"]
