@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/bitmap_font_creator/components/Vector2.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 4.0
+bg_color = Color( 0.0980392, 0.113725, 0.156863, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.0980392, 0.113725, 0.156863, 1 )
+expand_margin_right = 4.0
+expand_margin_top = 4.0
+expand_margin_bottom = 4.0
+
+[node name="Vector2" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 14.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_top = 18.0
+margin_right = 1024.0
+margin_bottom = 42.0
+
+[node name="XLabel" type="Label" parent="HBoxContainer"]
+light_mask = 0
+margin_top = 4.0
+margin_right = 12.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_styles/normal = SubResource( 1 )
+text = "x"
+
+[node name="X" type="LineEdit" parent="HBoxContainer"]
+light_mask = 0
+margin_left = 16.0
+margin_right = 74.0
+margin_bottom = 24.0
+text = "0"
+caret_blink = true
+caret_blink_speed = 0.5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+margin_top = 46.0
+margin_right = 1024.0
+margin_bottom = 70.0
+
+[node name="YLabel" type="Label" parent="HBoxContainer2"]
+light_mask = 0
+margin_top = 4.0
+margin_right = 12.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 0, 1, 0.0627451, 1 )
+custom_styles/normal = SubResource( 1 )
+text = "y"
+
+[node name="Y" type="LineEdit" parent="HBoxContainer2"]
+margin_left = 16.0
+margin_right = 74.0
+margin_bottom = 24.0
+text = "0"
+caret_blink = true
+caret_blink_speed = 0.5
+
+[connection signal="focus_exited" from="HBoxContainer/X" to="." method="_on_focus_exited" binds= [ "x" ]]
+[connection signal="text_entered" from="HBoxContainer/X" to="." method="_vector_changed" binds= [ "x" ]]
+[connection signal="focus_exited" from="HBoxContainer2/Y" to="." method="_on_focus_exited" binds= [ "y" ]]
+[connection signal="text_entered" from="HBoxContainer2/Y" to="." method="_vector_changed" binds= [ "y" ]]

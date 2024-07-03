@@ -59,10 +59,25 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/dialogic/Other/DialogicUtil.gd"
 }, {
+"base": "Reference",
+"class": "GifReader",
+"language": "GDScript",
+"path": "res://addons/godot-gif-importer/addons/gif-importer/GIFReader.gd"
+}, {
 "base": "PanelContainer",
 "class": "HistoryRow",
 "language": "GDScript",
 "path": "res://addons/dialogic/Example Assets/History/HistoryRow.gd"
+}, {
+"base": "Label",
+"class": "LabelAutoSizer",
+"language": "GDScript",
+"path": "res://label_font_auto_sizer/label_auto_sizer.gd"
+}, {
+"base": "RichTextLabel",
+"class": "RichLabelAutoSizer",
+"language": "GDScript",
+"path": "res://label_font_auto_sizer/rich_label_auto_sizer.gd"
 }, {
 "base": "Reference",
 "class": "SVGArcs",
@@ -180,7 +195,10 @@ _global_script_class_icons={
 "DialogicParser": "",
 "DialogicResources": "",
 "DialogicUtil": "",
+"GifReader": "",
 "HistoryRow": "",
+"LabelAutoSizer": "",
+"RichLabelAutoSizer": "",
 "SVGArcs": "",
 "SVGAttributeParser": "",
 "SVGClockValue": "",
@@ -216,7 +234,7 @@ window/stretch/mode="2d"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg", "res://addons/godot_svg/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg", "res://addons/godot-gif-importer/addons/gif-importer/plugin.cfg", "res://addons/godot_svg/plugin.cfg" )
 
 [gui]
 
