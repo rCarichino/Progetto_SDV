@@ -219,7 +219,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Trillo"
-run/main_scene="res://scena1/Node2D.tscn"
+run/main_scene="res://Desktop/Node2D.tscn"
 config/icon="res://icone/icon.png"
 
 [display]
