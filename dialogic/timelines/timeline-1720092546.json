@@ -1,0 +1,84 @@
+{
+	"events": [
+		{
+			"background": "res://immagini scelta fade-in/blurred.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Stai attento per favore"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Non ci credo.... non può essere"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Cosa? Che è successo ad Alessia?"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Non è per lei, è per lui... fra, è Manuel. Ho un piano forse"
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 5
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "CARLO?!"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ok, mi sa che l'ho fatto svenire, spero..."
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Spero si.. è finita?"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Credo di si, ma perchè cazzo era Manuel?"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ma Alessia?"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Vero, la slego e lego Manuel. Comunque sembra stare bene. Nel mentre chiama la polizia, dì di mandare subito una volante qui"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ti prego, fammi parlare con Alessia, ho bisogno di sentire la sua voce..."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1720092546.json",
+		"name": "2.2.3._appartaenti_parte finale"
+	}
+}
