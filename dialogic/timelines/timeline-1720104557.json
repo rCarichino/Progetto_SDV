@@ -1,0 +1,42 @@
+{
+	"events": [
+		{
+			"background": "res://immagini scelta fade-in/black screen.jpeg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Il rapitore ha visto e riconosciuto Carlo arrivare dalla finestra dell’appartamento e nella rabbia ha deciso di uscire dal suo nascondiglio, sparare a Carlo con la pistola di servizio e successivamente tornare da Alessia e spararle in testa."
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1.5,
+			"waiting_skippable": false
+		},
+		{
+			"choice": "Rigioca",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "Torna al menù principale",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1720104557.json",
+		"name": "finale di prova"
+	}
+}
