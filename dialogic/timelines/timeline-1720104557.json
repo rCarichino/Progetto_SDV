@@ -1,6 +1,10 @@
 {
 	"events": [
 		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1720104475.cfg"
+		},
+		{
 			"background": "res://immagini scelta fade-in/black screen.jpeg",
 			"event_id": "dialogic_021"
 		},
