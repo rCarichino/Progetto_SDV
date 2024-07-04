@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Rumore.mp3-741e97098e10ad08e9d2635daada548b.mp3str"
+
+[deps]
+
+source_file="res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Rumore.mp3"
+dest_files=[ "res://.import/Rumore.mp3-741e97098e10ad08e9d2635daada548b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dialogo4.1.mp3-541f7f58d01f1b7098b79eb972c419f1.mp3str"
+
+[deps]
+
+source_file="res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo4.1.mp3"
+dest_files=[ "res://.import/Dialogo4.1.mp3-541f7f58d01f1b7098b79eb972c419f1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
