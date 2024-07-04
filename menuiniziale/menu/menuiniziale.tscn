@@ -46,7 +46,7 @@ custom_constants/separation = 60
 [node name="separator" type="Control" parent="menu/MarginContainer/VBoxContainer"]
 margin_right = 998.0
 
-[node name="Label" type="Label" parent="menu/MarginContainer/VBoxContainer"]
+[node name="Titolo" type="Label" parent="menu/MarginContainer/VBoxContainer"]
 margin_top = 60.0
 margin_right = 998.0
 margin_bottom = 134.0
