@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/DialogoLavanderia1.mp3-4a907a4419ffcafd8af75bbe9f6ae3be.mp3str"
+
+[deps]
+
+source_file="res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/DialogoLavanderia1.mp3"
+dest_files=[ "res://.import/DialogoLavanderia1.mp3-4a907a4419ffcafd8af75bbe9f6ae3be.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

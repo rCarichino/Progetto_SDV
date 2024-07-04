@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dialogo3-4.mp3-1bb55218a0d85ded88635002c2de637a.mp3str"
+
+[deps]
+
+source_file="res://suoni/Doppiaggio/SecondaChiamata/Dialogo3-4.mp3"
+dest_files=[ "res://.import/Dialogo3-4.mp3-1bb55218a0d85ded88635002c2de637a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

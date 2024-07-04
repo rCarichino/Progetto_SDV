@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dialogo2.mp3-78ce6795132f2a41396c669f902949e0.mp3str"
+
+[deps]
+
+source_file="res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataPrefabbricato(finale)/Dialogo2.mp3"
+dest_files=[ "res://.import/Dialogo2.mp3-78ce6795132f2a41396c669f902949e0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

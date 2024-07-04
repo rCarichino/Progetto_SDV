@@ -1,0 +1,127 @@
+{
+	"events": [
+		{
+			"background": "res://immagini scelta fade-in/blurred.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sono agli appartamenti, che faccio?"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sali al primo piano, ricordo che il graffito lo facemmo lì"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Ho sentito dei passi dalla lavanderia, Jimmy!"
+		},
+		{
+			"choice": "Vai subito a vedere!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Porca miseria, è tutto buio qua però..."
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "E che cosa era quel rumore?"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Potrebbe essere stato un topo, ne ho incontrati una dozzina fin'ora..."
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Vai subito al primo piano, non perdere tempo"
+		},
+		{
+			"choice": "No, Carlo. Troviamo il graffito",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sono arrivato sopra, ti ricordi la stanza?"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "No, adesso abbassa la voce"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ho un'idea"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Cosa?"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Mandagli un Trillo"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Perchè?"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Cosi capiamo in che stanza si trova"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Lo faccio subito."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1720090940.json",
+		"name": "2.2.3_appartamenti"
+	}
+}

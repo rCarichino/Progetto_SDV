@@ -1,0 +1,74 @@
+{
+	"events": [
+		{
+			"background": "res://immagini scelta fade-in/blurred.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Beh, hai novità?"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Mi ha mandato una foto... forse sono riuscito a capire dove si trova"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Prova a sforzarti e a capire preciso dove potrebbe essere"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "C’è la foto del nostro tag, quello con Manuel, che facemmo al centro sportivo anni fa, ti ricordi?"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Sì, mi ricordo che lo facemmo anche al Residence e al prefabbricato. Dove devo andare?"
+		},
+		{
+			"choice": "Vai al residence",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "Vai al prefabbricato",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "Vai al centro sportivo",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1720086723.json",
+		"name": "chiamata2"
+	}
+}

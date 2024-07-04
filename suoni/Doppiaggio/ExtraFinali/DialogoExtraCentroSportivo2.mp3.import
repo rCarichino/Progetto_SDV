@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/DialogoExtraCentroSportivo2.mp3-a8ff08ef41ec37da78e033281fb12e84.mp3str"
+
+[deps]
+
+source_file="res://suoni/Doppiaggio/ExtraFinali/DialogoExtraCentroSportivo2.mp3"
+dest_files=[ "res://.import/DialogoExtraCentroSportivo2.mp3-a8ff08ef41ec37da78e033281fb12e84.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

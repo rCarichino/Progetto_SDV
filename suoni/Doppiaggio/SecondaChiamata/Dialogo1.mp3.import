@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dialogo1.mp3-676b92113fc713fdbb92b4f8e99248a3.mp3str"
+
+[deps]
+
+source_file="res://suoni/Doppiaggio/SecondaChiamata/Dialogo1.mp3"
+dest_files=[ "res://.import/Dialogo1.mp3-676b92113fc713fdbb92b4f8e99248a3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

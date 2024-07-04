@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dialogo4.mp3-8e2417ccc6265dc956e3f2e57370b5ed.mp3str"
+
+[deps]
+
+source_file="res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo4.mp3"
+dest_files=[ "res://.import/Dialogo4.mp3-8e2417ccc6265dc956e3f2e57370b5ed.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

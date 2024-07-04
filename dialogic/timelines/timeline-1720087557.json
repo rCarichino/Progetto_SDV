@@ -1,0 +1,79 @@
+{
+	"events": [
+		{
+			"background": "res://immagini scelta fade-in/blurred.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sono arrivato, sto parcheggiando"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Per favore, dammi buone notizie. Ti prego!"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Fra... qui non c'è NIENTE"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Cazzo... mi ha riscritto e mi ha fatto capire che il tempo scorre, dobbiamo muoverci"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "E dove cazzo devo andare adesso?"
+		},
+		{
+			"choice": "Vai al prefabbricato",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Va bene, corro al prefabbricato"
+		},
+		{
+			"choice": "Vai al Residence",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ok corro al Residence solo che ci vorrà un po perchè sai che è distante, ti richiamo quando sono arrivato"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1720087557.json",
+		"name": "Scelta3_CentroSportivo"
+	}
+}

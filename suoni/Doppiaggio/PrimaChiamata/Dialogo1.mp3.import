@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Dialogo1.mp3-bc9db5c4f9694f67463e82dd7d2675b1.mp3str"
+
+[deps]
+
+source_file="res://suoni/Doppiaggio/PrimaChiamata/Dialogo1.mp3"
+dest_files=[ "res://.import/Dialogo1.mp3-bc9db5c4f9694f67463e82dd7d2675b1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
