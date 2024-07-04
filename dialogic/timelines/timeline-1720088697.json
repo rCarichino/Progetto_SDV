@@ -11,7 +11,13 @@
 
 			],
 			"portrait": "",
-			"question": "Sono arrivato al Residence, ma non ricordo in quale zona abbiamo fatto il tag"
+			"question": "Sono appena arrivato al Residence, ma non ricordo in quale zona abbiamo fatto il tag",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Dialogo1.mp3"
+				}
+			}
 		},
 		{
 			"choice": "Vai al teatro",
