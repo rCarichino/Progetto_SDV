@@ -1,30 +1,27 @@
 {
 	"events": [
 		{
+			"background": "res://immagini scelta fade-in/blurred.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_010",
 			"options": [
 
 			],
 			"portrait": "",
-			"question": "domanda, dove cazzo devo andare bro?"
+			"question": "Fra, sto in macchina. Dimmi cosa cazzo devo fare"
 		},
 		{
-			"choice": "vai ad appartament",
+			"choice": "Non ne ho idea...",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
 		},
 		{
-			"choice": "vai al residence",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"choice": "vai al centro sportivo",
+			"choice": "Inizia a girare",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -32,11 +29,103 @@
 		},
 		{
 			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Ma hai pensato all'eventualità di dargli effettivamente i soldi?"
+		},
+		{
+			"choice": "Non ce li ho con me adesso",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "E se le facesse del male?",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Io capisco che stai a panicare, ma stai lucido. Fatti venire almeno un'idea"
+		},
+		{
+			"choice": "Per ora abbiamo solo una foto",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Eh si, ma non si capiva nulla. Te ne fai mandare un'altra magari, che ne so"
+		},
+		{
+			"choice": "Non mi viene in mente nulla",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "In teoria abbiamo una foto ma non si capisce niente, e se te ne fai mandare un'altra?"
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Genio, non ci avevo pensato effettivamente"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Va beh, mo vai a parlare con quel sociopatico, ricordati che puoi vedermi dalla mappa sul browser perché ti ho condiviso il GPS"
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sisi me lo ricordavo, ti chiamo io appena ho novità, intanto inizia a girare non si sa mai"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ti aggiorno se scopro qualcosa io, anche se la vedo difficile"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.5.1",
 		"file": "timeline-1720083241.json",
-		"name": "timeline-1720083241.json"
+		"name": "chiamata1"
 	}
 }
