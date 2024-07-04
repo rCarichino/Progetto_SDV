@@ -5,6 +5,12 @@
 			"event_id": "dialogic_021"
 		},
 		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ho sentito un trillo, mi avvicino... la porta sta aperta"
+		},
+		{
 			"character": "character-1720086199.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
