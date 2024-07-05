@@ -11,7 +11,7 @@
 			"text": "Beh, hai novità?",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/SecondaChiamata/Dialogo1.mp3"
 				}
 			}
@@ -29,7 +29,7 @@
 			"text": "Prova a sforzarti e a capire preciso dove potrebbe essere",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/SecondaChiamata/Dialogo2.mp3"
 				}
 			}
@@ -38,7 +38,13 @@
 			"character": "character-1720086199.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "C’è la foto del nostro tag, quello con Manuel, che facemmo al centro sportivo anni fa, ti ricordi?"
+			"text": "C’è la foto del nostro tag, quello con Manuel, che facemmo al centro sportivo anni fa, ti ricordi?",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": ""
+				}
+			}
 		},
 		{
 			"character": "character-1720083110.json",
@@ -50,7 +56,7 @@
 			"question": "Sì, mi ricordo che lo facemmo anche al Residence e al prefabbricato. Dove devo andare?",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/SecondaChiamata/Dialogo3-4.mp3"
 				}
 			}

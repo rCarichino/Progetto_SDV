@@ -11,7 +11,7 @@
 			"text": "Sono arrivato, sto parcheggiando",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo1.mp3"
 				}
 			}
@@ -29,7 +29,7 @@
 			"text": "Fra... qui non c'è NIENTE",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo2.mp3"
 				}
 			}
@@ -50,7 +50,7 @@
 			"question": "E dove cazzo devo andare adesso?",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo3.mp3"
 				}
 			}
@@ -69,7 +69,7 @@
 			"text": "Va bene, corro al prefabbricato",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo4.1.mp3"
 				}
 			}
@@ -88,7 +88,7 @@
 			"text": "Ok corro al Residence solo che ci vorrà un po perchè sai che è distante, ti richiamo quando sono arrivato",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo4.2.mp3"
 				}
 			}

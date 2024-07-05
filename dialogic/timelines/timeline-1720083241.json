@@ -14,7 +14,7 @@
 			"question": "Fra, sto in macchina. Dimmi cosa cazzo devo fare",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo1.mp3"
 				}
 			}
@@ -46,7 +46,7 @@
 			"question": "Ma hai pensato all'eventualità di dargli effettivamente i soldi?",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo2.mp3"
 				}
 			}
@@ -78,13 +78,13 @@
 			"question": "Io capisco che stai a panicare, ma stai lucido. Fatti venire almeno un'idea",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo3.mp3"
 				}
 			}
 		},
 		{
-			"choice": "Per ora abbiamo solo una foto",
+			"choice": "Esaminiamo la foto",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -97,7 +97,7 @@
 			"text": "Eh si, ma non si capiva nulla. Te ne fai mandare un'altra magari, che ne so",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo4.1.mp3"
 				}
 			}
@@ -116,7 +116,7 @@
 			"text": "In teoria abbiamo una foto ma non si capisce niente, e se te ne fai mandare un'altra?",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo4.2.mp3"
 				}
 			}
@@ -137,7 +137,7 @@
 			"text": "Va beh, mo vai a parlare con quel sociopatico, ricordati che puoi vedermi dalla mappa sul browser perché ti ho condiviso il GPS",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo5.mp3"
 				}
 			}
@@ -155,7 +155,7 @@
 			"text": "Ti aggiorno se scopro qualcosa io, anche se la vedo difficile",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo6.mp3"
 				}
 			}

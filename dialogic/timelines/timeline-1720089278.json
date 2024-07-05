@@ -14,7 +14,7 @@
 			"question": "Sono al teatro, e non vedo niente",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Teatro/Dialogo1.mp3",
 					"start_time": 1
 				}
@@ -37,7 +37,7 @@
 			"question": "Ho appena controllato, ma non vedo nessuno",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Teatro/Dialogo2.1.mp3",
 					"start_time": 0.5
 				}
@@ -57,7 +57,7 @@
 			"text": "Jimmy...",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ExtraFinali/DialogoBadEnding.mp3",
 					"start_time": 1
 				}
@@ -87,7 +87,7 @@
 			"text": "Jimmy...",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ExtraFinali/DialogoBadEnding.mp3",
 					"start_time": 1
 				}

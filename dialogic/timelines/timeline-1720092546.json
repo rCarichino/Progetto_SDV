@@ -11,7 +11,7 @@
 			"text": "Ho sentito un trillo, mi avvicino... la porta sta aperta",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo7-8.mp3"
 				}
 			}
@@ -29,7 +29,7 @@
 			"text": "Non ci credo.... non può essere",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo9.mp3"
 				}
 			}
@@ -47,7 +47,7 @@
 			"text": "Non è per lei, è per lui... fra, è Manuel. Ho un piano forse",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo10-11-12.mp3"
 				}
 			}
@@ -70,7 +70,7 @@
 			"text": "Ok, mi sa che l'ho fatto svenire, spero...",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo13-14.mp3"
 				}
 			}
@@ -88,7 +88,7 @@
 			"text": "Credo di si, ma perchè cazzo era Manuel?",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo15.mp3"
 				}
 			}
@@ -106,7 +106,7 @@
 			"text": "Vero, la slego e lego Manuel. Comunque sembra stare bene. Nel mentre chiama la polizia, dì di mandare subito una volante qui",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo16-17.mp3"
 				}
 			}
