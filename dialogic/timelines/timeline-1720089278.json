@@ -88,7 +88,17 @@
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 3
+			"wait_seconds": 2
+		},
+		{
+			"background": "res://immagini scelta fade-in/black screen.jpeg",
+			"event_id": "dialogic_021",
+			"fade_duration": 2
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 2
 		},
 		{
 			"character": "character-1720083110.json",
