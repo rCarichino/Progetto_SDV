@@ -12,7 +12,8 @@
 			"voice_data": {
 				"0": {
 					"audio_bus": "Dialoghi",
-					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataPrefabbricato(finale)/Dialogo1.mp3"
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataPrefabbricato(finale)/Dialogo1.mp3",
+					"start_time": 0.5
 				}
 			}
 		},
@@ -30,7 +31,8 @@
 			"voice_data": {
 				"0": {
 					"audio_bus": "Dialoghi",
-					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataPrefabbricato(finale)/Dialogo2.mp3"
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataPrefabbricato(finale)/Dialogo2.mp3",
+					"start_time": 0.5
 				}
 			}
 		},

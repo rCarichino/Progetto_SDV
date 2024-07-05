@@ -12,7 +12,8 @@
 			"voice_data": {
 				"0": {
 					"audio_bus": "Dialoghi",
-					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo1.mp3"
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo1.mp3",
+					"start_time": 0.5
 				}
 			}
 		},
@@ -30,7 +31,8 @@
 			"voice_data": {
 				"0": {
 					"audio_bus": "Dialoghi",
-					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo2.mp3"
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo2.mp3",
+					"start_time": 0.5
 				}
 			}
 		},
@@ -51,7 +53,8 @@
 			"voice_data": {
 				"0": {
 					"audio_bus": "Dialoghi",
-					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo3.mp3"
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo3.mp3",
+					"start_time": 0.5
 				}
 			}
 		},
@@ -70,7 +73,8 @@
 			"voice_data": {
 				"0": {
 					"audio_bus": "Dialoghi",
-					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo4.1.mp3"
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo4.1.mp3",
+					"start_time": 0.3
 				}
 			}
 		},
@@ -89,7 +93,8 @@
 			"voice_data": {
 				"0": {
 					"audio_bus": "Dialoghi",
-					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo4.2.mp3"
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo4.2.mp3",
+					"start_time": 0.5
 				}
 			}
 		},
