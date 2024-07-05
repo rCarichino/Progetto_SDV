@@ -52,10 +52,10 @@ script = ExtResource( 15 )
 script = ExtResource( 2 )
 
 [node name="impostazioni" type="TextureButton" parent="Control"]
-margin_left = 526.0
-margin_top = 381.0
-margin_right = 650.0
-margin_bottom = 480.0
+margin_left = 879.0
+margin_top = 19.0
+margin_right = 1003.0
+margin_bottom = 118.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 12 )
 texture_pressed = ExtResource( 12 )
@@ -74,10 +74,10 @@ custom_fonts/font = SubResource( 1 )
 text = "Impostazioni"
 
 [node name="Foto" type="TextureButton" parent="Control"]
-margin_left = 825.0
-margin_top = 231.0
-margin_right = 954.0
-margin_bottom = 341.0
+margin_left = 462.0
+margin_top = 22.0
+margin_right = 591.0
+margin_bottom = 132.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 5 )
@@ -96,10 +96,10 @@ custom_fonts/font = SubResource( 2 )
 text = "Foto"
 
 [node name="Appunti" type="TextureButton" parent="Control"]
-margin_left = 445.0
-margin_top = 116.0
-margin_right = 574.0
-margin_bottom = 226.0
+margin_left = 281.0
+margin_top = 24.0
+margin_right = 410.0
+margin_bottom = 134.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 5 )
@@ -118,10 +118,10 @@ custom_fonts/font = SubResource( 3 )
 text = "Appunti"
 
 [node name="Browser" type="TextureButton" parent="Control"]
-margin_left = 832.0
-margin_top = 30.0
-margin_right = 1002.0
-margin_bottom = 166.0
+margin_left = -6.0
+margin_top = 194.0
+margin_right = 179.0
+margin_bottom = 330.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 4 )
@@ -140,10 +140,10 @@ custom_fonts/font = SubResource( 4 )
 text = "Browser"
 
 [node name="Messenger" type="TextureButton" parent="Control"]
-margin_left = 54.0
-margin_top = 23.0
-margin_right = 196.0
-margin_bottom = 144.0
+margin_left = 36.0
+margin_top = 9.0
+margin_right = 178.0
+margin_bottom = 130.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 7 )
@@ -165,10 +165,10 @@ autowrap = true
 clip_text = true
 
 [node name="cestino" type="TextureButton" parent="Control"]
-margin_left = 182.0
-margin_top = 230.0
-margin_right = 313.0
-margin_bottom = 371.0
+margin_left = 878.0
+margin_top = 424.0
+margin_right = 1009.0
+margin_bottom = 565.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 11 )
 texture_pressed = ExtResource( 11 )
@@ -337,7 +337,7 @@ texture = ExtResource( 13 )
 
 [node name="Sprite" type="Sprite" parent="Control"]
 show_behind_parent = true
-position = Vector2( 512.5, 300.5 )
+position = Vector2( 512, 300 )
 scale = Vector2( 0.533854, 0.556482 )
 texture = ExtResource( 25 )
 normal_map = ExtResource( 25 )
