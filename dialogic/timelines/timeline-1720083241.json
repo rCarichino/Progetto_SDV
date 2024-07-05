@@ -11,11 +11,12 @@
 
 			],
 			"portrait": "",
-			"question": "Fra, sto in macchina. Dimmi cosa cazzo devo fare",
+			"question": "Oh fra, sto in macchina. Dimmi cosa cazzo devo fare",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
-					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo1.mp3"
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo1.mp3",
+					"start_time": 0.5
 				}
 			}
 		},
@@ -46,8 +47,9 @@
 			"question": "Ma hai pensato all'eventualità di dargli effettivamente i soldi?",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
-					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo2.mp3"
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo2.mp3",
+					"start_time": 0.5
 				}
 			}
 		},
@@ -78,13 +80,14 @@
 			"question": "Io capisco che stai a panicare, ma stai lucido. Fatti venire almeno un'idea",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
-					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo3.mp3"
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo3.mp3",
+					"start_time": 0.5
 				}
 			}
 		},
 		{
-			"choice": "Per ora abbiamo solo una foto",
+			"choice": "Esaminiamo la foto",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -97,8 +100,9 @@
 			"text": "Eh si, ma non si capiva nulla. Te ne fai mandare un'altra magari, che ne so",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
-					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo4.1.mp3"
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo4.1.mp3",
+					"start_time": 0.8
 				}
 			}
 		},
@@ -116,7 +120,7 @@
 			"text": "In teoria abbiamo una foto ma non si capisce niente, e se te ne fai mandare un'altra?",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
+					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo4.2.mp3"
 				}
 			}
@@ -137,8 +141,9 @@
 			"text": "Va beh, mo vai a parlare con quel sociopatico, ricordati che puoi vedermi dalla mappa sul browser perché ti ho condiviso il GPS",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
-					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo5.mp3"
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo5.mp3",
+					"start_time": 0.7
 				}
 			}
 		},
@@ -146,7 +151,7 @@
 			"character": "character-1720086199.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Sisi me lo ricordavo, ti chiamo io appena ho novità, intanto inizia a girare non si sa mai"
+			"text": "Si si, me lo ricordavo. Ti chiamo io appena ho novità, intanto inizia a girare non si sa mai"
 		},
 		{
 			"character": "character-1720083110.json",
@@ -155,8 +160,9 @@
 			"text": "Ti aggiorno se scopro qualcosa io, anche se la vedo difficile",
 			"voice_data": {
 				"0": {
-					"audio_bus": "Master",
-					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo6.mp3"
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/PrimaChiamata/Dialogo6.mp3",
+					"start_time": 0.7
 				}
 			}
 		},

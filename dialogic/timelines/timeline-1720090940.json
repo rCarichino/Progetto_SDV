@@ -8,7 +8,14 @@
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Sono agli appartamenti, che faccio?"
+			"text": "Sono agli appartamenti, che faccio?",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo1.mp3",
+					"start_time": 0.5
+				}
+			}
 		},
 		{
 			"character": "character-1720086199.json",
@@ -17,13 +24,32 @@
 			"text": "Sali al primo piano, ricordo che il graffito lo facemmo lì"
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Effetti",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Rumore.mp3",
+			"volume": 0
+		},
+		{
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_010",
 			"options": [
 
 			],
 			"portrait": "",
-			"question": "Ho sentito dei passi dalla lavanderia, Jimmy!"
+			"question": "Ho sentito dei passi dalla lavanderia, Jimmy!",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo2.mp3",
+					"start_time": 0.7
+				},
+				"1": {
+					"audio_bus": "Master",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo2.mp3"
+				}
+			}
 		},
 		{
 			"choice": "Vai subito a vedere!",
@@ -36,7 +62,14 @@
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Porca miseria, è tutto buio qua però..."
+			"text": "Porca miseria, è tutto buio qua però...",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/DialogoLavanderia1.mp3",
+					"start_time": 0.5
+				}
+			}
 		},
 		{
 			"character": "character-1720086199.json",
@@ -48,7 +81,14 @@
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Potrebbe essere stato un topo, ne ho incontrati una dozzina fin'ora..."
+			"text": "Potrebbe essere stato un topo, ne ho incontrati una dozzina fin'ora...",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/DialogoLavanderia2.mp3",
+					"start_time": 0.5
+				}
+			}
 		},
 		{
 			"character": "character-1720086199.json",
@@ -70,7 +110,14 @@
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Sono arrivato sopra, ti ricordi la stanza?"
+			"text": "Sono arrivato sopra, ti ricordi la stanza?",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo3.mp3",
+					"start_time": 0.5
+				}
+			}
 		},
 		{
 			"character": "character-1720086199.json",
@@ -82,7 +129,14 @@
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ho un'idea"
+			"text": "Ho un'idea",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo4.mp3",
+					"start_time": 1.3
+				}
+			}
 		},
 		{
 			"character": "character-1720086199.json",
@@ -94,7 +148,14 @@
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Mandagli un Trillo"
+			"text": "Mandagli un Trillo",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo5.mp3",
+					"start_time": 0.7
+				}
+			}
 		},
 		{
 			"character": "character-1720086199.json",
@@ -106,7 +167,14 @@
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Cosi capiamo in che stanza si trova"
+			"text": "Cosi capiamo in che stanza si trova",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo6.mp3",
+					"start_time": 0.7
+				}
+			}
 		},
 		{
 			"character": "character-1720086199.json",

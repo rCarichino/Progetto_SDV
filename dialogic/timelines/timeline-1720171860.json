@@ -1,0 +1,41 @@
+{
+	"events": [
+		{
+			"background": "res://immagini scelta fade-in/black screen.jpeg",
+			"event_id": "dialogic_021",
+			"fade_duration": 3
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1720104475.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": " Carlo andando prima alla reception (che trova libera) e poi agli appartamenti perde troppo tempo e purtroppo il rapitore decide di ammazzare Alessia strangolandola, perché il contatto del rapitore è passato in quel momento sotto casa di Jimmy e non ha trovato il borsone con i soldi. Il rapitore scappa e Carlo una volta arrivato agli appartamenti scopre il corpo di Alessia senza vita."
+		},
+		{
+			"choice": "Torna al menù principale",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "Rigioca",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1720171860.json",
+		"name": "finale soffocamento_2"
+	}
+}

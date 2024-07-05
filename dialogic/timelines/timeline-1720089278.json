@@ -11,7 +11,14 @@
 
 			],
 			"portrait": "",
-			"question": "Sono al teatro, ma non vedo niente"
+			"question": "Sono al teatro, e non vedo niente",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Teatro/Dialogo1.mp3",
+					"start_time": 1
+				}
+			}
 		},
 		{
 			"choice": "Controlla dietro le quinte",
@@ -27,7 +34,14 @@
 
 			],
 			"portrait": "",
-			"question": "Ho appena controllato, ma non vedo nessuno"
+			"question": "Ho appena controllato, ma non vedo nessuno",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Teatro/Dialogo2.1.mp3",
+					"start_time": 0.7
+				}
+			}
 		},
 		{
 			"choice": "Vai alla reception",
@@ -37,10 +51,22 @@
 			"value": ""
 		},
 		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 3
+		},
+		{
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Jimmy..."
+			"text": "Jimmy...",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ExtraFinali/DialogoBadEnding.mp3",
+					"start_time": 1
+				}
+			}
 		},
 		{
 			"choice": "Vai agli appartamenti",
@@ -60,10 +86,26 @@
 			"value": ""
 		},
 		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 3
+		},
+		{
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Jimmy..."
+			"text": "Jimmy...",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ExtraFinali/DialogoBadEnding.mp3",
+					"start_time": 1
+				}
+			}
+		},
+		{
+			"change_timeline": "timeline-1720171568.json",
+			"event_id": "dialogic_020"
 		},
 		{
 			"choice": "Vai agli appartamenti",
