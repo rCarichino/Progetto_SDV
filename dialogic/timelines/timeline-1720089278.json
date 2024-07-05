@@ -94,6 +94,10 @@
 			}
 		},
 		{
+			"change_timeline": "timeline-1720171568.json",
+			"event_id": "dialogic_020"
+		},
+		{
 			"choice": "Vai agli appartamenti",
 			"condition": "",
 			"definition": "",

@@ -1,12 +1,12 @@
 {
 	"events": [
 		{
-			"event_id": "dialogic_024",
-			"set_theme": "theme-1720104475.cfg"
-		},
-		{
 			"background": "res://immagini scelta fade-in/black screen.jpeg",
 			"event_id": "dialogic_021"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1720104475.cfg"
 		},
 		{
 			"character": "",
@@ -15,13 +15,7 @@
 
 			],
 			"portrait": "",
-			"question": "Il rapitore ha visto e riconosciuto Carlo arrivare dalla finestra dell’appartamento e nella rabbia ha deciso di uscire dal suo nascondiglio, sparare a Carlo con la pistola di servizio e successivamente tornare da Alessia e spararle in testa."
-		},
-		{
-			"event_id": "dialogic_023",
-			"hide_dialogbox": true,
-			"wait_seconds": 1.5,
-			"waiting_skippable": false
+			"question": "Il corpo di Alessia, la sorella di Jimmy,è stata ritrovata al Residence privo di vita da Carlo. Carlo non ha fatto in tempo ad arrivarci. Il contatto del rapitore è passato dal luogo di incontro ma non c’era il borsone con i soldi. Il rapitore ha deciso di uccidere Alessia soffocandola.\n"
 		},
 		{
 			"choice": "Rigioca",
@@ -40,7 +34,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.5.1",
-		"file": "timeline-1720104557.json",
-		"name": "finale morte Carlo"
+		"file": "timeline-1720171568.json",
+		"name": "finale soffocamento"
 	}
 }
