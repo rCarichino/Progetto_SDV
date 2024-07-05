@@ -1,0 +1,40 @@
+{
+	"events": [
+		{
+			"background": "res://immagini scelta fade-in/black screen.jpeg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1720104475.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Siete riusciti a salvare Alessia, la polizia arriverà a breve. Jimmy è sconvolto dalla scoperta che il rapitore è il suo amico d’infanzia Manuel. Alessia sta fisicamente bene ma anche lei è uscita scossa da questa situazione.  \n\n"
+		},
+		{
+			"choice": "Rigioca",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "Torna al menù principale",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1720195266.json",
+		"name": "good ending"
+	}
+}
