@@ -8,7 +8,14 @@
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Sono appena arrivato ed ho controllato, ma non vedo nessuno"
+			"text": "Sono appena arrivato ed ho controllato, ma non vedo nessuno",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Reception/Dialogo1.mp3",
+					"start_time": 0.7
+				}
+			}
 		},
 		{
 			"character": "character-1720086199.json",

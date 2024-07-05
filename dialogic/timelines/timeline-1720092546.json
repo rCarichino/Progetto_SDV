@@ -8,7 +8,13 @@
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ho sentito un trillo, mi avvicino... la porta sta aperta"
+			"text": "Ho sentito un trillo, mi avvicino... la porta sta aperta",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo7-8.mp3"
+				}
+			}
 		},
 		{
 			"character": "character-1720086199.json",
@@ -20,7 +26,13 @@
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Non ci credo.... non può essere"
+			"text": "Non ci credo.... non può essere",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo9.mp3"
+				}
+			}
 		},
 		{
 			"character": "character-1720086199.json",
@@ -32,7 +44,13 @@
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Non è per lei, è per lui... fra, è Manuel. Ho un piano forse"
+			"text": "Non è per lei, è per lui... fra, è Manuel. Ho un piano forse",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo10-11-12.mp3"
+				}
+			}
 		},
 		{
 			"event_id": "dialogic_023",
@@ -49,7 +67,13 @@
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ok, mi sa che l'ho fatto svenire, spero..."
+			"text": "Ok, mi sa che l'ho fatto svenire, spero...",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo13-14.mp3"
+				}
+			}
 		},
 		{
 			"character": "character-1720086199.json",
@@ -61,7 +85,13 @@
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Credo di si, ma perchè cazzo era Manuel?"
+			"text": "Credo di si, ma perchè cazzo era Manuel?",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo15.mp3"
+				}
+			}
 		},
 		{
 			"character": "character-1720086199.json",
@@ -73,7 +103,13 @@
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Vero, la slego e lego Manuel. Comunque sembra stare bene. Nel mentre chiama la polizia, dì di mandare subito una volante qui"
+			"text": "Vero, la slego e lego Manuel. Comunque sembra stare bene. Nel mentre chiama la polizia, dì di mandare subito una volante qui",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Master",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Appartamenti/Dialogo16-17.mp3"
+				}
+			}
 		},
 		{
 			"character": "character-1720086199.json",
