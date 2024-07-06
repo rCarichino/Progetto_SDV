@@ -1,0 +1,117 @@
+{
+	"events": [
+		{
+			"background": "res://immagini scelta fade-in/immagine desktop-photoaidcom-blur.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sono arrivato sto parcheggiando",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo1.mp3",
+					"start_time": 0.5
+				}
+			}
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Perfavore dammi buone notizie, ti prego"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Fra…. qui non c’è NIENTE",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo2.mp3",
+					"start_time": 0.5
+				}
+			}
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Cazzo… mi ha riscritto e mi ha fatto capire che il tempo scorre, dobbiamo muoverci",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "",
+					"start_time": 0
+				}
+			}
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "E dove cazzo devo andare adesso?",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo3.mp3",
+					"start_time": 0.5
+				}
+			}
+		},
+		{
+			"choice": "Vai al centro sportivo",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Va bene, corro al centro sportivo",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ExtraFinali/DialogoExtraCentroSportivo.mp3",
+					"start_time": 0.5
+				}
+			}
+		},
+		{
+			"choice": "Vai al residence",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ok corro al Residence solo che ci vorrà un po perchè sai che è distante, ti richiamo quando sono arrivato",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/Dialogo4.2.mp3",
+					"start_time": 0.5
+				}
+			}
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1720256178.json",
+		"name": "prefabbricato"
+	}
+}

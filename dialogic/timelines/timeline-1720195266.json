@@ -2,11 +2,17 @@
 	"events": [
 		{
 			"background": "res://immagini scelta fade-in/black screen.jpeg",
-			"event_id": "dialogic_021"
+			"event_id": "dialogic_021",
+			"fade_duration": 2
 		},
 		{
 			"event_id": "dialogic_024",
 			"set_theme": "theme-1720104475.cfg"
+		},
+		{
+			"block_input": true,
+			"event_id": "dialogic_050",
+			"wait_time": 0
 		},
 		{
 			"character": "",
