@@ -222,6 +222,10 @@ config/name="Trillo"
 run/main_scene="res://Desktop/Node2D.tscn"
 config/icon="res://icone/icon.png"
 
+[autoload]
+
+Colonnesonore="*res://suoni/colonne_sonore/Scena_colonne_sonore/colonnesonore.tscn"
+
 [display]
 
 window/stretch/mode="2d"
@@ -233,6 +237,13 @@ enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg", "res://addons/godot
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[importer_defaults]
+
+mp3={
+"loop": false,
+"loop_offset": 0
+}
 
 [input]
 

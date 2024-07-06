@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/msnTrilloTelefono.mp3-50d6e77508642485f5989a6230ba706a.mp3str"
+
+[deps]
+
+source_file="res://suoni/Doppiaggio/ExtraFinali/msnTrilloTelefono.mp3"
+dest_files=[ "res://.import/msnTrilloTelefono.mp3-50d6e77508642485f5989a6230ba706a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

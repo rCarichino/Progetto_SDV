@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/depressa.mp3-d1e88dccb6f5fe3d098026e8d82019f1.mp3str"
+
+[deps]
+
+source_file="res://suoni/colonne_sonore/audio_colonne_sonore/depressa.mp3"
+dest_files=[ "res://.import/depressa.mp3-d1e88dccb6f5fe3d098026e8d82019f1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/msn_sound.mp3-ef100adc06e0bab44fabd40a92ce55f8.mp3st
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

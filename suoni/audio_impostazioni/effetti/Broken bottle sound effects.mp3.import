@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Broken bottle sound effects.mp3-ac3a28b4971b5c49c30e0ddf8fd06fe6.mp3str"
+
+[deps]
+
+source_file="res://suoni/audio_impostazioni/effetti/Broken bottle sound effects.mp3"
+dest_files=[ "res://.import/Broken bottle sound effects.mp3-ac3a28b4971b5c49c30e0ddf8fd06fe6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
