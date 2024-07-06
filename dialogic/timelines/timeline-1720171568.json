@@ -9,9 +9,27 @@
 			"set_theme": "theme-1720104475.cfg"
 		},
 		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1
+		},
+		{
 			"block_input": true,
 			"event_id": "dialogic_050",
 			"wait_time": 0
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Effetti",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://suoni/52277__rettalo__choking.wav",
+			"volume": 0
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 3
 		},
 		{
 			"character": "",
@@ -20,7 +38,7 @@
 
 			],
 			"portrait": "",
-			"question": "Il corpo di Alessia, la sorella di Jimmy,è stata ritrovata al Residence privo di vita da Carlo. Carlo non ha fatto in tempo ad arrivarci. Il contatto del rapitore è passato dal luogo di incontro ma non c’era il borsone con i soldi. Il rapitore ha deciso di uccidere Alessia soffocandola.\n"
+			"question": "Il corpo di Alessia, la sorella di Jimmy,è stata ritrovato al Residence privo di vita da Carlo. Carlo non ha fatto in tempo ad arrivarci. Il contatto del rapitore è passato dal luogo di incontro ma non c’era il borsone con i soldi. Il rapitore ha deciso di uccidere Alessia soffocandola.\n"
 		},
 		{
 			"choice": "Rigioca",

@@ -2,7 +2,8 @@
 	"events": [
 		{
 			"background": "res://immagini scelta fade-in/black screen.jpeg",
-			"event_id": "dialogic_021"
+			"event_id": "dialogic_021",
+			"fade_duration": 2
 		},
 		{
 			"event_id": "dialogic_024",
