@@ -11,5 +11,5 @@ dest_files=[ "res://.import/cellphone-ringing-6475.mp3-6f68a84237982212444c701cd
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

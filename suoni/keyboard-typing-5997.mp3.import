@@ -11,5 +11,5 @@ dest_files=[ "res://.import/keyboard-typing-5997.mp3-c165fca3224657200b938cda7ed
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

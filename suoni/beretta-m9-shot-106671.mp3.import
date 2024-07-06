@@ -11,5 +11,5 @@ dest_files=[ "res://.import/beretta-m9-shot-106671.mp3-31c468d32c448a03772dcffd9
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
