@@ -9,6 +9,11 @@
 			"event_id": "dialogic_021"
 		},
 		{
+			"block_input": true,
+			"event_id": "dialogic_050",
+			"wait_time": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_010",
 			"options": [

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bottle-smash-107832.mp3-07ec17e88b9d0d5c25fc29be02aec33b.mp3str"
+
+[deps]
+
+source_file="res://suoni/Doppiaggio/ExtraFinali/bottle-smash-107832.mp3"
+dest_files=[ "res://.import/bottle-smash-107832.mp3-07ec17e88b9d0d5c25fc29be02aec33b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

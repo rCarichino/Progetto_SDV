@@ -10,6 +10,11 @@
 			"set_theme": "theme-1720104475.cfg"
 		},
 		{
+			"block_input": true,
+			"event_id": "dialogic_050",
+			"wait_time": 0
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_010",
 			"options": [

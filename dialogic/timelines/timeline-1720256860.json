@@ -1,0 +1,49 @@
+{
+	"events": [
+		{
+			"background": "res://immagini scelta fade-in/immagine desktop-photoaidcom-blur.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sono arrivato al centro sportivo, non c’è un cazzo di nessuno",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ExtraFinali/DialogoExtraCentroSportivo2.mp3",
+					"start_time": 0.5
+				}
+			}
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hai controllato dappertutto vero?"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Il posto è completamente vuoto, non sta neanche una sigaretta, corro al residence",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataPrefabbricato(finale)/Dialogo2.mp3",
+					"start_time": 0.5
+				}
+			}
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1720256860.json",
+		"name": "centro_sportivo_morte"
+	}
+}

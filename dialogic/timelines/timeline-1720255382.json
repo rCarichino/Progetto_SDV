@@ -1,0 +1,65 @@
+{
+	"events": [
+		{
+			"background": "res://immagini scelta fade-in/immagine desktop-photoaidcom-blur.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Sono a teatro e non vedo niente",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Teatro/Dialogo1.mp3",
+					"start_time": 0.5
+				}
+			}
+		},
+		{
+			"choice": "Controlla dietro le quinte",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ho appena controllato, ma non vedo nessuno",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Teatro/Dialogo2.1.mp3",
+					"start_time": 0.9
+				}
+			}
+		},
+		{
+			"character": "character-1720086199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Muoviti, vai agli appartamenti"
+		},
+		{
+			"choice": "Vai agli appartamenti",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1720255382.json",
+		"name": "teatro_post_reception"
+	}
+}

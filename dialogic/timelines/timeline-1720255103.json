@@ -1,0 +1,46 @@
+{
+	"events": [
+		{
+			"background": "res://immagini scelta fade-in/immagine desktop-photoaidcom-blur.jpg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"character": "character-1720083110.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Sono appena arrivato ed ho controllato, ma non vedo nessuno",
+			"voice_data": {
+				"0": {
+					"audio_bus": "Dialoghi",
+					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Reception/Dialogo1.mp3",
+					"start_time": 0.5
+				}
+			}
+		},
+		{
+			"choice": "Vai al teatro",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "Vai agli appartamenti",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1720255103.json",
+		"name": "reception_first"
+	}
+}
