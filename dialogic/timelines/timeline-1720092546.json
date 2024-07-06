@@ -5,6 +5,29 @@
 			"event_id": "dialogic_021"
 		},
 		{
+			"block_input": true,
+			"event_id": "dialogic_050",
+			"wait_time": 0
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 2
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Effetti",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://suoni/suoni in wav/msnTrilloTelefono.wav",
+			"volume": -20
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 2
+		},
+		{
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -61,10 +84,23 @@
 			"wait_seconds": 5
 		},
 		{
+			"audio": "play",
+			"audio_bus": "Effetti",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://suoni/suoni in wav/bottle-smash-107832.wav",
+			"volume": 0
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 2
+		},
+		{
 			"character": "character-1720086199.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "CARLO?!"
+			"text": "Carlo?!!"
 		},
 		{
 			"character": "character-1720083110.json",
@@ -78,6 +114,11 @@
 					"start_time": 0.8
 				}
 			}
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 1
 		},
 		{
 			"character": "character-1720086199.json",
@@ -97,6 +138,11 @@
 					"start_time": 0.8
 				}
 			}
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 1
 		},
 		{
 			"character": "character-1720086199.json",
@@ -122,6 +168,10 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Ti prego, fammi parlare con Alessia, ho bisogno di sentire la sua voce..."
+		},
+		{
+			"change_timeline": "timeline-1720195266.json",
+			"event_id": "dialogic_020"
 		}
 	],
 	"metadata": {

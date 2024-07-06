@@ -13,7 +13,7 @@
 				"0": {
 					"audio_bus": "Dialoghi",
 					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Reception/Dialogo1.mp3",
-					"start_time": 0.7
+					"start_time": 0.6
 				}
 			}
 		},
@@ -22,15 +22,11 @@
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "Vai agli appartamenti"
-		},
-		{
-			"event_id": "dialogic_022",
-			"transition_duration": 1
 		}
 	],
 	"metadata": {
 		"dialogic-version": "1.5.1",
-		"file": "timeline-1720089628.json",
-		"name": "reception_negativo"
+		"file": "timeline-1720258414.json",
+		"name": "reception_positivo"
 	}
 }
