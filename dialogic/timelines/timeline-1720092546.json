@@ -116,6 +116,11 @@
 			}
 		},
 		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 1
+		},
+		{
 			"character": "character-1720086199.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
@@ -133,6 +138,11 @@
 					"start_time": 0.8
 				}
 			}
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": false,
+			"wait_seconds": 1
 		},
 		{
 			"character": "character-1720086199.json",
