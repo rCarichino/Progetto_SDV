@@ -5,6 +5,24 @@
 			"event_id": "dialogic_021"
 		},
 		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 1
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Effetti",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://suoni/suoni in wav/cellphone-ringing-6475.wav",
+			"volume": -30
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 7
+		},
+		{
 			"character": "character-1720083110.json",
 			"event_id": "dialogic_010",
 			"options": [
