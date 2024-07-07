@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Cartella_Appunti/Button.gd" type="Script" id=1]
 [ext_resource path="res://Cartella_Appunti/Immagini/line_icon_126358.png" type="Texture" id=2]
@@ -8,6 +8,16 @@
 [ext_resource path="res://background.jpg" type="Texture" id=6]
 [ext_resource path="res://Cartella_Appunti/Immagini/txt_5583.png" type="Texture" id=7]
 [ext_resource path="res://menuiniziale/arial_narrow_7.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Cartella_Appunti/Jimmy.gd" type="Script" id=9]
+[ext_resource path="res://Cartella_Appunti/Alessia.gd" type="Script" id=10]
+[ext_resource path="res://Cartella_Appunti/1 Anno Dopo.gd" type="Script" id=11]
+[ext_resource path="res://Cartella_Appunti/Nostalgia.gd" type="Script" id=12]
+[ext_resource path="res://Cartella_Appunti/Realizzazione.gd" type="Script" id=13]
+[ext_resource path="res://Cartella_Appunti/ATTO 1.gd" type="Script" id=14]
+[ext_resource path="res://Cartella_Appunti/ATTO 2.gd" type="Script" id=15]
+[ext_resource path="res://Cartella_Appunti/Prologo.gd" type="Script" id=16]
+[ext_resource path="res://Cartella_Appunti/ATTO 3.gd" type="Script" id=17]
+[ext_resource path="res://Cartella_Appunti/Epilogo.gd" type="Script" id=18]
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.94902, 0.905882, 0.835294, 1 )
@@ -160,15 +170,16 @@ scale = Vector2( 0.104492, 0.098633 )
 texture = ExtResource( 5 )
 
 [node name="Jimmy" type="TextureButton" parent="."]
-margin_left = 10.0
+margin_left = 5.0
 margin_top = 100.0
-margin_right = 107.0
+margin_right = 102.0
 margin_bottom = 199.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 7 )
 expand = true
+script = ExtResource( 9 )
 
 [node name="Label" type="Label" parent="Jimmy"]
 modulate = Color( 0, 0, 0, 1 )
@@ -178,21 +189,22 @@ margin_top = 99.0
 margin_right = 85.0
 margin_bottom = 113.0
 custom_fonts/font = SubResource( 12 )
-text = "Background
+text = "Vita
 Jimmy"
 align = 1
 valign = 1
 
 [node name="Alessia" type="TextureButton" parent="."]
-margin_left = 106.0
+margin_left = 105.0
 margin_top = 100.0
-margin_right = 203.0
+margin_right = 202.0
 margin_bottom = 199.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 7 )
 expand = true
+script = ExtResource( 10 )
 
 [node name="Label" type="Label" parent="Alessia"]
 modulate = Color( 0, 0, 0, 1 )
@@ -202,21 +214,22 @@ margin_top = 99.0
 margin_right = 85.0
 margin_bottom = 113.0
 custom_fonts/font = SubResource( 13 )
-text = "Background
+text = "Vita
 Alessia"
 align = 1
 valign = 1
 
 [node name="1 Anno Dopo" type="TextureButton" parent="."]
-margin_left = 201.0
+margin_left = 205.0
 margin_top = 100.0
-margin_right = 298.0
+margin_right = 302.0
 margin_bottom = 199.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 7 )
 expand = true
+script = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="1 Anno Dopo"]
 modulate = Color( 0, 0, 0, 1 )
@@ -232,15 +245,16 @@ align = 1
 valign = 1
 
 [node name="Nostalgia" type="TextureButton" parent="."]
-margin_left = 296.0
+margin_left = 305.0
 margin_top = 100.0
-margin_right = 393.0
+margin_right = 402.0
 margin_bottom = 199.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 7 )
 expand = true
+script = ExtResource( 12 )
 
 [node name="Label" type="Label" parent="Nostalgia"]
 modulate = Color( 0, 0, 0, 1 )
@@ -256,15 +270,16 @@ align = 1
 valign = 1
 
 [node name="Realizzazione" type="TextureButton" parent="."]
-margin_left = 391.0
+margin_left = 405.0
 margin_top = 100.0
-margin_right = 488.0
+margin_right = 502.0
 margin_bottom = 199.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 7 )
 expand = true
+script = ExtResource( 13 )
 
 [node name="Label" type="Label" parent="Realizzazione"]
 modulate = Color( 0, 0, 0, 1 )
@@ -278,16 +293,113 @@ text = "Realizzazione"
 align = 1
 valign = 1
 
-[node name="Epilogo" type="TextureButton" parent="."]
-margin_left = 487.0
+[node name="Prologo" type="TextureButton" parent="."]
+margin_left = 505.0
 margin_top = 100.0
-margin_right = 584.0
+margin_right = 602.0
 margin_bottom = 199.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 7 )
 texture_hover = ExtResource( 7 )
 expand = true
+script = ExtResource( 16 )
+
+[node name="Label" type="Label" parent="Prologo"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 6.0
+margin_top = 99.0
+margin_right = 93.0
+margin_bottom = 113.0
+custom_fonts/font = SubResource( 17 )
+text = "Prologo"
+align = 1
+valign = 1
+
+[node name="ATTO 1" type="TextureButton" parent="."]
+margin_left = 605.0
+margin_top = 100.0
+margin_right = 702.0
+margin_bottom = 199.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+expand = true
+script = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="ATTO 1"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 6.0
+margin_top = 99.0
+margin_right = 93.0
+margin_bottom = 113.0
+custom_fonts/font = SubResource( 17 )
+text = "ATTO 1"
+align = 1
+valign = 1
+
+[node name="ATTO 2" type="TextureButton" parent="."]
+margin_left = 705.0
+margin_top = 100.0
+margin_right = 802.0
+margin_bottom = 199.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+expand = true
+script = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="ATTO 2"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 6.0
+margin_top = 99.0
+margin_right = 93.0
+margin_bottom = 113.0
+custom_fonts/font = SubResource( 17 )
+text = "ATTO 2"
+align = 1
+valign = 1
+
+[node name="ATTO 3" type="TextureButton" parent="."]
+margin_left = 805.0
+margin_top = 100.0
+margin_right = 902.0
+margin_bottom = 199.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+expand = true
+script = ExtResource( 17 )
+
+[node name="Label" type="Label" parent="ATTO 3"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 6.0
+margin_top = 99.0
+margin_right = 93.0
+margin_bottom = 113.0
+custom_fonts/font = SubResource( 17 )
+text = "ATTO 3"
+align = 1
+valign = 1
+
+[node name="Epilogo" type="TextureButton" parent="."]
+margin_left = 905.0
+margin_top = 100.0
+margin_right = 1002.0
+margin_bottom = 199.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 7 )
+expand = true
+script = ExtResource( 18 )
 
 [node name="Label" type="Label" parent="Epilogo"]
 modulate = Color( 0, 0, 0, 1 )
@@ -302,3 +414,13 @@ align = 1
 valign = 1
 
 [connection signal="pressed" from="Titolo/DesktopButton" to="Titolo/DesktopButton" method="_on_Button_pressed"]
+[connection signal="pressed" from="Jimmy" to="Jimmy" method="_on_Jimmy_pressed"]
+[connection signal="pressed" from="Alessia" to="Alessia" method="_on_Alessia_pressed"]
+[connection signal="pressed" from="1 Anno Dopo" to="1 Anno Dopo" method="_on_1_Anno_Dopo_pressed"]
+[connection signal="pressed" from="Nostalgia" to="Nostalgia" method="_on_Nostalgia_pressed"]
+[connection signal="pressed" from="Realizzazione" to="Realizzazione" method="_on_Realizzazione_pressed"]
+[connection signal="pressed" from="Prologo" to="Prologo" method="_on_Prologo_pressed"]
+[connection signal="pressed" from="ATTO 1" to="ATTO 1" method="_on_ATTO_1_pressed"]
+[connection signal="pressed" from="ATTO 2" to="ATTO 2" method="_on_ATTO_2_pressed"]
+[connection signal="pressed" from="ATTO 3" to="ATTO 3" method="_on_ATTO_3_pressed"]
+[connection signal="pressed" from="Epilogo" to="Epilogo" method="_on_Epilogo_pressed"]
