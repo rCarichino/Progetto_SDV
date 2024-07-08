@@ -10,9 +10,9 @@
 [ext_resource path="res://menuiniziale/impostazionimenu/stili_che_giuseppe_non_ha_messo/focus.tres" type="StyleBox" id=8]
 [ext_resource path="res://menuiniziale/impostazionimenu/stili_che_giuseppe_non_ha_messo/normal.tres" type="StyleBox" id=9]
 [ext_resource path="res://Opzioni/impostazioni.gd" type="Script" id=10]
-[ext_resource path="res://Opzioni/HSlidercs.gd" type="Script" id=12]
-[ext_resource path="res://Opzioni/HSlidereffetti.gd" type="Script" id=13]
-[ext_resource path="res://Opzioni/HSliderdialoghi.gd" type="Script" id=14]
+[ext_resource path="res://suoni/SliderAudio/ColonnaSonoraSlider.tscn" type="PackedScene" id=11]
+[ext_resource path="res://suoni/SliderAudio/Effettislider.tscn" type="PackedScene" id=12]
+[ext_resource path="res://suoni/SliderAudio/DialoghiSlider.tscn" type="PackedScene" id=13]
 
 [sub_resource type="DynamicFont" id=10]
 font_data = ExtResource( 4 )
@@ -72,10 +72,10 @@ __meta__ = {
 }
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-margin_left = 287.0
-margin_top = 96.0
-margin_right = 746.0
-margin_bottom = 290.0
+margin_left = 284.0
+margin_top = 273.0
+margin_right = 743.0
+margin_bottom = 467.0
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -88,9 +88,9 @@ size_flags_vertical = 3
 columns = 2
 
 [node name="Diplay" type="Label" parent="MarginContainer/GridContainer"]
-margin_top = 15.0
+margin_top = 89.0
 margin_right = 228.0
-margin_bottom = 31.0
+margin_bottom = 105.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -99,9 +99,9 @@ text = "Modalità display"
 
 [node name="OptionButton" type="OptionButton" parent="MarginContainer/GridContainer"]
 margin_left = 232.0
-margin_top = 13.0
+margin_top = 87.0
 margin_right = 459.0
-margin_bottom = 33.0
+margin_bottom = 107.0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -109,77 +109,62 @@ align = 1
 icon_align = 1
 script = ExtResource( 3 )
 
-[node name="AudioDialoghi" type="Label" parent="MarginContainer/GridContainer"]
-margin_top = 65.0
-margin_right = 228.0
-margin_bottom = 81.0
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+margin_left = 287.0
+margin_top = 96.0
+margin_right = 746.0
+margin_bottom = 290.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer2"]
+margin_right = 459.0
+margin_bottom = 194.0
+
+[node name="AudioDialoghi" type="Label" parent="MarginContainer2/GridContainer"]
+margin_top = 23.0
+margin_right = 92.0
+margin_bottom = 39.0
 size_flags_vertical = 6
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "Audio dialoghi"
 
-[node name="HSliderdialoghi" type="HSlider" parent="MarginContainer/GridContainer"]
+[node name="HSliderDialoghi" parent="MarginContainer2/GridContainer/AudioDialoghi" instance=ExtResource( 13 )]
 margin_left = 232.0
-margin_top = 65.0
 margin_right = 459.0
-margin_bottom = 81.0
-mouse_default_cursor_shape = 2
-size_flags_vertical = 6
-max_value = 1.0
-step = 0.05
-value = 0.5
-tick_count = 20
-script = ExtResource( 14 )
+margin_bottom = 1.0
 
-[node name="Audioeffetti" type="Label" parent="MarginContainer/GridContainer"]
-margin_top = 114.0
-margin_right = 228.0
-margin_bottom = 130.0
+[node name="Audioeffetti" type="Label" parent="MarginContainer2/GridContainer"]
+margin_top = 89.0
+margin_right = 92.0
+margin_bottom = 105.0
 size_flags_vertical = 6
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "Audio effetti"
 
-[node name="HSlidereffetti" type="HSlider" parent="MarginContainer/GridContainer"]
+[node name="HSlidersfx" parent="MarginContainer2/GridContainer/Audioeffetti" instance=ExtResource( 12 )]
 margin_left = 232.0
-margin_top = 114.0
 margin_right = 459.0
-margin_bottom = 130.0
-mouse_default_cursor_shape = 2
-size_flags_vertical = 6
-max_value = 1.0
-step = 0.05
-value = 0.5
-tick_count = 20
-script = ExtResource( 13 )
+margin_bottom = 2.0
 
-[node name="Audiocs" type="Label" parent="MarginContainer/GridContainer"]
-margin_top = 163.0
-margin_right = 228.0
-margin_bottom = 179.0
+[node name="Audiocs" type="Label" parent="MarginContainer2/GridContainer"]
+margin_top = 155.0
+margin_right = 92.0
+margin_bottom = 171.0
 size_flags_vertical = 6
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "Audio musica"
 
-[node name="HSlidercs" type="HSlider" parent="MarginContainer/GridContainer"]
-margin_left = 232.0
-margin_top = 163.0
-margin_right = 459.0
-margin_bottom = 179.0
-mouse_default_cursor_shape = 2
-size_flags_vertical = 6
-max_value = 1.0
-step = 0.05
-value = 0.1
-tick_count = 20
-ticks_on_borders = true
-script = ExtResource( 12 )
+[node name="HSlidercs" parent="MarginContainer2/GridContainer/Audiocs" instance=ExtResource( 11 )]
+margin_left = 230.0
+margin_right = 458.0
+value = 0.2
 
-[connection signal="pressed" from="Titolo/baubau" to="Titolo/baubau" method="_on_baubau_pressed"]
 [connection signal="pressed" from="Titolo/baubau" to="Titolo/baubau" method="_on_DesktopButton_pressed"]
+[connection signal="pressed" from="Titolo/baubau" to="Titolo/baubau" method="_on_baubau_pressed"]
 [connection signal="item_selected" from="MarginContainer/GridContainer/OptionButton" to="MarginContainer/GridContainer/OptionButton" method="_on_OptionButton_item_selected"]
 [connection signal="pressed" from="MarginContainer/GridContainer/OptionButton" to="MarginContainer/GridContainer/OptionButton" method="_on_OptionButton_pressed"]
-[connection signal="value_changed" from="MarginContainer/GridContainer/HSliderdialoghi" to="MarginContainer/GridContainer/HSliderdialoghi" method="_on_HSliderdialoghi_value_changed"]
-[connection signal="value_changed" from="MarginContainer/GridContainer/HSlidereffetti" to="MarginContainer/GridContainer/HSlidereffetti" method="_on_HSlidereffetti_value_changed"]
-[connection signal="value_changed" from="MarginContainer/GridContainer/HSlidercs" to="MarginContainer/GridContainer/HSlidercs" method="_on_HSlidercs_value_changed"]

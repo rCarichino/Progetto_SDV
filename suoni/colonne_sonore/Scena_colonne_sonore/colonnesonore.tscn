@@ -4,5 +4,6 @@
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 stream = ExtResource( 1 )
+volume_db = -12.235
 autoplay = true
 bus = "Colonna_Sonora"
