@@ -17,3 +17,4 @@ func _ready():
 
 func _on_menuButton_pressed():
 	get_tree().change_scene("res://menuiniziale/menu/menuiniziale.tscn")
+	pass

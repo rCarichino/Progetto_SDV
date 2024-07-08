@@ -29,6 +29,7 @@
 [ext_resource path="res://Desktop/msnpush.png" type="Texture" id=27]
 [ext_resource path="res://Desktop/Controlpushmsn.gd" type="Script" id=28]
 [ext_resource path="res://Desktop/diariopush.png" type="Texture" id=29]
+[ext_resource path="res://Desktop/Messanger.gd" type="Script" id=30]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 26 )
@@ -40,9 +41,6 @@ font_data = ExtResource( 26 )
 font_data = ExtResource( 26 )
 
 [sub_resource type="DynamicFont" id=4]
-font_data = ExtResource( 26 )
-
-[sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 26 )
 
 [sub_resource type="DynamicFont" id=6]
@@ -94,7 +92,8 @@ self_modulate = Color( 0, 0, 0, 1 )
 margin_left = 21.0
 margin_top = 113.0
 margin_right = 105.0
-margin_bottom = 127.0
+margin_bottom = 129.0
+rect_pivot_offset = Vector2( -567, 87 )
 custom_fonts/font = SubResource( 1 )
 text = "Impostazioni"
 
@@ -163,31 +162,6 @@ margin_right = 118.0
 margin_bottom = 140.0
 custom_fonts/font = SubResource( 4 )
 text = "Browser"
-
-[node name="Messenger" type="TextureButton" parent="Control"]
-margin_left = 36.0
-margin_top = 9.0
-margin_right = 178.0
-margin_bottom = 130.0
-mouse_default_cursor_shape = 2
-texture_normal = ExtResource( 7 )
-texture_pressed = ExtResource( 7 )
-texture_hover = ExtResource( 7 )
-expand = true
-script = ExtResource( 17 )
-
-[node name="MessengerLabel" type="Label" parent="Control/Messenger"]
-modulate = Color( 0, 0, 0, 1 )
-self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 30.0
-margin_top = 125.0
-margin_right = 104.0
-margin_bottom = 145.0
-custom_fonts/font = SubResource( 5 )
-text = "Messenger
-"
-autowrap = true
-clip_text = true
 
 [node name="cestino" type="TextureButton" parent="Control"]
 margin_left = 878.0
@@ -432,6 +406,26 @@ margin_right = 19.0
 margin_bottom = 84.0
 flat = true
 
+[node name="Messanger" type="TextureButton" parent="Control"]
+margin_left = 21.0
+margin_top = 22.0
+margin_right = 145.0
+margin_bottom = 121.0
+texture_normal = ExtResource( 7 )
+expand = true
+script = ExtResource( 30 )
+
+[node name="MessangerLabel" type="Label" parent="Control/Messanger"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 32.0
+margin_top = 103.0
+margin_right = 116.0
+margin_bottom = 119.0
+rect_pivot_offset = Vector2( -567, 87 )
+custom_fonts/font = SubResource( 1 )
+text = "Messanger"
+
 [connection signal="mouse_entered" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_mouse_entered"]
 [connection signal="mouse_exited" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_mouse_exited"]
 [connection signal="pressed" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_pressed"]
@@ -444,9 +438,6 @@ flat = true
 [connection signal="mouse_entered" from="Control/Browser" to="Control/Browser" method="_on_impostazioni_mouse_entered"]
 [connection signal="mouse_exited" from="Control/Browser" to="Control/Browser" method="_on_impostazioni_mouse_exited"]
 [connection signal="pressed" from="Control/Browser" to="Control/Browser" method="_on_impostazioni_pressed"]
-[connection signal="mouse_entered" from="Control/Messenger" to="Control/Messenger" method="_on_impostazioni_mouse_entered"]
-[connection signal="mouse_exited" from="Control/Messenger" to="Control/Messenger" method="_on_impostazioni_mouse_exited"]
-[connection signal="pressed" from="Control/Messenger" to="Control/Messenger" method="_on_impostazioni_pressed"]
 [connection signal="mouse_entered" from="Control/cestino" to="Control/cestino" method="_on_impostazioni_mouse_entered"]
 [connection signal="mouse_exited" from="Control/cestino" to="Control/cestino" method="_on_impostazioni_mouse_exited"]
 [connection signal="pressed" from="Control/cestino" to="Control/cestino" method="_on_impostazioni_pressed"]
@@ -476,3 +467,4 @@ flat = true
 [connection signal="pressed" from="Control/Controlpushdiario/chiudipushdiario" to="Control/Controlpushdiario" method="_on_chiudipushdiario_pressed"]
 [connection signal="pressed" from="Control/Controlpushdiario/chiudipushdiario/rimandopushdiario" to="Control/Controlpushdiario" method="_on_rimandopushdiario_pressed"]
 [connection signal="pressed" from="Control/Controlpushdiario/chiudipushdiario/rimandopushdiario2" to="Control/Controlpushdiario" method="_on_rimandopushdiario2_pressed"]
+[connection signal="pressed" from="Control/Messanger" to="Control/Messanger" method="_on_Messanger_pressed"]
