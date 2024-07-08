@@ -16,6 +16,6 @@ func _ready():
 #	pass
 
 
-func _on_ESCI_pressed():
+func _on_NUOVAP_pressed():
 	$"../../../../selezione".play()
-	get_tree().quit()
+

@@ -10,9 +10,9 @@
 [ext_resource path="res://menuiniziale/arial_narrow_7.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Opzioni/OptionButton.gd" type="Script" id=9]
 [ext_resource path="res://menuiniziale/impostazionimenu/menuimpostazioni.gd" type="Script" id=10]
-[ext_resource path="res://Opzioni/HSlidercs.gd" type="Script" id=11]
-[ext_resource path="res://Opzioni/HSlidereffetti.gd" type="Script" id=12]
-[ext_resource path="res://Opzioni/HSliderdialoghi.gd" type="Script" id=13]
+[ext_resource path="res://suoni/SliderAudio/Effettislider.tscn" type="PackedScene" id=11]
+[ext_resource path="res://suoni/SliderAudio/DialoghiSlider.tscn" type="PackedScene" id=12]
+[ext_resource path="res://suoni/SliderAudio/ColonnaSonoraSlider.tscn" type="PackedScene" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 8 )
@@ -58,6 +58,44 @@ custom_styles/normal = ExtResource( 6 )
 text = "X"
 script = ExtResource( 7 )
 
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = 284.0
+margin_top = 273.0
+margin_right = 743.0
+margin_bottom = 467.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+margin_right = 459.0
+margin_bottom = 194.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 2
+
+[node name="Diplay" type="Label" parent="MarginContainer/GridContainer"]
+margin_top = 89.0
+margin_right = 228.0
+margin_bottom = 105.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Modalità display"
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/GridContainer"]
+margin_left = 232.0
+margin_top = 87.0
+margin_right = 459.0
+margin_bottom = 107.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+align = 1
+icon_align = 1
+script = ExtResource( 9 )
+
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 margin_left = 287.0
 margin_top = 96.0
@@ -70,102 +108,49 @@ __meta__ = {
 [node name="GridContainer" type="GridContainer" parent="MarginContainer2"]
 margin_right = 459.0
 margin_bottom = 194.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-columns = 2
-
-[node name="Diplay" type="Label" parent="MarginContainer2/GridContainer"]
-margin_top = 15.0
-margin_right = 228.0
-margin_bottom = 31.0
-size_flags_horizontal = 3
-size_flags_vertical = 6
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "Modalità display"
-
-[node name="OptionButton" type="OptionButton" parent="MarginContainer2/GridContainer"]
-margin_left = 232.0
-margin_top = 13.0
-margin_right = 459.0
-margin_bottom = 33.0
-mouse_default_cursor_shape = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-align = 1
-icon_align = 1
-script = ExtResource( 9 )
 
 [node name="AudioDialoghi" type="Label" parent="MarginContainer2/GridContainer"]
-margin_top = 65.0
-margin_right = 228.0
-margin_bottom = 81.0
+margin_top = 23.0
+margin_right = 92.0
+margin_bottom = 39.0
 size_flags_vertical = 6
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Audio dialoghi"
 
-[node name="HSliderdialoghi" type="HSlider" parent="MarginContainer2/GridContainer"]
+[node name="HSliderDialoghi" parent="MarginContainer2/GridContainer/AudioDialoghi" instance=ExtResource( 12 )]
 margin_left = 232.0
-margin_top = 65.0
 margin_right = 459.0
-margin_bottom = 81.0
-mouse_default_cursor_shape = 2
-size_flags_vertical = 6
-max_value = 1.0
-step = 0.05
-value = 0.5
-tick_count = 20
-script = ExtResource( 13 )
+margin_bottom = 1.0
 
 [node name="Audioeffetti" type="Label" parent="MarginContainer2/GridContainer"]
-margin_top = 114.0
-margin_right = 228.0
-margin_bottom = 130.0
+margin_top = 89.0
+margin_right = 92.0
+margin_bottom = 105.0
 size_flags_vertical = 6
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Audio effetti"
 
-[node name="HSlidereffetti" type="HSlider" parent="MarginContainer2/GridContainer"]
+[node name="HSlidersfx" parent="MarginContainer2/GridContainer/Audioeffetti" instance=ExtResource( 11 )]
 margin_left = 232.0
-margin_top = 114.0
 margin_right = 459.0
-margin_bottom = 130.0
-mouse_default_cursor_shape = 2
-size_flags_vertical = 6
-max_value = 1.0
-step = 0.05
-value = 0.5
-tick_count = 20
-script = ExtResource( 12 )
+margin_bottom = 2.0
 
 [node name="Audiocs" type="Label" parent="MarginContainer2/GridContainer"]
-margin_top = 163.0
-margin_right = 228.0
-margin_bottom = 179.0
+margin_top = 155.0
+margin_right = 92.0
+margin_bottom = 171.0
 size_flags_vertical = 6
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Audio musica"
 
-[node name="HSlidercs" type="HSlider" parent="MarginContainer2/GridContainer"]
-margin_left = 232.0
-margin_top = 163.0
-margin_right = 459.0
-margin_bottom = 179.0
-mouse_default_cursor_shape = 2
-size_flags_vertical = 6
-max_value = 1.0
-step = 0.05
-value = 0.1
-tick_count = 20
-ticks_on_borders = true
-script = ExtResource( 11 )
+[node name="HSlidercs" parent="MarginContainer2/GridContainer/Audiocs" instance=ExtResource( 13 )]
+margin_left = 230.0
+margin_right = 458.0
+value = 0.2
 
 [connection signal="pressed" from="titolo/menuButton" to="titolo/menuButton" method="_on_menuButton_pressed"]
-[connection signal="item_selected" from="MarginContainer2/GridContainer/OptionButton" to="MarginContainer2/GridContainer/OptionButton" method="_on_OptionButton_item_selected"]
-[connection signal="pressed" from="MarginContainer2/GridContainer/OptionButton" to="MarginContainer2/GridContainer/OptionButton" method="_on_OptionButton_pressed"]
-[connection signal="value_changed" from="MarginContainer2/GridContainer/HSliderdialoghi" to="MarginContainer2/GridContainer/HSliderdialoghi" method="_on_HSliderdialoghi_value_changed"]
-[connection signal="value_changed" from="MarginContainer2/GridContainer/HSlidereffetti" to="MarginContainer2/GridContainer/HSlidereffetti" method="_on_HSlidereffetti_value_changed"]
-[connection signal="value_changed" from="MarginContainer2/GridContainer/HSlidercs" to="MarginContainer2/GridContainer/HSlidercs" method="_on_HSlidercs_value_changed"]
+[connection signal="item_selected" from="MarginContainer/GridContainer/OptionButton" to="MarginContainer/GridContainer/OptionButton" method="_on_OptionButton_item_selected"]
+[connection signal="pressed" from="MarginContainer/GridContainer/OptionButton" to="MarginContainer/GridContainer/OptionButton" method="_on_OptionButton_pressed"]
