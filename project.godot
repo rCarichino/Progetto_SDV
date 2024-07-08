@@ -224,9 +224,7 @@ config/icon="res://icone/icon.png"
 
 [autoload]
 
-Colonnesonore="*res://suoni/colonne_sonore/Scena_colonne_sonore/colonnesonore.tscn"
-Impostazioni="*res://Opzioni/impostazioni.tscn"
-Menuimpostazioni="*res://menuiniziale/impostazionimenu/menuimpostazioni.tscn"
+Global="*res://Global.gd"
 
 [display]
 

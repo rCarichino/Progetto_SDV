@@ -47,10 +47,10 @@ align = 1
 valign = 1
 
 [node name="menuButton" type="Button" parent="titolo"]
-margin_left = 952.0
-margin_top = 3.0
-margin_right = 1013.0
-margin_bottom = 55.0
+margin_left = 964.0
+margin_top = 2.0
+margin_right = 1025.0
+margin_bottom = 54.0
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 2 )
 custom_styles/focus = ExtResource( 5 )
