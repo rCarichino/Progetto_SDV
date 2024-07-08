@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://bubbleInvio/Speech.gd" type="Script" id=1]
+[ext_resource path="res://icone/SpeachBubbleBoarder.png" type="Texture" id=2]
+
+[node name="Speech" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_bottom = 14.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer/Label"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -16.0
+margin_top = -4.0
+margin_right = 20.0
+margin_bottom = 3.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource( 2 )
+patch_margin_left = 18
+patch_margin_top = 11
+patch_margin_right = 18
+patch_margin_bottom = 10
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
