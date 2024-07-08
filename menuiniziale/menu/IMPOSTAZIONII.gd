@@ -17,4 +17,5 @@ func _ready():
 
 
 func _on_IMPOSTAZIONI_pressed():
+	$"../../../../selezione".play()
 	get_tree().change_scene("res://menuiniziale/impostazionimenu/menuimpostazioni.tscn")

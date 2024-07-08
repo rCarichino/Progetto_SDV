@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://menuiniziale/menu/pure-black-background-wcs86b1g1awsprv8.jpg" type="Texture" id=1]
 [ext_resource path="res://menuiniziale/menu/IMPOSTAZIONII.gd" type="Script" id=2]
 [ext_resource path="res://menuiniziale/menu/ESCI.gd" type="Script" id=3]
 [ext_resource path="res://menuiniziale/arial_narrow_7.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://addons/bitmap_font_importer/arial_narrow_7.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://menuiniziale/menu/CARICA.gd" type="Script" id=6]
+[ext_resource path="res://menuiniziale/menu/NUOVAP.gd" type="Script" id=7]
+[ext_resource path="res://suoni/Select Button Sound Effect.mp3" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 81
@@ -113,6 +116,7 @@ size_flags_horizontal = 3
 custom_fonts/font = SubResource( 2 )
 text = "NUOVA PARTITA"
 flat = true
+script = ExtResource( 7 )
 
 [node name="separator5" type="Control" parent="menu/MarginContainer/HBoxContainer/VBoxContainer"]
 margin_top = 292.0
@@ -128,6 +132,7 @@ size_flags_horizontal = 3
 custom_fonts/font = SubResource( 2 )
 text = "CARICA PARTITA"
 flat = true
+script = ExtResource( 6 )
 
 [node name="separator6" type="Control" parent="menu/MarginContainer/HBoxContainer/VBoxContainer"]
 margin_top = 375.0
@@ -161,5 +166,12 @@ text = "ESCI"
 flat = true
 script = ExtResource( 3 )
 
+[node name="selezione" type="AudioStreamPlayer2D" parent="menu"]
+stream = ExtResource( 8 )
+volume_db = 17.362
+bus = "Effetti"
+
+[connection signal="pressed" from="menu/MarginContainer/HBoxContainer/VBoxContainer/NUOVAP" to="menu/MarginContainer/HBoxContainer/VBoxContainer/NUOVAP" method="_on_NUOVAP_pressed"]
+[connection signal="pressed" from="menu/MarginContainer/HBoxContainer/VBoxContainer/CARICA" to="menu/MarginContainer/HBoxContainer/VBoxContainer/CARICA" method="_on_CARICA_pressed"]
 [connection signal="pressed" from="menu/MarginContainer/HBoxContainer/VBoxContainer/IMPOSTAZIONI" to="menu/MarginContainer/HBoxContainer/VBoxContainer/IMPOSTAZIONI" method="_on_IMPOSTAZIONI_pressed"]
 [connection signal="pressed" from="menu/MarginContainer/HBoxContainer/VBoxContainer/ESCI" to="menu/MarginContainer/HBoxContainer/VBoxContainer/ESCI" method="_on_ESCI_pressed"]
