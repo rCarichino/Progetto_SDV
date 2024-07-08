@@ -23,6 +23,9 @@ func double_click_detect():
 #	pass
 
 
-func _on_impostazioni_pressed():
+
+
+func _on_Messanger_pressed():
 	if double_click_detect():
-		get_tree().change_scene("res://Opzioni/impostazioni.tscn")
+		get_tree().change_scene("res://ChatIniziale/messanger.tscn")
+
