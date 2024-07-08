@@ -225,7 +225,9 @@ config/icon="res://icone/icon.png"
 [autoload]
 
 Global="*res://Global.gd"
+
 Colonnesonore="*res://suoni/colonne_sonore/Scena_colonne_sonore/colonnesonore.tscn"
+
 
 [display]
 
