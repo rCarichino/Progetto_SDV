@@ -27,3 +27,6 @@ var answerCarlo = [
 	"nn ero io, cmq ora stacco e vado a mangiare"
 ]
 
+var global_volumeCS: float = 0.4
+var global_volumesfx: float = 0.4
+var global_volumedialoghi: float = 0.4
