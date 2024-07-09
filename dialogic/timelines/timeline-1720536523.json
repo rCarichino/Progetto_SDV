@@ -5,31 +5,31 @@
 			"event_id": "dialogic_021"
 		},
 		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1720104475.cfg"
+		},
+		{
 			"block_input": true,
 			"event_id": "dialogic_050",
 			"wait_time": 0
 		},
 		{
-			"character": "",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "",
-			"voice_data": {
-				"0": {
-					"audio_bus": "Effetti",
-					"file": "res://suoni/suoni in wav/chiamata in entrata.wav",
-					"stop_time": 10
-				}
-			}
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 2
 		},
 		{
-			"event_id": "dialogic_024",
-			"set_theme": "theme-1720104475.cfg"
+			"audio": "play",
+			"audio_bus": "Effetti",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://suoni/suoni in wav/beretta-m9-shot-106671.wav",
+			"volume": 0
 		},
 		{
 			"event_id": "dialogic_023",
 			"hide_dialogbox": true,
-			"wait_seconds": 3
+			"wait_seconds": 2
 		},
 		{
 			"character": "",
@@ -38,7 +38,7 @@
 
 			],
 			"portrait": "",
-			"question": "Jimmy chiama la polizia, ma il rapitore sente la comunicazione arrivare sulla sua radio, in quanto è un poliziotto. Accorgendosi di questo, decide di uccidere Alessia"
+			"question": "Il rapitore è rimasto troppo tempo senza ricevere risposta da Jimmy\nFrustrato dal mancato rispetto degli accordi, decide di uccidere Alessia con un colpo di pistola in testa."
 		},
 		{
 			"choice": "Rigioca",
@@ -57,7 +57,7 @@
 	],
 	"metadata": {
 		"dialogic-version": "1.5.1",
-		"file": "timeline-1720172318.json",
-		"name": "finale polizia"
+		"file": "timeline-1720536523.json",
+		"name": "finale_ignora_rapitore"
 	}
 }
