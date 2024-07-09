@@ -1,0 +1,63 @@
+{
+	"events": [
+		{
+			"background": "res://immagini scelta fade-in/black screen.jpeg",
+			"event_id": "dialogic_021"
+		},
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1720104475.cfg"
+		},
+		{
+			"block_input": true,
+			"event_id": "dialogic_050",
+			"wait_time": 0
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 2
+		},
+		{
+			"audio": "play",
+			"audio_bus": "Effetti",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://suoni/suoni in wav/beretta-m9-shot-106671.wav",
+			"volume": 0
+		},
+		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 2
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Jimmy non ha a disposizione i soldi che il rapitore chiede.\n Ignorando Carlo e non potendosi muovere dalla sua stanza, non scopre il luogo del rapimento. \nAll'arrivo dell'ora del riscatto, i soldi non sono al punto di incontro, il che porta il rapitore ad uccidere Alessia"
+		},
+		{
+			"choice": "Rigioca",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "Torna al menù principale",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1720536500.json",
+		"name": "finale_ignora_Carlo"
+	}
+}
