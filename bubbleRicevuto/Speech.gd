@@ -27,7 +27,7 @@ func _on_Timer_timeout():
 		lbltext.text = current_text
 		
 		if(bubble_text_index < bubble_text_length -1):
-			timer.start(0.04)
+			timer.start(0.001)
 			bubble_text_index += 1
 		else:
 			if(!do_close):
