@@ -15,6 +15,11 @@
 			"wait_time": 0
 		},
 		{
+			"event_id": "dialogic_023",
+			"hide_dialogbox": true,
+			"wait_seconds": 3
+		},
+		{
 			"character": "",
 			"event_id": "dialogic_010",
 			"options": [

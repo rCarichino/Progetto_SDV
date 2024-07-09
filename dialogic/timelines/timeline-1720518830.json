@@ -1,0 +1,25 @@
+{
+	"events": [
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Sono appena arrivato ed ho controllato, ma non vedo nessuno"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Vai agli appartamenti"
+		},
+		{
+			"change_timeline": "timeline-1720104557.json",
+			"event_id": "dialogic_020"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.5.1",
+		"file": "timeline-1720518830.json",
+		"name": "reception_morte"
+	}
+}

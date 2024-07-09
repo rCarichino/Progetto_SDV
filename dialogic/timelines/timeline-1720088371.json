@@ -55,6 +55,10 @@
 			}
 		},
 		{
+			"change_timeline": "timeline-1720171568.json",
+			"event_id": "dialogic_020"
+		},
+		{
 			"event_id": "dialogic_022",
 			"transition_duration": 1
 		}

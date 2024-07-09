@@ -87,11 +87,19 @@
 			}
 		},
 		{
+			"change_timeline": "timeline-1720171860.json",
+			"event_id": "dialogic_020"
+		},
+		{
 			"choice": "Vai agli appartamenti",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"change_timeline": "timeline-1720104557.json",
+			"event_id": "dialogic_020"
 		},
 		{
 			"event_id": "dialogic_013"
@@ -132,7 +140,7 @@
 			}
 		},
 		{
-			"change_timeline": "timeline-1720171568.json",
+			"change_timeline": "timeline-1720171860.json",
 			"event_id": "dialogic_020"
 		},
 		{
@@ -141,6 +149,10 @@
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"change_timeline": "timeline-1720104557.json",
+			"event_id": "dialogic_020"
 		},
 		{
 			"event_id": "dialogic_013"
@@ -153,6 +165,6 @@
 	"metadata": {
 		"dialogic-version": "1.5.1",
 		"file": "timeline-1720089278.json",
-		"name": "2.2.1_teatro_first"
+		"name": "teatro_first"
 	}
 }

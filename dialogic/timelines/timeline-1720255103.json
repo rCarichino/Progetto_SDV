@@ -46,11 +46,19 @@
 			"value": ""
 		},
 		{
+			"change_timeline": "timeline-1720171860.json",
+			"event_id": "dialogic_020"
+		},
+		{
 			"choice": "Vai agli appartamenti",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"change_timeline": "timeline-1720104557.json",
+			"event_id": "dialogic_020"
 		},
 		{
 			"event_id": "dialogic_013"
