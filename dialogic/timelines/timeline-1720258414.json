@@ -24,22 +24,33 @@
 		},
 		{
 			"character": "character-1720083110.json",
-			"event_id": "dialogic_001",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
 			"portrait": "",
-			"text": "Sono appena arrivato ed ho controllato, ma non vedo nessuno",
-			"voice_data": {
-				"0": {
-					"audio_bus": "Dialoghi",
-					"file": "res://suoni/Doppiaggio/ChiamataCentroSportivo/ChiamataResidence(finale)/Reception/Dialogo1.mp3",
-					"start_time": 0.6
-				}
-			}
+			"question": "Sono appena arrivato ed ho controlalto, ma non vedo nessuno"
 		},
 		{
-			"character": "character-1720086199.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "Vai agli appartamenti"
+			"choice": "Vai al teatro",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"choice": "Vai agli appartamenti",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {
