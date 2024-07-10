@@ -119,3 +119,52 @@ var chat_jimmy_to_rapitore_atto1 = [
 var global_volumeCS: float = 0.4
 var global_volumesfx: float = 0.4
 var global_volumedialoghi: float = 0.4
+
+# Salva i dati globali su un file JSON
+func save_global_data():
+	var save_data = {
+		"fine_prologo": fine_prologo,
+		"fine_atto1": fine_atto1,
+		"fine_atto2": fine_atto2,
+		"fine_gioco": fine_gioco,
+		"chat_messages_carlo": chat_messages_carlo,
+		"chat_messages_rapitore": chat_messages_rapitore,
+		"global_volumeCS": global_volumeCS,
+		"global_volumesfx": global_volumesfx,
+		"global_volumedialoghi": global_volumedialoghi
+	}
+	var file = File.new()
+	file.open("res://salvataggi/salvataggi_impostazioni/global_data.json", File.WRITE)
+	file.store_string(JSON.print(save_data))
+	print("Salvataggio effettuato")
+	file.close()
+# Carica i dati globali da un gile JSON
+func load_global_data():
+	var file = File.new()
+	if file.file_exists("res://salvataggi/salvataggi_impostazioni/global_data.json"):
+		print("cristo")
+		file.open("res://salvataggi/salvataggi_impostazioni/global_data.json", File.READ)
+		var data = JSON.parse(file.get_as_text())
+		print(data.error)
+		file.close()
+		if data.error == OK:
+			var save_data = data.result
+			fine_prologo = save_data.get("fine_prologo", false)
+			fine_atto1 = save_data.get("fine_atto1", false)
+			fine_atto2 = save_data.get("fine_atto2", false)
+			fine_gioco = save_data.get("fine_gioco", false)
+			chat_messages_carlo = save_data.get("chat_messages_carlo", [])
+			chat_messages_rapitore = save_data.get("chat_messages_rapitore", [])
+			global_volumeCS = save_data.get("global_volumeCS", 0.4)
+			global_volumesfx = save_data.get("global_volumesfx", 0.4)
+			global_volumedialoghi = save_data.get("global_volumedialoghi", 0.4)
+			print(data.result)
+			print(fine_prologo)
+			print(fine_atto1)
+			print(fine_atto2)
+			print(fine_gioco)
+			print(chat_messages_carlo)
+			print(chat_messages_rapitore)
+			print(global_volumeCS)
+			print(global_volumesfx)
+			print(global_volumedialoghi)
