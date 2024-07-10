@@ -21,9 +21,16 @@ func seleziona_chiamata(stato):
 			add_child(second_dialog)
 			second_dialog.connect("timeline_end", self, 'after_chiamata2')
 			second_dialog.connect("dialogic_signal",self, 'signal_chiamata2')
-			
+		
+		#scelta residence come primo luogo da visitare	
 		elif(stato == 3):
-			pass
+			Global.residence_as_first = true
+			var third_dialog = Dialogic.start('Scelta2_Residence')
+			add_child(third_dialog)
+			third_dialog.connect("timeline_end", self, 'Scelta2_Residence')
+			third_dialog.connect("dialogic_signal",self, 'signal_residence')
+		
+			
 		
 		#scelta centro sportivo come primo posto da visitare
 		elif(stato == 4):
@@ -93,10 +100,9 @@ func seleziona_chiamata(stato):
 			print("alessia morta")
 			#nessun signal perche comprende la morte
 			
-	
-			
 			# DA FARE: implementazione percorso del Residence come prima scelta
-			#(in quel caso non si muore andando a teatro o reception prima)
+			#   - implementare le timeline di teatro appartamenti e reception senza morte (pp. 19-26)
+			#	- nelle funzione signal_residence inserire i reindirizzamenti mancanti
 			
 			
 
@@ -148,15 +154,29 @@ func signal_centrosportivo (arg):
 
 #sei al residence dopo il centro, in base alla scelta vai a teatro, app, o rece
 func signal_residence(arg):
-	if arg == 'residence_teatro':
-		print("va nel teatro del residence")
-		Global.stato_chiamata = 7
-	if arg == 'residence_reception':
-		print("va nella reception del residence")
-		Global.stato_chiamata = 8
-	if arg == 'residence_appartamenti':
-		print("va negli appartamenti del residence")
-		Global.stato_chiamata = 9
+	if(Global.residence_as_first == true):
+		print("hai scelto residence per primo")
+		if arg == 'residence_teatro':
+			print("va nel teatro del residence")
+			# CAMBIARE STATO CHIAMATA
+		if arg == 'residence_reception':
+			print("va nella reception del residence")
+			# CAMBIARE STATO CHIAMATA
+		if arg == 'residence_appartamenti':
+			print("va negli appartamenti del residence")
+			# CAMBIARE STATO CHIAMATA
+
+		
+	else:
+		if arg == 'residence_teatro':
+			print("va nel teatro del residence")
+			Global.stato_chiamata = 7
+		if arg == 'residence_reception':
+			print("va nella reception del residence")
+			Global.stato_chiamata = 8
+		if arg == 'residence_appartamenti':
+			print("va negli appartamenti del residence")
+			Global.stato_chiamata = 9
 
 
 
