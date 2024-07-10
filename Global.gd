@@ -1,5 +1,9 @@
 extends Node
 
+var chat_completed = true
+
+var stato_chiamata = 1
+
 var unknown_unloked = false
 
 var chat_messages = []
