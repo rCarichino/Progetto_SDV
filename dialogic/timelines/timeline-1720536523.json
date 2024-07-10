@@ -53,6 +53,13 @@
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {
