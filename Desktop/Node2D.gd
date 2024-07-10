@@ -1,9 +1,10 @@
 extends Node2D
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-
+		print(Global.stato_chiamata)
 		if(Global.chat_completed == true):
 			seleziona_chiamata(Global.stato_chiamata)
 	
@@ -120,13 +121,13 @@ func after_chiamata2(chiamata2):
 func signal_chiamata2(argument):
 		if(argument == 'residence'):
 			print("ha scelto residence")
-			#Global.stato_chiamata = 3
+			Global.stato_chiamata = 3
 		if(argument == 'centrosportivo'):
 			print("ha scelto centrosportivo")
 			Global.stato_chiamata = 4
 		if(argument == 'prefabbricato'):
 			print("ha scelto prefabbricato")
-		Global.stato_chiamata = 11
+			Global.stato_chiamata = 11
 
 
 
