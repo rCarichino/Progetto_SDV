@@ -1,5 +1,16 @@
 extends Node
 
+
+#servono alla gestione dei dialoghi fade in
+var chat_completed = false		#se vero, puo far partire la chiamata col numero corrente
+
+var stato_chiamata = 1			#indica quale timeline di chiamata attivare
+
+var residence_as_first = false	#se si è scelto il residence come prima opzione, allora è vera
+
+
+var unknown_unloked = false
+
 var fine_prologo = true #SAVE
 
 var fine_atto1 = false #SAVE
