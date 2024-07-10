@@ -294,6 +294,7 @@ align = 1
 valign = 1
 
 [node name="Prologo" type="TextureButton" parent="."]
+visible = false
 margin_left = 505.0
 margin_top = 100.0
 margin_right = 602.0
@@ -318,6 +319,7 @@ align = 1
 valign = 1
 
 [node name="ATTO 1" type="TextureButton" parent="."]
+visible = false
 margin_left = 605.0
 margin_top = 100.0
 margin_right = 702.0
@@ -342,6 +344,7 @@ align = 1
 valign = 1
 
 [node name="ATTO 2" type="TextureButton" parent="."]
+visible = false
 margin_left = 705.0
 margin_top = 100.0
 margin_right = 802.0
@@ -366,6 +369,7 @@ align = 1
 valign = 1
 
 [node name="ATTO 3" type="TextureButton" parent="."]
+visible = false
 margin_left = 805.0
 margin_top = 100.0
 margin_right = 902.0
@@ -390,6 +394,7 @@ align = 1
 valign = 1
 
 [node name="Epilogo" type="TextureButton" parent="."]
+visible = false
 margin_left = 905.0
 margin_top = 100.0
 margin_right = 1002.0
