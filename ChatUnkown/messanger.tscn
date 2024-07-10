@@ -4,13 +4,13 @@
 [ext_resource path="res://icone/imgAlessia64.png" type="Texture" id=2]
 [ext_resource path="res://ChatIniziale/ItemList.gd" type="Script" id=3]
 [ext_resource path="res://icone/imgCarlo64.png" type="Texture" id=4]
-[ext_resource path="res://icone/imgCarlo.png" type="Texture" id=5]
+[ext_resource path="res://icone/imgRapitore.png" type="Texture" id=5]
 [ext_resource path="res://ChatIniziale/ChatListContainer.gd" type="Script" id=6]
 [ext_resource path="res://icone/bell-alert-outline-icon.png" type="Texture" id=7]
 [ext_resource path="res://icone/Mobile-Phone-1-icon.png" type="Texture" id=8]
 [ext_resource path="res://icone/msn-messenger-logo-1A0536E047-seeklogo.com.png" type="Texture" id=9]
 [ext_resource path="res://ChatAlessia/Button.gd" type="Script" id=10]
-[ext_resource path="res://ChatCarlo/ControlMessanger.gd" type="Script" id=11]
+[ext_resource path="res://ChatUnkown/ControlMessanger.gd" type="Script" id=11]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0862745, 0.129412, 0.788235, 1 )
@@ -164,14 +164,14 @@ margin_right = 156.0
 margin_bottom = 115.0
 alignment = 1
 
-[node name="ImgCarlo" type="TextureRect" parent="ControlMessanger/HBoxContainer/InfoBox/InfoHBox/InfoVBox"]
+[node name="ImgRapitore" type="TextureRect" parent="ControlMessanger/HBoxContainer/InfoBox/InfoHBox/InfoVBox"]
 light_mask = 0
 margin_right = 96.0
 margin_bottom = 96.0
 theme = SubResource( 6 )
 texture = ExtResource( 5 )
 
-[node name="ColorRect" type="ColorRect" parent="ControlMessanger/HBoxContainer/InfoBox/InfoHBox/InfoVBox/ImgCarlo"]
+[node name="ColorRect" type="ColorRect" parent="ControlMessanger/HBoxContainer/InfoBox/InfoHBox/InfoVBox/ImgRapitore"]
 show_behind_parent = true
 margin_left = -1.0
 margin_top = -1.0
@@ -179,14 +179,14 @@ margin_right = 97.0
 margin_bottom = 97.0
 color = Color( 0, 0, 0, 1 )
 
-[node name="NicknameCarlo" type="RichTextLabel" parent="ControlMessanger/HBoxContainer/InfoBox/InfoHBox/InfoVBox"]
+[node name="NicknameRapitore" type="RichTextLabel" parent="ControlMessanger/HBoxContainer/InfoBox/InfoHBox/InfoVBox"]
 margin_top = 100.0
 margin_right = 96.0
 margin_bottom = 115.0
 bbcode_enabled = true
-bbcode_text = "[color=black]CcCc"
+bbcode_text = "[color=black]User_454234"
 tab_size = 7
-text = "CcCc"
+text = "User_454234"
 fit_content_height = true
 
 [node name="sfondo" type="Sprite" parent="ControlMessanger"]
