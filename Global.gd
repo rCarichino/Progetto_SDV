@@ -8,9 +8,15 @@ var fine_atto2 = false #SAVE
 
 var fine_gioco = false #SAVE
 
+<<<<<<< Updated upstream
 var foto1 = false
 
 var foto2 = false
+=======
+var setnotifica = false #serve a gestire l'arrivo dei messaggi
+
+var setnotificaDiario = false #serve per gestire la notifica del diario
+>>>>>>> Stashed changes
 
 var chat_messages_carlo = [] #SAVE
 
