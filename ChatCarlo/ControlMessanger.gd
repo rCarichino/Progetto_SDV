@@ -211,6 +211,8 @@ func check_where_stopped():
 func load_answer(question):
 	print(question)
 	match question:
+		"Ehy Jimmy, cm va? ma l’hai comprato\n alla fine il nuovo CoD":
+			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[0]])
 		"Sì anche io, prime impressioni?":
 			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[1],Global.chat_jimmy_to_carlo_prologo[2]])
 		"A me sta piacendo un sacco","K fai?":

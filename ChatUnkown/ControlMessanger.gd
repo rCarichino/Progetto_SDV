@@ -21,7 +21,8 @@ func _ready():
 	else:
 		load_messages()
 		check_where_stopped()
-		
+
+
 func scroll_to_bottom():
 	scroll_container.scroll_vertical = scroll_container.get_v_scrollbar().max_value
 
@@ -216,6 +217,8 @@ func check_where_stopped():
 func load_answer(question):
 	print(question)
 	match question:
+		"Ciao Jimmy, come sta Alessia?":
+			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[0]])
 		"Beh, effettivamente come potresti saperlo! É qui con me":
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[1],Global.chat_jimmy_to_rapitore_atto1[2]])
 		"Pensi che ti stia prendendo per il culo?":
