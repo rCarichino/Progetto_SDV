@@ -9,6 +9,8 @@ var of = Vector2(0,0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if (Global.fine_gioco == true):
+		self.show()
 	connect("pressed",self,"on_pressed")
 	connect("double_click",self, "on_double_click")
 
