@@ -68,7 +68,7 @@ func seleziona_chiamata(stato):
 
 		#reception del residence
 		elif (stato == 8):
-			var eighth_dialog = Dialogic.start('reception_morte')
+			var eighth_dialog = Dialogic.start('reception_first')
 			add_child(eighth_dialog)
 			Global.residence_as_first = false
 			print("alessia morta")

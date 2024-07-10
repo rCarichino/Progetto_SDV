@@ -80,7 +80,7 @@
 			"value": ""
 		},
 		{
-			"emit_signal": "reception_to_appartamenti",
+			"emit_signal": "teatro_to_appartamenti",
 			"event_id": "dialogic_040"
 		},
 		{
@@ -105,7 +105,7 @@
 			"value": ""
 		},
 		{
-			"emit_signal": "reception_to_appartamenti",
+			"emit_signal": "teatro_to_appartamenti",
 			"event_id": "dialogic_040"
 		},
 		{
