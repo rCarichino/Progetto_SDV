@@ -9,6 +9,7 @@ func _ready():
 	
 	
 func seleziona_chiamata(stato):
+	
 		if(stato == 1):
 			var new_dialog = Dialogic.start('chiamata1')
 			add_child(new_dialog)
@@ -23,6 +24,7 @@ func seleziona_chiamata(stato):
 		elif(stato == 3):
 			pass
 		
+		#scelta centro sportivo come primo posto da visitare
 		elif(stato == 4):
 			var fourth_dialog = Dialogic.start('Scelta3_CentroSportivo')
 			add_child(fourth_dialog)
@@ -38,7 +40,7 @@ func seleziona_chiamata(stato):
 			
 			
 		
-		#scelta residence successiva alla visita del centro sportivo
+		#scelta residence successiva alla visita del centro sportivo o prefabbricato
 		elif(stato == 6):
 			var sixth_dialog = Dialogic.start('Scelta2_Residence')
 			add_child(sixth_dialog)
@@ -76,9 +78,24 @@ func seleziona_chiamata(stato):
 			add_child(tenth_dialog)
 			print("seconda parte appartamenti, Alessia salvata!")
 			
+		
+		#scelta del prefabbricato come primo luogo da visitare
+		elif(stato == 11):
+			var dialog_11 = Dialogic.start('prefabbricato_2')
+			add_child(dialog_11)
+			dialog_11.connect("dialogic_signal",self, 'signal_prefabbricato')
 			
+		#scelta del centro sportivo dopo esser andato al prefabbricato
+		elif(stato == 12):
+			var dialog_12 = Dialogic.start('centro_sportivo_morte')
+			add_child(dialog_12)
+			print("alessia morta")
+			#nessun signal perche comprende la morte
 			
+	
 			
+			# DA FARE: implementazione percorso del Residence come prima scelta
+			#(in quel caso non si muore andando a teatro o reception prima)
 			
 			
 
@@ -94,19 +111,26 @@ func after_chiamata1(chiamata1):
 
 func after_chiamata2(chiamata2):
 		print("fine chiamata numero 2")
+
+
+
 		
 
 # in base alla decisione presa in chiamata 2, la terza chiamata puo avere 3 opzioni diverse		
 func signal_chiamata2(argument):
 		if(argument == 'residence'):
 			print("ha scelto residence")
-			Global.stato_chiamata = 3
+			#Global.stato_chiamata = 3
 		if(argument == 'centrosportivo'):
 			print("ha scelto centrosportivo")
 			Global.stato_chiamata = 4
 		if(argument == 'prefabbricato'):
 			print("ha scelto prefabbricato")
-		##	Global.stato_chiamata = 5
+		Global.stato_chiamata = 11
+
+
+
+
 
 
 #sei al centro sportivo, in base alla scelta vai a prefabbricato o a residence			
@@ -117,6 +141,9 @@ func signal_centrosportivo (arg):
 	elif arg =='centro_to_residence':
 		print("va da centro sportivo a residence")
 		Global.stato_chiamata = 6
+
+
+
 
 #sei al residence dopo il centro, in base alla scelta vai a teatro, app, o rece
 func signal_residence(arg):
@@ -130,6 +157,17 @@ func signal_residence(arg):
 		print("va negli appartamenti del residence")
 		Global.stato_chiamata = 9
 
+
+
+#sei al prefabbricato come primo luogo, in base alla scelta vai a residence o centro sportivo
+func signal_prefabbricato(arg):
+		if arg == 'prefabbricato_to_residence':
+			print("va da prefabbricato a residence")
+			Global.stato_chiamata = 6
+		if arg == 'prefabbricato_to_centrosportivo':
+			print("va da prefabbricato a centro sportivo")
+			Global.stato_chiamata = 12
+			
 func _on_door_mouse_exited():
 	pass # Replace with function body.
 
