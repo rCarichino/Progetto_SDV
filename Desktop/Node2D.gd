@@ -43,6 +43,7 @@ func seleziona_chiamata(stato):
 		elif(stato == 5):
 			var fifth_dialog = Dialogic.start('Scelta1_Prefabbricato')
 			add_child(fifth_dialog)
+			Global.residence_as_first = false
 			print("tempo scaduto, alessia morta")
 			# nessuna funzione signal perche comprende la morte
 			
@@ -60,6 +61,7 @@ func seleziona_chiamata(stato):
 		elif(stato == 7):
 			var seventh_dialog = Dialogic.start('teatro_first')
 			add_child(seventh_dialog)
+			Global.residence_as_first = false
 			print("alessia morta")
 			#nessuna funzione signal perche comprende la morte
 			
@@ -68,6 +70,7 @@ func seleziona_chiamata(stato):
 		elif (stato == 8):
 			var eighth_dialog = Dialogic.start('reception_morte')
 			add_child(eighth_dialog)
+			Global.residence_as_first = false
 			print("alessia morta")
 			
 
@@ -97,15 +100,37 @@ func seleziona_chiamata(stato):
 		elif(stato == 12):
 			var dialog_12 = Dialogic.start('centro_sportivo_morte')
 			add_child(dialog_12)
+			Global.residence_as_first = false
 			print("alessia morta")
 			#nessun signal perche comprende la morte
 			
-			# DA FARE: implementazione percorso del Residence come prima scelta
-			#   - implementare le timeline di teatro appartamenti e reception senza morte (pp. 19-26)
-			#	- nelle funzione signal_residence inserire i reindirizzamenti mancanti
+		
+		
+		#scelta teatro del residence, se si è scelto il residence per primo	
+		elif(stato == 13):
+			var dialog_13 = Dialogic.start('teatro_positivo')
+			add_child(dialog_13)
+			dialog_13.connect("dialogic_signal",self, 'signal_teatropositivo')
 			
+		#scelta reception, se si arriva da teatro e si è scelto residence per primo	
+		elif(stato == 14):
+			var dialog_14 = Dialogic.start('reception_1')
+			add_child(dialog_14)
+			Global.stato_chiamata = 9 #perchè puoi andare solo agli appartamenti
+		
+		#scelta reception del residence, se si è scelto il residence per primo	
+		elif(stato == 15):
+			var dialog_15 = Dialogic.start('reception_positivo')
+			add_child(dialog_15)
+			dialog_15.connect("dialogic_signal",self, 'signal_receptionpositivo')
 			
-
+		#scelto teatro del residence, se si è stati prima alla reception e si è scelto residence x primo
+		elif(stato == 16):
+			var dialog_16 = Dialogic.start('teatro_post_reception')
+			add_child(dialog_16)
+			Global.stato_chiamata = 9 #perchè puoi andare solo agli appartamenti
+		
+			
 
 	
 
@@ -152,19 +177,19 @@ func signal_centrosportivo (arg):
 
 
 
-#sei al residence dopo il centro, in base alla scelta vai a teatro, app, o rece
+#sei al residence dopo il centro, in base alla scelta vai a teatro, app, o reception
 func signal_residence(arg):
 	if(Global.residence_as_first == true):
 		print("hai scelto residence per primo")
 		if arg == 'residence_teatro':
 			print("va nel teatro del residence")
-			# CAMBIARE STATO CHIAMATA
+			Global.stato_chiamata = 13
 		if arg == 'residence_reception':
 			print("va nella reception del residence")
-			# CAMBIARE STATO CHIAMATA
+			Global.stato_chiamata = 15
 		if arg == 'residence_appartamenti':
 			print("va negli appartamenti del residence")
-			# CAMBIARE STATO CHIAMATA
+			Global.stato_chiamata = 9
 
 		
 	else:
@@ -188,6 +213,30 @@ func signal_prefabbricato(arg):
 		if arg == 'prefabbricato_to_centrosportivo':
 			print("va da prefabbricato a centro sportivo")
 			Global.stato_chiamata = 12
+			
+
+
+
+
+#sei al residence come primo luogo e sei andato a teatro, puoi andare a reception o appartamenti			
+func signal_teatropositivo(arg):
+		if arg == 'teatro_to_reception':
+			Global.stato_chiamata = 14
+		if arg == 'teatro_to_appartamenti':
+			Global.stato_chiamata = 9
+
+
+
+
+#sei al residence come primo luogo e sei andato in reception, puoi andare a teatro o appartamenti			
+func signal_receptionpositivo(arg):
+		if arg == 'reception_to_teatro':
+			Global.stato_chiamata = 16
+		if arg == 'reception_to_appartamenti':
+			Global.stato_chiamata = 9
+			
+
+
 			
 func _on_door_mouse_exited():
 	pass # Replace with function body.

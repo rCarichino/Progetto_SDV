@@ -46,11 +46,19 @@
 			"value": ""
 		},
 		{
+			"emit_signal": "reception_to_teatro",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "Vai agli appartamenti",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"emit_signal": "reception_to_appartamenti",
+			"event_id": "dialogic_040"
 		},
 		{
 			"event_id": "dialogic_013"
