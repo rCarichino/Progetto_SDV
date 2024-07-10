@@ -29,19 +29,52 @@ func seleziona_chiamata(stato):
 			fourth_dialog.connect("dialogic_signal",self, 'signal_centrosportivo')
 			
 		
-		##scelta prefabbricato successiva alla visita del centro sportivo
+		#scelta prefabbricato successiva alla visita del centro sportivo
 		elif(stato == 5):
 			var fifth_dialog = Dialogic.start('Scelta1_Prefabbricato')
 			add_child(fifth_dialog)
 			print("tempo scaduto, alessia morta")
 			# nessuna funzione signal perche comprende la morte
+			
+			
 		
-		##scelta residence successiva alla visita del centro sportivo
+		#scelta residence successiva alla visita del centro sportivo
 		elif(stato == 6):
 			var sixth_dialog = Dialogic.start('Scelta2_Residence')
 			add_child(sixth_dialog)
 			sixth_dialog.connect("dialogic_signal",self, 'signal_residence')
 			
+			
+		
+		#teatro del residence	
+		elif(stato == 7):
+			var seventh_dialog = Dialogic.start('teatro_first')
+			add_child(seventh_dialog)
+			print("alessia morta")
+			#nessuna funzione signal perche comprende la morte
+			
+
+		#reception del residence
+		elif (stato == 8):
+			var eighth_dialog = Dialogic.start('reception_morte')
+			add_child(eighth_dialog)
+			print("alessia morta")
+			
+
+		#appartamenti del residence inizio
+		elif (stato == 9):
+			var ninth_dialog = Dialogic.start('appartamenti_inizio')
+			add_child(ninth_dialog)
+			print("prima parte appartamenti...")
+			#da togliere, in realta si passa alla seconda parte solo dopo che vai su MSN e mandi il trillo!
+			Global.stato_chiamata = 10 
+			
+		
+		#appartamenti del residence fine
+		elif(stato == 10):
+			var tenth_dialog = Dialogic.start('appartamenti_fine')
+			add_child(tenth_dialog)
+			print("seconda parte appartamenti, Alessia salvata!")
 			
 			
 			
@@ -89,10 +122,13 @@ func signal_centrosportivo (arg):
 func signal_residence(arg):
 	if arg == 'residence_teatro':
 		print("va nel teatro del residence")
+		Global.stato_chiamata = 7
 	if arg == 'residence_reception':
 		print("va nella reception del residence")
+		Global.stato_chiamata = 8
 	if arg == 'residence_appartamenti':
 		print("va negli appartamenti del residence")
+		Global.stato_chiamata = 9
 
 func _on_door_mouse_exited():
 	pass # Replace with function body.

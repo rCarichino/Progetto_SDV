@@ -104,6 +104,10 @@
 			}
 		},
 		{
+			"emit_signal": "prefabbricato_to_centrosportivo",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "Vai al Residence",
 			"condition": "",
 			"definition": "",
@@ -122,6 +126,10 @@
 					"start_time": 0.5
 				}
 			}
+		},
+		{
+			"emit_signal": "prefabbricato_to_residence",
+			"event_id": "dialogic_040"
 		},
 		{
 			"event_id": "dialogic_013"
