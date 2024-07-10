@@ -10,6 +10,11 @@ onready var message_container = $HBoxContainer/ChatContainer/ScrollContainer/VBo
 
 
 func _ready():
+	
+	if(Global.fine_prologo == true):
+		$HBoxContainer/ChatListContainer/ItemList.add_item("User_454234",preload("res://icone/imgRapitore64.png"))
+	
+	
 	create_spacer()
 	
 	if(Global.chat_messages_carlo == []):
@@ -102,23 +107,23 @@ func create_phrase_buttons(phrases):
 		
   # Imposta lo stile del bottone
 		var style_normal = StyleBoxFlat.new()
-		style_normal.bg_color = Color(0, 0, 0, 0)  # Trasparente
+		style_normal.bg_color = Color(0, 0, 0, 0) 
 		
 		var style_hover = StyleBoxFlat.new()
-		style_hover.bg_color = Color(0, 0, 0, 0)  # Trasparente
+		style_hover.bg_color = Color(0, 0, 0, 0)  
 		
 		var style_pressed = StyleBoxFlat.new()
-		style_pressed.bg_color = Color(0, 0, 0, 0)  # Trasparente
-		
+		style_pressed.bg_color = Color(0, 0, 0, 0)  
+
 		var style_focus = StyleBoxEmpty.new()
 		
 		button.add_stylebox_override("normal", style_normal)
 		button.add_stylebox_override("hover", style_hover)
 		button.add_stylebox_override("pressed", style_pressed)
 		button.add_stylebox_override("focus", style_focus)
-		button.add_color_override("font_color", Color.black)  # Font nero
-		button.add_color_override("font_color_hover", Color.black)  # Font nero
-		button.add_color_override("font_color_pressed", Color.black)  # Font nero
+		button.add_color_override("font_color", Color.black)  
+		button.add_color_override("font_color_hover", Color.black)  
+		button.add_color_override("font_color_pressed", Color.black) 
 		button.connect("pressed", self, "_on_phrase_button_pressed", [button,phrase])
 		vbox.add_child(button)
 
@@ -143,31 +148,33 @@ func disable_all_buttons():
 func give_answer(question):
 	match question:
 		"Ehy Carlo!, tt bn!! Sì, l’ho comprato, tu?":
-			yield(get_tree().create_timer(5),"timeout")
+			yield(get_tree().create_timer(2),"timeout")
 			add_received_message(Global.chat_carlo_to_jimmy_prologo[1])
 			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[1],Global.chat_jimmy_to_carlo_prologo[2]])
 		"Mi sta piacendo un sacco","Mi sa che lo riporto in negozio":
-			yield(get_tree().create_timer(5),"timeout")
+			yield(get_tree().create_timer(2),"timeout")
 			add_received_message(Global.chat_carlo_to_jimmy_prologo[2])
-			yield(get_tree().create_timer(5),"timeout")
+			yield(get_tree().create_timer(2),"timeout")
 			add_received_message(Global.chat_carlo_to_jimmy_prologo[3])
 			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[3],Global.chat_jimmy_to_carlo_prologo[4]])
 		"Ho finito adesso a lavoro, tu?","nnt, tu?":
-			yield(get_tree().create_timer(5),"timeout")
+			yield(get_tree().create_timer(2),"timeout")
 			add_received_message(Global.chat_carlo_to_jimmy_prologo[4])
-			yield(get_tree().create_timer(5),"timeout")
+			yield(get_tree().create_timer(2),"timeout")
 			add_received_message(Global.chat_carlo_to_jimmy_prologo[5])
 			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[5],Global.chat_jimmy_to_carlo_prologo[6],Global.chat_jimmy_to_carlo_prologo[7]])
 		"Me lo dovresti dire tu! so che sei uscito cn lei l’altra sera? xD",\
 		"Si è vista cn un ragazzo l’altro giorno, dovresti dirmelo tu? xD",\
 		"Secondo me la vedi + tu k io xD":
-			yield(get_tree().create_timer(5),"timeout")
+			yield(get_tree().create_timer(2),"timeout")
 			add_received_message(Global.chat_carlo_to_jimmy_prologo[6])
-			yield(get_tree().create_timer(5),"timeout")
+			yield(get_tree().create_timer(2),"timeout")
 			add_received_message(Global.chat_carlo_to_jimmy_prologo[7])
 			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[8]])
 		"AH kk":
 			Global.modify_fine_prologo()
+			if(Global.fine_prologo == true):
+				$HBoxContainer/ChatListContainer/ItemList.add_item("User_454234",preload("res://icone/imgRapitore64.png"))
 			#DA METTERE IL SALVATAGGIO
 		
 
@@ -195,13 +202,17 @@ func check_where_stopped():
 	if(Global.chat_messages_carlo[length-1].type == "received"):
 		question = Global.chat_messages_carlo[length-1].text
 		load_answer(question)
-
+	elif(Global.chat_messages_carlo[length-1].type == "sent"):
+		question = Global.chat_messages_carlo[length-1].text
+		give_answer(question)
 
 
 
 func load_answer(question):
 	print(question)
 	match question:
+		"Ehy Jimmy, cm va? ma l’hai comprato\n alla fine il nuovo CoD":
+			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[0]])
 		"Sì anche io, prime impressioni?":
 			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[1],Global.chat_jimmy_to_carlo_prologo[2]])
 		"A me sta piacendo un sacco","K fai?":

@@ -1,12 +1,16 @@
 extends Node
 
-var fine_prologo = false #SAVE
+var fine_prologo = true #SAVE
 
 var fine_atto1 = false #SAVE
 
 var fine_atto2 = false #SAVE
 
 var fine_gioco = false #SAVE
+
+var foto1 = false
+
+var foto2 = false
 
 var chat_messages_carlo = [] #SAVE
 
@@ -25,28 +29,41 @@ func get_messages_rapitore():
 	return chat_messages_rapitore
 
 func modify_fine_prologo():
-	fine_prologo = !fine_prologo
+	fine_prologo = true
 
 func get_fine_prologo():
 	return fine_prologo
 
 func modify_fine_atto1():
-	fine_atto1 = !fine_atto1
+	fine_atto1 = true
 
 func get_fine_atto1():
 	return fine_atto1
 
 func modify_fine_atto2():
-	fine_atto2 = !fine_atto2
+	fine_atto2 = true
 
 func get_fine_atto2():
 	return fine_atto2
 
 func modify_fine_gioco():
-	fine_gioco = !fine_gioco
+	fine_gioco = true
 
 func get_fine_gioco():
 	return fine_gioco
+
+func modify_foto1():
+	foto1 = true
+
+func get_foto1():
+	return foto1
+
+func modify_foto2():
+	foto2 = true
+
+func get_foto2():
+	return foto2
+
 
 
 var chat_messages_alessia = [
@@ -98,8 +115,8 @@ var chat_rapitore_to_jimmy_atto1 = [
 	"Ciao Jimmy, come sta Alessia?",
 	"Beh, effettivamente come potresti saperlo! É qui con me",
 	"Pensi che ti stia prendendo per il culo?",
-	"Non ti azzardare a contattare qualcuno,chiamare la polizia/n o a muoverti da quella di sedia," + \
-	"/nse non ho tue risposte entro 5 minuti Alessia raggiunge mamma e papà./n E vedi di scrivere in modo decente…",
+	"Non ti azzardare a contattare qualcuno\n,chiamare la polizia\n o a muoverti da quella di sedia," + \
+	"\nse non ho tue risposte entro 5 minuti\n Alessia raggiunge mamma e papà.\n E vedi di scrivere in modo decente…",
 	"Se ascolterai tutto quello che ti dico, forse non le accadrá nulla",
 	"Lo scoprirai molto presto, per ora ascolta tutto quello che ti dico",
 	"Inutile che provi a chiamare"
@@ -113,7 +130,11 @@ var chat_jimmy_to_rapitore_atto1 = [
 	"Ok ma cosa vuoi da noi",
 	"[Chiama la polizia]",
 	"[Chiama Alessia]",
+	"Va bene…"
 ]
+
+
+
 
 
 var global_volumeCS: float = 0.4
@@ -127,11 +148,14 @@ func save_global_data():
 		"fine_atto1": fine_atto1,
 		"fine_atto2": fine_atto2,
 		"fine_gioco": fine_gioco,
+		"foto1":foto1,
+		"foto2":foto2,
 		"chat_messages_carlo": chat_messages_carlo,
 		"chat_messages_rapitore": chat_messages_rapitore,
 		"global_volumeCS": global_volumeCS,
 		"global_volumesfx": global_volumesfx,
-		"global_volumedialoghi": global_volumedialoghi
+		"global_volumedialoghi": global_volumedialoghi,
+
 	}
 	var file = File.new()
 	file.open("res://salvataggi/salvataggi_impostazioni/global_data.json", File.WRITE)
@@ -153,18 +177,10 @@ func load_global_data():
 			fine_atto1 = save_data.get("fine_atto1", false)
 			fine_atto2 = save_data.get("fine_atto2", false)
 			fine_gioco = save_data.get("fine_gioco", false)
+			foto1 = save_data.get("foto1",false)
+			foto2 = save_data.get("foto2",false)
 			chat_messages_carlo = save_data.get("chat_messages_carlo", [])
 			chat_messages_rapitore = save_data.get("chat_messages_rapitore", [])
 			global_volumeCS = save_data.get("global_volumeCS", 0.4)
 			global_volumesfx = save_data.get("global_volumesfx", 0.4)
 			global_volumedialoghi = save_data.get("global_volumedialoghi", 0.4)
-			print(data.result)
-			print(fine_prologo)
-			print(fine_atto1)
-			print(fine_atto2)
-			print(fine_gioco)
-			print(chat_messages_carlo)
-			print(chat_messages_rapitore)
-			print(global_volumeCS)
-			print(global_volumesfx)
-			print(global_volumedialoghi)
