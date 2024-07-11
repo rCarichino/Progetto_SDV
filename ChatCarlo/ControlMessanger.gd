@@ -280,8 +280,6 @@ func give_answer(question):
 			"Con il telefono deficiente":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[16])
-				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[18]])
 				Global.modify_fine_atto2_carlo()
 				if(Global.fine_atto2_carlo && Global.fine_atto2_rapitore):
 					Global.modify_fine_atto2()
