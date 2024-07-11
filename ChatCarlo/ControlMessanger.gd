@@ -1,6 +1,5 @@
 extends Control
 
-
 var MessaggioRicevuto = preload("res://bubbleRicevuto/Speech.tscn")
 var MessaggioInviato  = preload("res://bubbleInvio/Speech.tscn")
 var SendImageBubble = preload("res://bubbleImmagine/ImageBubble.tscn")  # Carica la nuova scena
@@ -93,19 +92,22 @@ func add_received_message(text):
 		Global.add_message_carlo({"type": "received", "text": text})
 
 
-
 func create_phrase_buttons(phrases):
 	var vbox = $HBoxContainer/ChatContainer/HBoxContainer/VBoxContainer
 	for child in vbox.get_children():
 		vbox.remove_child(child)
 		child.queue_free()
 
-	for phrase in phrases:
+	for i in range(len(phrases)):
+		var phrase = phrases[i]
 		var button = Button.new()
 		button.flat = true
 		button.text = phrase
 		
-  # Imposta lo stile del bottone
+		# Imposta il puntatore a pointing hand
+		button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+
+		# Imposta lo stile del bottone
 		var style_normal = StyleBoxFlat.new()
 		style_normal.bg_color = Color(0, 0, 0, 0) 
 		
@@ -124,28 +126,32 @@ func create_phrase_buttons(phrases):
 		button.add_color_override("font_color", Color.black)  
 		button.add_color_override("font_color_hover", Color.black)  
 		button.add_color_override("font_color_pressed", Color.black) 
-		button.connect("pressed", self, "_on_phrase_button_pressed", [button,phrase])
+		button.connect("pressed", self, "_on_phrase_button_pressed", [button, phrase])
 		vbox.add_child(button)
 
+		# Aggiungi una linea di separazione tra i bottoni
+		if i < len(phrases) - 1:
+			var separator = HSeparator.new()
+			separator.rect_min_size = Vector2(0, 2)
+			separator.modulate = Color(0, 0, 0)
+			vbox.add_child(separator)
 
-
-func _on_phrase_button_pressed(button,phrase):
+func _on_phrase_button_pressed(button, phrase):
 	if(phrase == "Adesso ci credi?"):
 		add_send_image("res://fotoAlessia/foto_n1_chat.jpg")
 		
 	add_sent_message(phrase)
 	
 	disable_all_buttons()
-	button.disabled =  true
+	button.disabled = true
 	give_answer(phrase)
-
-
 
 func disable_all_buttons():
 	var vbox = $HBoxContainer/ChatContainer/HBoxContainer/VBoxContainer
 	for child in vbox.get_children():
 		if child is Button:
 			child.disabled = true
+
 
 func give_answer(question):
 	match question:
