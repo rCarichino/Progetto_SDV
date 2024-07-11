@@ -130,11 +130,11 @@ func create_phrase_buttons(phrases):
 
 
 func _on_phrase_button_pressed(button,phrase):
-
-	add_sent_message(phrase)
 	if(phrase == "Adesso ci credi?"):
 		add_send_image("res://fotoAlessia/foto_n1_chat.jpg")
 		
+	add_sent_message(phrase)
+	
 	disable_all_buttons()
 	button.disabled =  true
 	give_answer(phrase)
@@ -175,8 +175,10 @@ func give_answer(question):
 			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[8]])
 		"AH kk":
 			Global.modify_fine_prologo()
+			$NotificaDiario.show_notify_diario()
 			if(Global.fine_prologo == true):
 				$HBoxContainer/ChatListContainer/ItemList.add_item("User_454234",preload("res://icone/imgRapitore64.png"))
+				$NotificaMSN.show_notify()
 				
 			if(Global.fine_atto1 == true):
 				yield(get_tree().create_timer(2),"timeout")
@@ -193,10 +195,10 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[2]])
 			"[Ignora Carlo]":
-				###TRILLO
+				Global.modify_trillo()
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[0]])
-				#######INSERIRE IL TRILLO COME MESSAGGIO IN GLOBAL
+				$NotificaMSN.show_notify()
 				
 			"Senti Carlo é successa una cosa grave, qualcuno mi ha contattato e dice di aver rapito Ale e mi chiede dei soldi":
 				yield(get_tree().create_timer(2),"timeout")
@@ -211,7 +213,6 @@ func give_answer(question):
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[4]])
 				
 			"Adesso ci credi?":
-				###INSERISCI IMMAGINE
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[5])
 				yield(get_tree().create_timer(2),"timeout")
@@ -247,7 +248,7 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[11])
 				Global.modify_sblocco_atto2_rapitore()
-				#####TRILLO RAPITORE
+				$NotificaMSN.show_notify()
 				
 				
 	if(Global.sblocco_atto2_carlo == true):
@@ -284,7 +285,7 @@ func give_answer(question):
 				Global.modify_fine_atto2_carlo()
 				if(Global.fine_atto2_carlo && Global.fine_atto2_rapitore):
 					Global.modify_fine_atto2()
-					###### AGGIUNGI SALVATAGGIO
+					$NotificaDiario.show_notify_diario()
 				
 			
 
