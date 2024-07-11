@@ -1,6 +1,7 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Desktop/door.gd" type="Script" id=1]
+[ext_resource path="res://ScenaNotificaFoto/ScenaNotificaFoto.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cestino/Cestino.gd" type="Script" id=3]
 [ext_resource path="res://icone/Internet_Explorer-Logo.wine.png" type="Texture" id=4]
 [ext_resource path="res://icone/folder.png" type="Texture" id=5]
@@ -342,6 +343,9 @@ text = "Messanger"
 visible = false
 
 [node name="Controlpushdiario" parent="Control" instance=ExtResource( 15 )]
+visible = false
+
+[node name="ControlpushFoto" parent="." instance=ExtResource( 2 )]
 visible = false
 
 [connection signal="mouse_entered" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_mouse_entered"]
