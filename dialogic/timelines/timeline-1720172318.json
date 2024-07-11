@@ -48,11 +48,19 @@
 			"value": ""
 		},
 		{
+			"emit_signal": "rigioca",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "Torna al menù principale",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"emit_signal": "menuprincipale",
+			"event_id": "dialogic_040"
 		},
 		{
 			"event_id": "dialogic_013"

@@ -13,7 +13,7 @@ var sblocco_atto2_rapitore = false #AGGIUNGERE AL SAVE
 
 var sblocco_atto2_carlo = false #AGGIUNGERE AL SAVE
 
-var fine_prologo = true #SAVE
+var fine_prologo = false #SAVE
 
 var fine_atto1 = false #SAVE
 
@@ -237,7 +237,7 @@ var chat_rapitore_to_jimmy_atto2 = [
 	"Non fai tu le regole, sbrigati che il tempo scorre",
 ]
 
-var chat_jimmy_to_rapitori_atto2 = [
+var chat_jimmy_to_rapitore_atto2 = [
 	"Non ho tutti quei soldi",
 	"Come fai a sapere dove abito?",
 	"Come posso fidarmi di te? Dopo che ti avrò dato i soldi libererai mia sorella?",
@@ -290,8 +290,10 @@ func save_progress_data():
 	file.store_string(JSON.print(save_data))
 	print("Salvataggio effettuato")
 	file.close()
+	
 	# Carica i dati globali da un gile JSON
 func load_progress_data():
+
 	var file = File.new()
 	if file.file_exists("res://salvataggi/salvataggi_progressi/progressi_data.json"):
 		print("cristo")
