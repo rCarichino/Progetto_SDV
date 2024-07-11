@@ -225,7 +225,7 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[6]])
 				Global.modify_sblocco_atto2_carlo()
-				###trillo CARLO
+				$NotificaMSN.show_notify()
 			"Ok, dammi un po’ di tempo per trovare i soldi":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_rapitore_to_jimmy_atto2[7])

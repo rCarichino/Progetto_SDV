@@ -248,7 +248,8 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[11])
 				Global.modify_sblocco_atto2_rapitore()
-				$NotificaMSN.show_notify()
+
+
 				
 				
 	if(Global.sblocco_atto2_carlo == true):
