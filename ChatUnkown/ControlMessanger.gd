@@ -174,7 +174,7 @@ func give_answer(question):
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[7]])
 
 		"[Chiama la polizia]":
-			###inserire un finale di polizia
+			###finale della chiamata alla  polizia
 			var finalePolizia = Dialogic.start('finale polizia')
 			add_child(finalePolizia)
 			finalePolizia.connect("dialogic_signal",self,'signal_finalepolizia')

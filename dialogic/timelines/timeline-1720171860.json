@@ -49,6 +49,10 @@
 			"value": ""
 		},
 		{
+			"change_scene": "res://menuiniziale/menu/menuiniziale.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
 			"choice": "Rigioca",
 			"condition": "",
 			"definition": "",
