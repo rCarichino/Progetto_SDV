@@ -202,7 +202,7 @@ var chat_jimmy_to_carlo_atto2 = [
 	"[Ignora Carlo]",
 	"Senti Carlo é successa una cosa grave, qualcuno mi ha contattato e dice di aver rapito Ale e mi chiede dei soldi",
 	"Fra ti giuro, non credo sia uno scherzo, ho paura…",
-	"[Manda la foto in chat] Adesso ci credi?",
+	"Adesso ci credi?",
 	"Guarda il tatuaggio sul braccio…",
 	"Non so cosa fare…",
 	"Ho paura a chiamare la polizia, mi ha detto di non farlo",
