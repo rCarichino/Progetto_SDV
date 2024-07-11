@@ -75,6 +75,7 @@ script = ExtResource( 6 )
 [node name="ItemList" type="ItemList" parent="ControlMessanger/HBoxContainer/ChatListContainer"]
 margin_right = 267.0
 margin_bottom = 580.0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 items = [ "xx_Ale", ExtResource( 2 ), false, "_CcCc_", ExtResource( 4 ), false ]

@@ -81,6 +81,7 @@ script = ExtResource( 6 )
 [node name="ItemList" type="ItemList" parent="ControlMessanger/HBoxContainer/ChatListContainer"]
 margin_right = 269.0
 margin_bottom = 580.0
+mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 items = [ "xx_Ale", ExtResource( 2 ), false, "_CcCc_", ExtResource( 4 ), false ]
@@ -151,6 +152,7 @@ icon = ExtResource( 8 )
 margin_left = 130.0
 margin_right = 174.0
 margin_bottom = 38.0
+mouse_default_cursor_shape = 2
 icon = ExtResource( 7 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ControlMessanger/HBoxContainer/InfoBox/BottoniBox/Trillo"]
