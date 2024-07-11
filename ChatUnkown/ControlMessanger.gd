@@ -174,7 +174,10 @@ func give_answer(question):
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[7]])
 
 		"[Chiama la polizia]":
-			###inserire un finale
+			###inserire un finale di polizia
+			var finalePolizia = Dialogic.start('finale polizia')
+			add_child(finalePolizia)
+			finalePolizia.connect("dialogic_signal",self,'signal_finalepolizia')
 			Global.modify_fine_atto1()
 
 		"[Chiama Alessia]":
@@ -259,3 +262,13 @@ func add_received_image(image_path):
 	scroll_to_bottom()
 	
 	Global.add_message_rapitore({"type": "received_image", "text": image_path})
+
+
+
+#funzione che permette di gestire le opzioni post-finale polizia
+func signal_finalepolizia(arg):
+	if arg == 'rigioca':
+		pass	##deve ricominciare dall'inizio atto 1
+	if arg == 'menuprincipale':
+		get_tree().change_scene("res://menuiniziale/menu/menuiniziale.tscn")
+		
