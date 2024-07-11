@@ -1,7 +1,7 @@
 extends Node
 
 #servono alla gestione dei dialoghi fade in
-var chat_completed = false		#se vero, puo far partire la chiamata col numero corrente
+var chat_completed = true		#se vero, puo far partire la chiamata col numero corrente
 
 var stato_chiamata = 1			#indica quale timeline di chiamata attivare
 

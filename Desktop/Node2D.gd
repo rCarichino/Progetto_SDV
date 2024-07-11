@@ -4,9 +4,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+		print("ciao")
 		print(Global.stato_chiamata)
-		if(Global.chat_completed == true):
-			seleziona_chiamata(Global.stato_chiamata)
+		seleziona_chiamata(Global.stato_chiamata)
 	
 	
 func seleziona_chiamata(stato):
@@ -16,11 +16,13 @@ func seleziona_chiamata(stato):
 			add_child(new_dialog)
 			new_dialog.connect("timeline_end", self, 'after_chiamata1')
 			
+			
 		elif(stato == 2):
 			var second_dialog = Dialogic.start('chiamata2')
 			add_child(second_dialog)
 			second_dialog.connect("timeline_end", self, 'after_chiamata2')
 			second_dialog.connect("dialogic_signal",self, 'signal_chiamata2')
+			
 		
 		#scelta residence come primo luogo da visitare	
 		elif(stato == 3):
@@ -59,6 +61,7 @@ func seleziona_chiamata(stato):
 		
 		#teatro del residence	
 		elif(stato == 7):
+			
 			var seventh_dialog = Dialogic.start('teatro_first')
 			add_child(seventh_dialog)
 			Global.residence_as_first = false

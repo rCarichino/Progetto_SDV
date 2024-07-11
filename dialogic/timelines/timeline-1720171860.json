@@ -53,13 +53,6 @@
 			"event_id": "dialogic_041"
 		},
 		{
-			"choice": "Rigioca",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
 			"event_id": "dialogic_013"
 		},
 		{
