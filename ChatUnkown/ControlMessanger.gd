@@ -185,6 +185,59 @@ func give_answer(question):
 			
 		"Va bene…":
 			Global.modify_fine_atto1()
+			if(Global.sblocco_atto2_rapitore == true):
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[0])
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[1])
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[2])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[0],
+				Global.chat_jimmy_to_rapitore_atto2[1],Global.chat_jimmy_to_rapitore_atto2[2]])
+				
+
+	if(Global.sblocco_atto2_rapitore == true):
+		match question:
+			"Non ho tutti quei soldi":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[3])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[3]])
+				
+			"Come fai a sapere dove abito?":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[4])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[4]])
+			"Come posso fidarmi di te? Dopo che ti avrò dato i soldi libererai mia sorella?":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[5])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[5]])
+				
+			"Ti sto dicendo la verità, non ho tutti quei soldi","In ogni caso non ho tutti quei soldi",\
+			"Non ho scelta ma non neanche tutti quei soldi":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[6])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[6]])
+				Global.modify_sblocco_atto2_carlo()
+				###trillo CARLO
+			"Ok, dammi un po’ di tempo per trovare i soldi":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[7])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[7]])
+			"Io li cerco, ma tu non toccarla":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[8])
+				Global.modify_fine_atto2_rapitore()
+				if(Global.fine_atto2_carlo && Global.fine_atto2_rapitore):
+					Global.modify_fine_atto2()
+				
+
+
 
 func load_messages():
 	# Carica i messaggi dal singleton
@@ -228,6 +281,52 @@ func load_answer(question):
 		"Lo scoprirai molto presto, per ora ascolta tutto quello che ti dico",\
 		"Inutile che provi a chiamare":
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[7]])
+	if(Global.sblocco_atto2_rapitore == true):
+		match question:
+			
+			"Adesso è arrivato il momento di dimostrare quanto ci tieni a tua sorella.":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[1])
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[2])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[0],
+				Global.chat_jimmy_to_rapitore_atto2[1],Global.chat_jimmy_to_rapitore_atto2[2]])
+				
+			"Voglio 20 mila euro in contanti e dovrai lasciare i soldi vicino casa tua e alle ore “X” passerà un mio contatto a ritirarli.":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[2])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[0],
+				Global.chat_jimmy_to_rapitore_atto2[1],Global.chat_jimmy_to_rapitore_atto2[2]])
+				
+			"Non devi assolutamente avere niente a che fare con il contatto altrimenti succederà qualcosa a tua sorella":
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[0],
+				Global.chat_jimmy_to_rapitore_atto2[1],Global.chat_jimmy_to_rapitore_atto2[2]])
+				
+			"Perchè mi stai mentendo? Non tieni abbastanza a tua sorella a quanto pare":
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[3]])
+				
+			"Non ti interessa":
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[4]])
+				
+			"Non credo tu abbia altra scelta":
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[5]])
+				
+			"Conosco benissimo la storia della tua famiglia, non trovare scuse":
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[6]])
+				Global.modify_sblocco_atto2_carlo()
+				###trillo CARLO
+				
+			"Ricordati che la vita di tua sorella è nelle tue mani…":
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[7]])
+				
+			"Non fai tu le regole, sbrigati che il tempo scorre":
+				print()
+
+
+
 
 func add_received_image(image_path):
 	var bubble = ReceivedImageBubble.instance()

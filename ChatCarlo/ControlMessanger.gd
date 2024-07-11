@@ -143,8 +143,6 @@ func disable_all_buttons():
 		if child is Button:
 			child.disabled = true
 
-
-
 func give_answer(question):
 	match question:
 		"Ehy Carlo!, tt bn!! Sì, l’ho comprato, tu?":
@@ -175,8 +173,117 @@ func give_answer(question):
 			Global.modify_fine_prologo()
 			if(Global.fine_prologo == true):
 				$HBoxContainer/ChatListContainer/ItemList.add_item("User_454234",preload("res://icone/imgRapitore64.png"))
+				
+			if(Global.fine_atto1 == true):
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[0])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[0],Global.chat_jimmy_to_carlo_atto2[1]])
 			#DA METTERE IL SALVATAGGIO
-		
+			
+	if(Global.fine_atto1 == true):
+		match question: 
+			"Guarda non é il momento":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[1])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[2]])
+			"[Ignora Carlo]":
+				###TRILLO
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[0]])
+				#######INSERIRE IL TRILLO COME MESSAGGIO IN GLOBAL
+				
+			"Senti Carlo é successa una cosa grave, qualcuno mi ha contattato e dice di aver rapito Ale e mi chiede dei soldi":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[3])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[3]])
+				
+			"Fra ti giuro, non credo sia uno scherzo, ho paura…":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[4])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[4]])
+				
+			"[Manda la foto in chat] Adesso ci credi?":
+				###INSERISCI IMMAGINE
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[5])
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[6])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[5]])
+				
+			"Guarda il tatuaggio sul braccio…":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[7])
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[8])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[6],Global.chat_jimmy_to_carlo_atto2[7]])
+				
+			"Non so cosa fare…":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[9])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[8]])
+				
+			"Ho paura a chiamare la polizia, mi ha detto di non farlo":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[10])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[9]])
+				
+			"[Chiama la polizia]":
+				print()
+				###inserire un finale
+				
+			"Ho troppa paura…Non ce la faccio, ho paura che le faccia del male":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[11])
+				Global.modify_sblocco_atto2_rapitore()
+				#####TRILLO RAPITORE
+				
+				
+	if(Global.sblocco_atto2_carlo == true):
+		match question: 
+			"Fra, sei vestito","Io non posso muovermi":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[12])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[12]])
+				
+			"Devo continuare a rispondergli":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[13])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[13]])
+				
+			"Fra dovrai essere le mie gambe, devi andare tu al posto mio":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[14])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[15],Global.chat_jimmy_to_carlo_atto2[16]])
+				
+			"Non lo so mi verrá in mente dopo, tu esci di casa e vai in macchina","Per ora vai in macchina":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[15])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[17]])
+				
+			"Con il telefono deficiente":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[16])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[18]])
+				Global.modify_fine_atto2_carlo()
+				if(Global.fine_atto2_carlo && Global.fine_atto2_rapitore):
+					Global.modify_fine_atto2()
+					###### AGGIUNGI SALVATAGGIO
+				
+			
+
 
 
 func load_messages():
@@ -221,4 +328,46 @@ func load_answer(question):
 			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[5],Global.chat_jimmy_to_carlo_prologo[6],Global.chat_jimmy_to_carlo_prologo[7]])
 		"??","nn ero io, cmq ora stacco e vado a mangiare":
 			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[8]])
+			
+	if(Global.fine_atto1 == true):
+		match question: 
+			"Ue ho finito, vuoi giocare???":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[0],Global.chat_jimmy_to_carlo_atto2[1]])
+			"k succ?":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[2]])
+			"Dai nn dire ste cazzate neanche x scherzo":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[3]])
+			"Cazzo dici, ma smettila":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[4]])
+			"Oh cazzo":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[6])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[5]])
+			"Sicuro sia lei?":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[5]])
+			"Cazzo hai ragione":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[8])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[6],Global.chat_jimmy_to_carlo_atto2[7]])
+			"Chiama immediatamente la polizia":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[6],Global.chat_jimmy_to_carlo_atto2[7]])
+			"CHIAMA LA POLIZIA":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[8],Global.chat_jimmy_to_carlo_atto2[9]])
+			"BRUTTO COGLIONE CHIAMA LA POLIZIA":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[8],Global.chat_jimmy_to_carlo_atto2[9]])
 
+	if(Global.sblocco_atto2_carlo == true):
+		match question:
+			"Dimmi come vuoi che ti aiuti se posso":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[11]])
+			"In che senso non puoi muoverti?":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[12]])
+			"Quindi cosa vuoi che faccia?":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[13]])
+			"Eh e quale sarebbe il piano?":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[15],Global.chat_jimmy_to_carlo_atto2[16]])
+			"Okok e come ci sentiamo?":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[17]])
+			
