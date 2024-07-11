@@ -1,4 +1,4 @@
-extends Button
+extends HBoxContainer
 
 
 # Declare member variables here. Examples:
@@ -16,6 +16,5 @@ func _ready():
 #	pass
 
 
-func _on_NUOVAP_pressed():
-	$"../../../../selezione".play()
-	$"../../../../HBoxContainer".show()
+func _on_Nobutton_pressed():
+	$".".hide()
