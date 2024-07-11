@@ -275,6 +275,7 @@ func save_global_data():
 	file.close()
 # Carica i dati globali da un gile JSON
 func load_global_data():
+	print("entro")
 	var file = File.new()
 	if file.file_exists("res://salvataggi/salvataggi_impostazioni/global_data.json"):
 		print("cristo")

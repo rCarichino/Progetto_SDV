@@ -61,6 +61,10 @@
 			"value": ""
 		},
 		{
+			"change_scene": "res://menuiniziale/menu/menuiniziale.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
 			"event_id": "dialogic_013"
 		},
 		{
