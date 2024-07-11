@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Cartella_Appunti/Immagini/line_icon_126358.png" type="Texture" id=1]
 [ext_resource path="res://Cartella_Appunti/Immagini/Next_arrow_1559.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Cartella_Foto/Foto Ale n2.gd" type="Script" id=11]
 [ext_resource path="res://ScenaNotifica/Scenanotifica.tscn" type="PackedScene" id=12]
 [ext_resource path="res://icone/png.png" type="Texture" id=13]
+[ext_resource path="res://ScenaNotificaFoto/ScenaNotificaFoto.tscn" type="PackedScene" id=14]
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.94902, 0.905882, 0.835294, 1 )
@@ -197,9 +198,14 @@ text = "Foto Alessia
 2"
 align = 1
 
-[node name="ScenaNotifica" parent="." instance=ExtResource( 12 )]
+[node name="Controlpushmsn" parent="." instance=ExtResource( 12 )]
+visible = false
 
-[node name="ScenaDiario" parent="." instance=ExtResource( 8 )]
+[node name="Controlpushdiario" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[node name="Controlpushfoto" parent="." instance=ExtResource( 14 )]
+visible = false
 
 [connection signal="pressed" from="Titolo/DesktopButton" to="Titolo/DesktopButton" method="_on_DesktopButton_pressed"]
 [connection signal="pressed" from="Foto Ale n1" to="Foto Ale n1" method="_on_Foto_Ale_n1_pressed"]

@@ -38,6 +38,9 @@ position = Vector2( -1, 2 )
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Titolo" type="Label" parent="ControlMessanger"]
 margin_left = 1.0
@@ -47,6 +50,9 @@ margin_bottom = 21.0
 custom_styles/normal = SubResource( 1 )
 text = "         Messanger"
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Button" type="Button" parent="ControlMessanger/Titolo"]
 margin_left = 1000.0
@@ -58,6 +64,9 @@ custom_styles/focus = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 text = "X"
 script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Icona" type="Sprite" parent="ControlMessanger/Titolo"]
 position = Vector2( 16, 9 )
@@ -70,6 +79,9 @@ margin_top = 19.0
 margin_right = 1025.0
 margin_bottom = 599.0
 custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="ChatListContainer" type="VBoxContainer" parent="ControlMessanger/HBoxContainer"]
 margin_right = 269.0
@@ -180,6 +192,9 @@ margin_top = -1.0
 margin_right = 97.0
 margin_bottom = 97.0
 color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="NicknameRapitore" type="RichTextLabel" parent="ControlMessanger/HBoxContainer/InfoBox/InfoHBox/InfoVBox"]
 margin_top = 100.0

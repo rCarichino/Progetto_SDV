@@ -76,3 +76,8 @@ func create_spacer():
 	spacer.rect_min_size = Vector2(0, 50)  # Altezza minima dello spacer
 	spacer.set_v_size_flags(Control.SIZE_EXPAND_FILL)
 	message_container.add_child(spacer)
+
+
+func _on_Trillo_pressed():
+	$HBoxContainer/InfoBox/BottoniBox/Trillo/AudioStreamPlayer.play()
+	pass # Replace with function body.

@@ -8,15 +8,12 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-
-func _on_rimandopushdiario_pressed():
-	get_tree().change_scene("res://Cartella_Appunti/CartellaAppunti.tscn")
-	
-func _on_chiudipushdiario_pressed():
-	$".".visible=false
 	pass # Replace with function body.
-
-func show_notify_diario():
+func _on_rimandopushfoto_pressed():
+	get_tree().change_scene("res://Cartella_Foto/CartellaFoto.tscn")
+func _on_chiudipushfoto_pressed():
+	$".".visible=false
+	
+func show_notify_foto():
 	$".".visible=true
 	$AudioStreamPlayer.play()
