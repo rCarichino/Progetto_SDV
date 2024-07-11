@@ -418,3 +418,8 @@ func add_send_image(image_path):
 			Global.add_message_carlo({"type": "received_image", "text": image_path})
 	else:
 		Global.add_message_carlo({"type": "received_image", "text": image_path})
+
+
+func _on_Trillo_pressed():
+	$HBoxContainer/InfoBox/BottoniBox/Trillo/AudioStreamPlayer.play()
+	pass # Replace with function body.
