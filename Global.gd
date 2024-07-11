@@ -28,6 +28,10 @@ var foto1 = false #AGGIUNGERE AL SAVE
 
 var foto2 = false #AGGIUNGERE AL SAVE
 
+var setnotifica = false #serve a gestire l'arrivo dei messaggi
+
+var setnotificaDiario = false #serve per gestire la notifica del diario
+
 var chat_messages_carlo = [] #SAVE
 
 var chat_messages_rapitore = [] #SAVE

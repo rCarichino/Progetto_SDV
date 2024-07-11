@@ -7,6 +7,8 @@
 [ext_resource path="res://background.jpg" type="Texture" id=5]
 [ext_resource path="res://icone/folder.png" type="Texture" id=6]
 [ext_resource path="res://menuiniziale/arial_narrow_7.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://ScenaNotificaDiario/NotificaDiario.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ScenaNotifica/Scenanotifica.tscn" type="PackedScene" id=9]
 [ext_resource path="res://icone/png.png" type="Texture" id=8]
 [ext_resource path="res://addons/bitmap_font_importer/arial_narrow_7.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Cartella_Foto/Foto Ale n°1.gd" type="Script" id=10]
@@ -147,6 +149,13 @@ position = Vector2( 970, 11 )
 scale = Vector2( 0.104492, 0.098633 )
 texture = ExtResource( 2 )
 
+
+[node name="Controlpushmsn" parent="." instance=ExtResource( 9 )]
+visible = false
+
+[node name="Controlpushdiario" parent="." instance=ExtResource( 8 )]
+visible = false
+
 [node name="Foto Ale n1" type="TextureButton" parent="."]
 visible = false
 margin_left = 5.0
@@ -191,9 +200,9 @@ margin_right = 103.0
 margin_bottom = 134.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 12 )
-text = "Foto Alessia
-2"
+text = "Foto Alessia2"
 align = 1
+
 
 [connection signal="pressed" from="Titolo/DesktopButton" to="Titolo/DesktopButton" method="_on_DesktopButton_pressed"]
 [connection signal="pressed" from="Foto Ale n1" to="Foto Ale n1" method="_on_Foto_Ale_n1_pressed"]
