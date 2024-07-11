@@ -179,7 +179,6 @@ func give_answer(question):
 			###finale della chiamata alla polizia
 			var finalePolizia = Dialogic.start('finale polizia')
 			add_child(finalePolizia)
-			finalePolizia.connect("dialogic_signal",self,'signal_finalepolizia')
 			Global.modify_fine_atto1()
 
 		"[Chiama Alessia]":
@@ -354,15 +353,14 @@ func load_answer(question):
 
 
 
-
 func add_received_image(image_path):
-	
+
 	var found = false
 	var bubble = ReceivedImageBubble.instance()
 	var texture = load(image_path)
 	var texture_rect = bubble.get_node("VBoxContainer/TextureRect")
 	texture_rect.texture = texture
-	
+
 	if texture:
 		texture_rect.rect_min_size = Vector2(texture.get_width(), texture.get_height())
 		texture_rect.rect_size = Vector2(texture.get_width(), texture.get_height())
@@ -370,35 +368,21 @@ func add_received_image(image_path):
 	bubble.get_node("VBoxContainer").margin_left = 30
 	var hbox = HBoxContainer.new()
 	hbox.alignment = BoxContainer.ALIGN_BEGIN 
-	
+
 	var message_container_left = VBoxContainer.new()
 	message_container_left.add_child(bubble)
 	var spacer_right = Control.new()
 	spacer_right.rect_min_size = Vector2(0, 70)
 	spacer_right.set_h_size_flags(Control.SIZE_EXPAND_FILL)
-	
+
 	hbox.add_child(message_container_left)
 	hbox.add_child(spacer_right)
 	message_container.add_child(hbox)
-	
+
 	create_spacer()
-	
+
 	yield(get_tree().create_timer(0.3),"timeout")
 	scroll_to_bottom()
-
-	
-	Global.add_message_rapitore({"type": "received_image", "text": image_path})
-
-
-
-#funzione che permette di gestire le opzioni post-finale polizia
-func signal_finalepolizia(arg):
-	if arg == 'rigioca':
-		Global.load_global_data() ##carica i dati dell'ultimo autosave
-	if arg == 'menuprincipale':
-		get_tree().change_scene("res://menuiniziale/menu/menuiniziale.tscn")
-		
-
 	if(Global.chat_messages_rapitore != []):
 		for message in Global.chat_messages_rapitore:
 			if image_path in message["text"]:
@@ -408,5 +392,4 @@ func signal_finalepolizia(arg):
 			Global.add_message_rapitore({"type": "received_image", "text": image_path})
 	else:
 		Global.add_message_rapitore({"type": "received_image", "text": image_path})
-
 
