@@ -9,19 +9,25 @@ var stato_chiamata = 1			#indica quale timeline di chiamata attivare
 var residence_as_first = false	#se si è scelto il residence come prima opzione, allora è vera
 
 
-var unknown_unloked = false
+var sblocco_atto2_rapitore = false #AGGIUNGERE AL SAVE
+
+var sblocco_atto2_carlo = false #AGGIUNGERE AL SAVE
 
 var fine_prologo = true #SAVE
 
 var fine_atto1 = false #SAVE
 
+var fine_atto2_carlo = false #AGGIUNGERE AL SAVE
+
+var fine_atto2_rapitore = false #AGGIUNGERE AL SAVE
+
 var fine_atto2 = false #SAVE
 
 var fine_gioco = false #SAVE
 
-var foto1 = false
+var foto1 = false #AGGIUNGERE AL SAVE
 
-var foto2 = false
+var foto2 = false #AGGIUNGERE AL SAVE
 
 var chat_messages_carlo = [] #SAVE
 
@@ -39,6 +45,18 @@ func add_message_rapitore(message):
 func get_messages_rapitore():
 	return chat_messages_rapitore
 
+func modify_sblocco_atto2_rapitore():
+	sblocco_atto2_rapitore = true
+
+func get_sblocco_atto2_rapitore():
+	return sblocco_atto2_rapitore
+
+func modify_sblocco_atto2_carlo():
+	sblocco_atto2_carlo = true
+
+func get_sblocco_atto2_carlo():
+	return sblocco_atto2_carlo
+
 func modify_fine_prologo():
 	fine_prologo = true
 
@@ -51,6 +69,18 @@ func modify_fine_atto1():
 func get_fine_atto1():
 	return fine_atto1
 
+func modify_fine_atto2_carlo():
+	fine_atto2_carlo = true
+
+func get_fine_atto2_carlo():
+	return fine_atto2_carlo
+	
+func modify_fine_atto2_rapitore():
+	fine_atto2_rapitore = true
+
+func get_fine_atto2_rapitore():
+	return fine_atto2_rapitore
+	
 func modify_fine_atto2():
 	fine_atto2 = true
 
@@ -144,9 +174,69 @@ var chat_jimmy_to_rapitore_atto1 = [
 	"Va bene…"
 ]
 
+var chat_carlo_to_jimmy_atto2 = [
+	"Ue ho finito, vuoi giocare???",
+	"“k succ?”",
+	"[ARRIVA UN ALTRO TRILLO]",
+	"Dai nn dire ste cazzate neanche x scherzo",
+	"Cazzo dici, ma smettila",
+	"Oh cazzo",
+	"Sicuro sia lei?",
+	"Cazzo hai ragione",
+	"Chiama immediatamente la polizia",
+	"CHIAMA LA POLIZIA",
+	"BRUTTO COGLIONE CHIAMA LA POLIZIA",
+	"Dimmi come vuoi che ti aiuti se posso",
+	"In che senso non puoi muoverti?",
+	"Quindi cosa vuoi che faccia?",
+	"Eh e quale sarebbe il piano?",
+	"Okok e come ci sentiamo?",
+	"kk corro"
+]
 
+var chat_jimmy_to_carlo_atto2 = [
+	"Guarda non é il momento",
+	"[Ignora Carlo]",
+	"Senti Carlo é successa una cosa grave, qualcuno mi ha contattato e dice di aver rapito Ale e mi chiede dei soldi",
+	"Fra ti giuro, non credo sia uno scherzo, ho paura…",
+	"[Manda la foto in chat] Adesso ci credi?",
+	"Guarda il tatuaggio sul braccio…",
+	"Non so cosa fare…",
+	"Ho paura a chiamare la polizia, mi ha detto di non farlo",
+	"[Chiama la polizia]",
+	"Ho troppa paura…Non ce la faccio, ho paura che le faccia del male",
+	"Fra, sei vestito",
+	"Io non posso muovermi",
+	"Devo continuare a rispondergli",
+	"Fra dovrai essere le mie gambe, devi andare tu al posto mio",
+	"Ma quindi sei vestito?",
+	"Non lo so mi verrá in mente dopo, tu esci di casa e vai in macchina",
+	"Per ora vai in macchina",
+	"Con il telefono deficiente",
+]
 
+var chat_rapitore_to_jimmy_atto2 = [
+	"Adesso è arrivato il momento di dimostrare quanto ci tieni a tua sorella.",
+	"Voglio 20 mila euro in contanti e dovrai lasciare i soldi vicino casa tua e alle ore “X” passerà un mio contatto a ritirarli.",
+	"Non devi assolutamente avere niente a che fare con il contatto altrimenti succederà qualcosa a tua sorella",
+	"Perchè mi stai mentendo? Non tieni abbastanza a tua sorella a quanto pare",
+	"Non ti interessa",
+	"Non credo tu abbia altra scelta",
+	"Conosco benissimo la storia della tua famiglia, non trovare scuse",
+	"Ricordati che la vita di tua sorella è nelle tue mani…",
+	"Non fai tu le regole, sbrigati che il tempo scorre",
+]
 
+var chat_jimmy_to_rapitori_atto2 = [
+	"Non ho tutti quei soldi",
+	"Come fai a sapere dove abito?",
+	"Come posso fidarmi di te? Dopo che ti avrò dato i soldi libererai mia sorella?",
+	"Ti sto dicendo la verità, non ho tutti quei soldi",
+	"In ogni caso non ho tutti quei soldi",
+	"Non ho scelta ma non neanche tutti quei soldi",
+	"Ok, dammi un po’ di tempo che trovo i soldi",
+	"Io li cerco, ma tu non toccarla",
+]
 
 var global_volumeCS: float = 0.4
 var global_volumesfx: float = 0.4
