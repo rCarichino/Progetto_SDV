@@ -7,6 +7,7 @@ var stato_chiamata = 1			#indica quale timeline di chiamata attivare
 
 var residence_as_first = false	#se si è scelto il residence come prima opzione, allora è vera
 
+var trillo = false
 
 var sblocco_atto2_rapitore = false #AGGIUNGERE AL SAVE
 
@@ -47,6 +48,12 @@ func add_message_rapitore(message):
 
 func get_messages_rapitore():
 	return chat_messages_rapitore
+
+func modify_trillo():
+	trillo = true
+
+func get_trillo():
+	return trillo
 
 func modify_sblocco_atto2_rapitore():
 	sblocco_atto2_rapitore = true

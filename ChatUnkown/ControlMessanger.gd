@@ -237,6 +237,7 @@ func give_answer(question):
 				Global.modify_fine_atto2_rapitore()
 				if(Global.fine_atto2_carlo && Global.fine_atto2_rapitore):
 					Global.modify_fine_atto2()
+					$NotificaDiario.show_notify_diario()
 				
 
 

@@ -8,9 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if(Global.fine_prologo==true):
-		$".".visible=true
-		$AudioStreamPlayer.play()
+
 	pass # Replace with function body.
 
 
@@ -22,3 +20,7 @@ func _ready():
 func _on_chiudipushmsn_pressed():
 	$".".visible=false
 	pass # Replace with function body.
+
+func show_notify():
+	$".".visible=true
+	$AudioStreamPlayer.play()
