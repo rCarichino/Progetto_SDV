@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Desktop/door.gd" type="Script" id=1]
 [ext_resource path="res://ScenaNotificaFoto/ScenaNotificaFoto.tscn" type="PackedScene" id=2]
@@ -26,6 +26,8 @@
 [ext_resource path="res://Cartella_Appunti/Cartella_Appunti.gd" type="Script" id=24]
 [ext_resource path="res://icone/Sfondo Desktop.png" type="Texture" id=25]
 [ext_resource path="res://menuiniziale/arial_narrow_7.ttf" type="DynamicFontData" id=26]
+[ext_resource path="res://Desktop/Node2D.gd" type="Script" id=27]
+[ext_resource path="res://Desktop/Control.gd" type="Script" id=28]
 [ext_resource path="res://Desktop/Messanger.gd" type="Script" id=30]
 [ext_resource path="res://ScenaNotifica/Scenanotifica.tscn" type="PackedScene" id=31]
 
@@ -44,7 +46,8 @@ font_data = ExtResource( 26 )
 [sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 26 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
+script = ExtResource( 27 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 0.0 ]
 }
@@ -57,6 +60,7 @@ texture = ExtResource( 25 )
 normal_map = ExtResource( 25 )
 
 [node name="Control" type="Control" parent="."]
+
 script = ExtResource( 2 )
 
 [node name="impostazioni" type="TextureButton" parent="Control"]

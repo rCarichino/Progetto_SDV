@@ -139,8 +139,9 @@ func create_phrase_buttons(phrases):
 func _on_phrase_button_pressed(button, phrase):
 	if(phrase == "Adesso ci credi?"):
 		add_send_image("res://fotoAlessia/foto_n1_chat.jpg")
-		
-	add_sent_message(phrase)
+		add_sent_message(phrase)
+	else:
+		 add_sent_message(phrase)
 	
 	disable_all_buttons()
 	button.disabled = true
@@ -155,7 +156,7 @@ func disable_all_buttons():
 
 func give_answer(question):
 	match question:
-		"Ehy Carlo!, tt bn!! Sì, l’ho comprato, tu?":
+		"Ehy Carlo!, tt bn!!\n Sì, l’ho comprato, tu?":
 			yield(get_tree().create_timer(2),"timeout")
 			add_received_message(Global.chat_carlo_to_jimmy_prologo[1])
 			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[1],Global.chat_jimmy_to_carlo_prologo[2]])
@@ -171,13 +172,14 @@ func give_answer(question):
 			yield(get_tree().create_timer(2),"timeout")
 			add_received_message(Global.chat_carlo_to_jimmy_prologo[5])
 			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[5],Global.chat_jimmy_to_carlo_prologo[6],Global.chat_jimmy_to_carlo_prologo[7]])
-		"Me lo dovresti dire tu! so che sei uscito cn lei l’altra sera? xD",\
-		"Si è vista cn un ragazzo l’altro giorno, dovresti dirmelo tu? xD",\
+		"Me lo dovresti dire tu!\n so che sei uscito cn lei l’altra sera? xD",\
+		"Si è vista cn un ragazzo l’altro giorno,\n dovresti dirmelo tu? xD",\
 		"Secondo me la vedi + tu k io xD":
 			yield(get_tree().create_timer(2),"timeout")
 			add_received_message(Global.chat_carlo_to_jimmy_prologo[6])
 			yield(get_tree().create_timer(2),"timeout")
 			add_received_message(Global.chat_carlo_to_jimmy_prologo[7])
+			yield(get_tree().create_timer(2),"timeout")
 			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[8]])
 		"AH kk":
 			Global.modify_fine_prologo()
@@ -185,9 +187,13 @@ func give_answer(question):
 			if(Global.fine_prologo == true):
 				if($HBoxContainer/ChatListContainer/ItemList.get_item_text(2)  != "User_454234"):
 					$HBoxContainer/ChatListContainer/ItemList.add_item("User_454234",preload("res://icone/imgRapitore64.png"))
-					$NotificaMSN.show_notify()
-					$NotificaDiario.show_notify_diario()
-					Global.save_progress_data()
+					if(Global.already_notified_Carlo == false):
+						$NotificaMSN.show_notify()
+						$NotificaDiario.show_notify_diario()
+						Global.yes_already_notified_Carlo()
+						Global.save_progress_data()
+
+
 			if(Global.fine_atto1 == true):
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[0])
@@ -198,6 +204,7 @@ func give_answer(question):
 	if(Global.fine_atto1 == true):
 		match question: 
 			"Guarda non é il momento":
+				Global.not_already_notified_Carlo()
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[1])
 				yield(get_tree().create_timer(2),"timeout")
@@ -206,19 +213,27 @@ func give_answer(question):
 				Global.modify_trillo()
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[0]])
-				$NotificaMSN.show_notify()
+
+				if(Global.already_notified_carlo):
+					$NotificaMSN.show_notify_diario()
+					Global.yes_already_notified_carlo()
 				
-			"Senti Carlo é successa una cosa grave, qualcuno mi ha contattato e dice di aver rapito Ale e mi chiede dei soldi":
+			"Senti Carlo é successa una cosa grave...":
+				Global.not_already_notified_Carlo()
+				yield(get_tree().create_timer(2),"timeout")
+				add_sent_message(Global.chat_jimmy_to_carlo_atto2[3])
+				yield(get_tree().create_timer(2),"timeout")
+				add_sent_message(Global.chat_jimmy_to_carlo_atto2[4])
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[3])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[3]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[5]])
 				
 			"Fra ti giuro, non credo sia uno scherzo, ho paura…":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[4])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[4]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[6]])
 				
 			"Adesso ci credi?":
 				yield(get_tree().create_timer(2),"timeout")
@@ -226,7 +241,7 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[6])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[5]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[7]])
 				
 			"Guarda il tatuaggio sul braccio…":
 				yield(get_tree().create_timer(2),"timeout")
@@ -234,25 +249,25 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[8])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[6],Global.chat_jimmy_to_carlo_atto2[7]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[8],Global.chat_jimmy_to_carlo_atto2[9]])
 				
 			"Non so cosa fare…":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[9])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[8]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[10]])
 				
-			"Ho paura a chiamare la polizia, mi ha detto di non farlo":
+			"Ho paura a chiamare la polizia,\n mi ha detto di non farlo":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[10])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[9]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[11]])
 				
 			"[Chiama la polizia]":
 				var finalePolizia = Dialogic.start('finale polizia')
 				add_child(finalePolizia)
 				
-			"Ho troppa paura…Non ce la faccio, ho paura che le faccia del male":
+			"Ho troppa paura…\nNon ce la faccio, ho paura che le faccia del male":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[11])
 				Global.modify_sblocco_atto2_rapitore()
@@ -274,13 +289,13 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[13]])
 				
-			"Fra dovrai essere le mie gambe, devi andare tu al posto mio":
+			"Fra dovrai essere le mie gambe,\n devi andare tu al posto mio":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[14])
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[15],Global.chat_jimmy_to_carlo_atto2[16]])
 				
-			"Non lo so mi verrá in mente dopo, tu esci di casa e vai in macchina","Per ora vai in macchina":
+			"Non lo so mi verrá in mente dopo,\n tu esci di casa e vai in macchina","Per ora vai in macchina":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[15])
 				yield(get_tree().create_timer(2),"timeout")
@@ -292,7 +307,11 @@ func give_answer(question):
 				Global.modify_fine_atto2_carlo()
 				if(Global.fine_atto2_carlo && Global.fine_atto2_rapitore):
 					Global.modify_fine_atto2()
+
+				if(Global.already_notified_carlo == false):
 					$NotificaDiario.show_notify_diario()
+					Global.yes_already_notified_carlo()
+
 					Global.save_progress_data()
 				
 			
