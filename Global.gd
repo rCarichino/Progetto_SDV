@@ -1,6 +1,6 @@
 extends Node
 
-var fine_prologo = true #SAVE
+var fine_prologo = false #SAVE
 
 var fine_atto1 = false #SAVE
 
