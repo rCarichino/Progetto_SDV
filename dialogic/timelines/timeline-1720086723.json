@@ -90,6 +90,10 @@
 			"value": ""
 		},
 		{
+			"emit_signal": "residence",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "Vai al prefabbricato",
 			"condition": "",
 			"definition": "",
@@ -97,11 +101,19 @@
 			"value": ""
 		},
 		{
+			"emit_signal": "prefabbricato",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "Vai al centro sportivo",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"emit_signal": "centrosportivo",
+			"event_id": "dialogic_040"
 		},
 		{
 			"event_id": "dialogic_013"
