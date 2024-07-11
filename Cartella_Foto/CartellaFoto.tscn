@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Cartella_Appunti/Immagini/line_icon_126358.png" type="Texture" id=1]
 [ext_resource path="res://Cartella_Appunti/Immagini/Next_arrow_1559.png" type="Texture" id=2]
@@ -9,6 +9,10 @@
 [ext_resource path="res://menuiniziale/arial_narrow_7.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://ScenaNotificaDiario/NotificaDiario.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ScenaNotifica/Scenanotifica.tscn" type="PackedScene" id=9]
+[ext_resource path="res://icone/png.png" type="Texture" id=8]
+[ext_resource path="res://addons/bitmap_font_importer/arial_narrow_7.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Cartella_Foto/Foto Ale n°1.gd" type="Script" id=10]
+[ext_resource path="res://Cartella_Foto/Foto Ale n2.gd" type="Script" id=11]
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.94902, 0.905882, 0.835294, 1 )
@@ -46,6 +50,9 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
+
+[sub_resource type="DynamicFont" id=12]
+font_data = ExtResource( 9 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 11, 18 )
@@ -142,10 +149,61 @@ position = Vector2( 970, 11 )
 scale = Vector2( 0.104492, 0.098633 )
 texture = ExtResource( 2 )
 
+
 [node name="Controlpushmsn" parent="." instance=ExtResource( 9 )]
 visible = false
 
 [node name="Controlpushdiario" parent="." instance=ExtResource( 8 )]
 visible = false
 
+[node name="Foto Ale n1" type="TextureButton" parent="."]
+visible = false
+margin_left = 5.0
+margin_top = 100.0
+margin_right = 102.0
+margin_bottom = 199.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 8 )
+expand = true
+script = ExtResource( 10 )
+
+[node name="Label foto 1" type="Label" parent="Foto Ale n1"]
+margin_left = 10.0
+margin_top = 99.0
+margin_right = 103.0
+margin_bottom = 134.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Foto Alessia
+1"
+align = 1
+
+[node name="Foto Ale n2" type="TextureButton" parent="."]
+visible = false
+margin_left = 105.0
+margin_top = 100.0
+margin_right = 202.0
+margin_bottom = 199.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 8 )
+expand = true
+script = ExtResource( 11 )
+
+[node name="Label foto 2" type="Label" parent="Foto Ale n2"]
+margin_left = 10.0
+margin_top = 99.0
+margin_right = 103.0
+margin_bottom = 134.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Foto Alessia2"
+align = 1
+
+
 [connection signal="pressed" from="Titolo/DesktopButton" to="Titolo/DesktopButton" method="_on_DesktopButton_pressed"]
+[connection signal="pressed" from="Foto Ale n1" to="Foto Ale n1" method="_on_Foto_Ale_n1_pressed"]
+[connection signal="pressed" from="Foto Ale n2" to="Foto Ale n2" method="_on_Foto_Ale_n2_pressed"]

@@ -1,0 +1,116 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://menuiniziale/arial_narrow_7.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Cartella_Foto/ButtonFotoAle.gd" type="Script" id=2]
+[ext_resource path="res://icone/paesaggio.png" type="Texture" id=3]
+[ext_resource path="res://icone/zoom_in_search_magnifier_magnifying_icon_196567.png" type="Texture" id=4]
+[ext_resource path="res://icone/zoom_out_magnifier_magnifying_search_icon_196534.png" type="Texture" id=5]
+[ext_resource path="res://fotoAlessia/Foto_n2.jpg" type="Texture" id=6]
+[ext_resource path="res://icone/arrow_next_right_icon_123723.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0862745, 0.129412, 0.788235, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.607843, 0.117647, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.419608, 0.129412, 0.0627451, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.419608, 0.129412, 0.0627451, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.607843, 0.117647, 0, 1 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.0862745, 0.129412, 0.788235, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 1, 1, 1, 1 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Titolo" type="Label" parent="."]
+margin_top = -1.0
+margin_right = 1025.0
+margin_bottom = 21.0
+custom_fonts/font = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "        Foto Alessia 2.jpg"
+valign = 1
+
+[node name="ButtonFotoAle" type="Button" parent="Titolo"]
+margin_left = 1005.0
+margin_top = 1.0
+margin_right = 1025.0
+margin_bottom = 23.0
+mouse_default_cursor_shape = 2
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+text = "X"
+script = ExtResource( 2 )
+
+[node name="Cartella" type="Sprite" parent="Titolo"]
+position = Vector2( 13.5, 11.3125 )
+scale = Vector2( 0.0449219, 0.041748 )
+texture = ExtResource( 3 )
+normal_map = ExtResource( 3 )
+
+[node name="Toolbar" type="Label" parent="."]
+margin_left = 1.0
+margin_top = 21.0
+margin_right = 1027.0
+margin_bottom = 601.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+
+[node name="Background" type="Label" parent="."]
+margin_left = 5.0
+margin_top = 23.0
+margin_right = 1020.0
+margin_bottom = 596.0
+custom_styles/normal = SubResource( 9 )
+
+[node name="Foto Alessia" type="Sprite" parent="."]
+position = Vector2( 495.5, 294.344 )
+scale = Vector2( 0.267857, 0.2695 )
+texture = ExtResource( 6 )
+normal_map = ExtResource( 6 )
+
+[node name="zoom in" type="Sprite" parent="."]
+position = Vector2( 334, 579 )
+scale = Vector2( 0.09375, 0.0917969 )
+texture = ExtResource( 4 )
+normal_map = ExtResource( 4 )
+
+[node name="zoom out" type="Sprite" parent="."]
+position = Vector2( 386, 580 )
+scale = Vector2( 0.09375, 0.0917969 )
+texture = ExtResource( 5 )
+normal_map = ExtResource( 5 )
+
+[node name="next" type="Sprite" parent="."]
+position = Vector2( 580, 582 )
+scale = Vector2( 0.0703125, 0.0693358 )
+texture = ExtResource( 7 )
+normal_map = ExtResource( 7 )
+
+[node name="back" type="Sprite" parent="."]
+position = Vector2( 617, 581 )
+scale = Vector2( 0.0703125, 0.0693358 )
+texture = ExtResource( 7 )
+normal_map = ExtResource( 7 )
+flip_h = true
+
+[connection signal="pressed" from="Titolo/ButtonFotoAle" to="Titolo/ButtonFotoAle" method="_on_ButtonFotoAle_pressed"]

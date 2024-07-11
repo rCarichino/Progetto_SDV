@@ -69,11 +69,19 @@
 			"value": ""
 		},
 		{
+			"emit_signal": "teatro_to_reception",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "Vai agli appartamenti",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"emit_signal": "teatro_to_appartamenti",
+			"event_id": "dialogic_040"
 		},
 		{
 			"event_id": "dialogic_013"
@@ -86,11 +94,19 @@
 			"value": ""
 		},
 		{
+			"emit_signal": "teatro_to_reception",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "Vai agli appartamenti",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
+		},
+		{
+			"emit_signal": "teatro_to_appartamenti",
+			"event_id": "dialogic_040"
 		},
 		{
 			"event_id": "dialogic_013"

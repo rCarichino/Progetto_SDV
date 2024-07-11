@@ -97,6 +97,10 @@
 			}
 		},
 		{
+			"emit_signal": "centro_to_pref",
+			"event_id": "dialogic_040"
+		},
+		{
 			"choice": "Vai al Residence",
 			"condition": "",
 			"definition": "",
@@ -115,6 +119,10 @@
 					"start_time": 0.5
 				}
 			}
+		},
+		{
+			"emit_signal": "centro_to_residence",
+			"event_id": "dialogic_040"
 		},
 		{
 			"event_id": "dialogic_013"
