@@ -1,6 +1,6 @@
 extends Node
 
-var chat_finished = false
+var chat_finished = true
 #trigger per coordinazione chat-telefonate
 
 var chiamata_1_finita = false	#carlo chiede la foto
