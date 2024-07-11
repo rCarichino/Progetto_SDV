@@ -29,18 +29,15 @@
 			"question": "Siete riusciti a salvare Alessia, la polizia arriverà a breve. Jimmy è sconvolto dalla scoperta che il rapitore è il suo amico d’infanzia Manuel. Alessia sta fisicamente bene ma anche lei è uscita scossa da questa situazione.  \n\n"
 		},
 		{
-			"choice": "Rigioca",
+			"choice": "Torna al menù principale",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
 		},
 		{
-			"choice": "Torna al menù principale",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
+			"change_scene": "res://menuiniziale/menu/menuiniziale.tscn",
+			"event_id": "dialogic_041"
 		},
 		{
 			"event_id": "dialogic_013"

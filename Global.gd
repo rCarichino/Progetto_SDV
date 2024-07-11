@@ -1,7 +1,33 @@
 extends Node
 
+var chat_finished = true
+#trigger per coordinazione chat-telefonate
+
+var chiamata_1_finita = false	#carlo chiede la foto
+
+var chat_1_finita = false		#jimmy ottiene la foto
+
+var tictac_centrosportivo_scelta3 = false
+var _10minuti_prefabbricato_scelta3 = false
+var _5minuti_residence_scelta3 = false
+var trillo_esca_scelta3 = false
+
+var tictac_prefabbricato_scelta2 = false
+var _10minuti_centrosportivo_scelta2 = false
+var _5minuti_residence_scelta2 = false
+var trillo_esca_scelta2 = false
+
+var _5minuti_residence_scelta1 = false
+var esca_trillo_residence_scelta1 = false
+var contatto_esca_trillo_scelta1 = false
+var contatto_esca_trillo_scelta_appartamenti = false
+
+
+
+
+
 #servono alla gestione dei dialoghi fade in
-var chat_completed = false		#se vero, puo far partire la chiamata col numero corrente
+var chat_completed = true		#se vero, puo far partire la chiamata col numero corrente
 
 var stato_chiamata = 1			#indica quale timeline di chiamata attivare
 
