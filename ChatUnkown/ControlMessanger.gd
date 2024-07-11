@@ -279,14 +279,31 @@ func give_answer(question):
 				Global.modify_fine_atto2_rapitore()
 				if(Global.fine_atto2_carlo && Global.fine_atto2_rapitore):
 					Global.modify_fine_atto2()
-
-
-				if(Global.already_notified_rapitore == false):
-					$NotificaDiario.show_notify_diario()
-					Global.yes_already_notified_rapitore()
-					Global.save_progress_data()
-					
-
+					if(Global.already_notified_rapitore == false):
+						$NotificaDiario.show_notify_diario()
+						Global.yes_already_notified_rapitore()
+						Global.save_progress_data()
+						
+	if(Global.chiamata_1_finita):
+		match question:
+			"Ho tutti i soldi,\nma mandami una sua foto ti prego,\nvoglio sapere se sta bene","Ancora non li ho contati,\nmandami però una sua foto,\nvoglio capire se sta bene":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_image("res://fotoAlessia/foto_n2_chat.jpg")
+				Global.modify_foto2()
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto3[1])
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto3[2])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[2]])
+			"Va bene, cosa devo fare?":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto3[3])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[3]])
+			"Ok…":
+				Global.chat_1_finita = true
+			
 
 func load_messages():
 	# Carica i messaggi dal singleton
@@ -500,12 +517,36 @@ func load_answer(question):
 				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[7]])
 				
 			"Non fai tu le regole,\n sbrigati che il tempo scorre":
-				print()
-
-
+				if(Global.chiamata_1_finita):
+					yield(get_tree().create_timer(2),"timeout")
+					add_received_message(Global.chat_rapitore_to_jimmy_atto3[0])
+					yield(get_tree().create_timer(2),"timeout")
+					create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[0],Global.chat_jimmy_to_rapitore_atto3[1]])
+	if(Global.chiamata_1_finita):
+		match question:
+			"Tic Tac il tempo sta per scadere,\n hai preso tutti i soldi?":
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[0],Global.chat_jimmy_to_rapitore_atto3[1]])
+			"res://fotoAlessia/foto_n2_chat.jpg":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto3[1])
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto3[2])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[2]])
+			"Contento? questo è l’ultimo desiderio\n che ti lascio esprimere":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto3[2])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[2]])
+			"Ora, tra circa 20 minuti\n il mio contatto sarà da te":
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[2]])
+			"Riempi un borsone e lascialo sotto casa\n esattamente quando te lo dico io":
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[3]])
 
 func add_received_image(image_path):
-
 	var found = false
 	var bubble = ReceivedImageBubble.instance()
 	var texture = load(image_path)
