@@ -12,7 +12,7 @@ var sblocco_atto2_rapitore = false #AGGIUNGERE AL SAVE
 
 var sblocco_atto2_carlo = false #AGGIUNGERE AL SAVE
 
-var fine_prologo = true #SAVE
+var fine_prologo = false #SAVE
 
 var fine_atto1 = false #SAVE
 
@@ -230,7 +230,7 @@ var chat_rapitore_to_jimmy_atto2 = [
 	"Non fai tu le regole, sbrigati che il tempo scorre",
 ]
 
-var chat_jimmy_to_rapitori_atto2 = [
+var chat_jimmy_to_rapitore_atto2 = [
 	"Non ho tutti quei soldi",
 	"Come fai a sapere dove abito?",
 	"Come posso fidarmi di te? Dopo che ti avrò dato i soldi libererai mia sorella?",
