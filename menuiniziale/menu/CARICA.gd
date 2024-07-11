@@ -22,4 +22,4 @@ func _on_CARICA_pressed():
 	$"../../../../selezione".play()
 	var file = File.new()
 	if file.file_exists(dir) :
-		file.open(dir, File.READ)
+		Global.load_global_data()
