@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Cartella_Appunti/Immagini/line_icon_126358.png" type="Texture" id=1]
 [ext_resource path="res://Cartella_Appunti/Immagini/Next_arrow_1559.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://menuiniziale/arial_narrow_7.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://ScenaNotificaDiario/NotificaDiario.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ScenaNotifica/Scenanotifica.tscn" type="PackedScene" id=9]
+[ext_resource path="res://ScenaNotificaFoto/ScenaNotificaFoto.tscn" type="PackedScene" id=10]
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.94902, 0.905882, 0.835294, 1 )
@@ -146,6 +147,9 @@ texture = ExtResource( 2 )
 visible = false
 
 [node name="Controlpushdiario" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[node name="Controlpushfoto" parent="." instance=ExtResource( 10 )]
 visible = false
 
 [connection signal="pressed" from="Titolo/DesktopButton" to="Titolo/DesktopButton" method="_on_DesktopButton_pressed"]
