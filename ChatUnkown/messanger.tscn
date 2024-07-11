@@ -35,12 +35,9 @@ bg_color = Color( 0.607843, 0.117647, 0, 1 )
 position = Vector2( -1, 2 )
 
 [node name="ControlMessanger" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": true
-}
 
 [node name="Titolo" type="Label" parent="ControlMessanger"]
 margin_left = 1.0
