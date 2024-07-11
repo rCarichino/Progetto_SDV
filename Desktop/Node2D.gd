@@ -6,7 +6,7 @@ extends Node2D
 func _ready():
 		
 		print(Global.stato_chiamata)
-		##if (Global.fine_atto2)
+		##if (Global.fine_atto2 == true):
 		seleziona_chiamata(Global.stato_chiamata)
 	
 	
@@ -19,10 +19,10 @@ func seleziona_chiamata(stato):
 			
 			
 		elif(stato == 2):
-			var second_dialog = Dialogic.start('chiamata2')
-			add_child(second_dialog)
-			second_dialog.connect("timeline_end", self, 'after_chiamata2')
-			second_dialog.connect("dialogic_signal",self, 'signal_chiamata2')
+				var second_dialog = Dialogic.start('chiamata2')
+				add_child(second_dialog)
+				second_dialog.connect("timeline_end", self, 'after_chiamata2')
+				second_dialog.connect("dialogic_signal",self, 'signal_chiamata2')
 			
 		
 		#scelta residence come primo luogo da visitare	
@@ -141,7 +141,6 @@ func seleziona_chiamata(stato):
 
 func after_chiamata1(chiamata1):
 		print("fine chiamata numero 1")
-		Global.chiamata_1_finita = true
 		Global.stato_chiamata = 2
 		
 
@@ -161,6 +160,7 @@ func signal_chiamata2(argument):
 		if(argument == 'centrosportivo'):
 			print("ha scelto centrosportivo")
 			Global.stato_chiamata = 4
+			## 
 		if(argument == 'prefabbricato'):
 			print("ha scelto prefabbricato")
 			Global.stato_chiamata = 11

@@ -7,9 +7,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-		print("ciao control")
-		print(Global.stato_chiamata)
-		##seleziona_chiamata(Global.stato_chiamata)
+		if Global.chat_finished == true:
+			print(Global.stato_chiamata)
+			seleziona_chiamata(Global.stato_chiamata)
 	
 	
 func seleziona_chiamata(stato):

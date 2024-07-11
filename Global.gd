@@ -1,30 +1,29 @@
 extends Node
 
+var chat_finished = false
 #trigger per coordinazione chat-telefonate
 
 var chiamata_1_finita = false	#carlo chiede la foto
 
 var chat_1_finita = false		#jimmy ottiene la foto
 
+var tictac_centrosportivo_scelta3 = false
+var _10minuti_prefabbricato_scelta3 = false
+var _5minuti_residence_scelta3 = false
+var trillo_esca_scelta3 = false
 
-var chiamata_2_finita = false	#carlo si mette in macchina
+var tictac_prefabbricato_scelta2 = false
+var _10minuti_centrosportivo_scelta2 = false
+var _5minuti_residence_scelta2 = false
+var trillo_esca_scelta2 = false
 
-var chat_2_finita = false
-
-
-var chiamata_3_finita = false
-
-var chat_3_finita = false
-
-
-var chiamata_4_finita = false
-
-var chat_4_finita = false
+var _5minuti_residence_scelta1 = false
+var esca_trillo_residence_scelta1 = false
+var contatto_esca_trillo_scelta1 = false
+var contatto_esca_trillo_scelta_appartamenti = false
 
 
-var chiamata_5_finita = false
 
-var chat_5_finita = false
 
 
 #servono alla gestione dei dialoghi fade in
