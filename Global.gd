@@ -1,7 +1,33 @@
 extends Node
 
+var chat_finished = true
+#trigger per coordinazione chat-telefonate
+
+var chiamata_1_finita = false	#carlo chiede la foto
+
+var chat_1_finita = false		#jimmy ottiene la foto
+
+var tictac_centrosportivo_scelta3 = false
+var _10minuti_prefabbricato_scelta3 = false
+var _5minuti_residence_scelta3 = false
+var trillo_esca_scelta3 = false
+
+var tictac_prefabbricato_scelta2 = false
+var _10minuti_centrosportivo_scelta2 = false
+var _5minuti_residence_scelta2 = false
+var trillo_esca_scelta2 = false
+
+var _5minuti_residence_scelta1 = false
+var esca_trillo_residence_scelta1 = false
+var contatto_esca_trillo_scelta1 = false
+var contatto_esca_trillo_scelta_appartamenti = false
+
+
+
+
+
 #servono alla gestione dei dialoghi fade in
-var chat_completed = false		#se vero, puo far partire la chiamata col numero corrente
+var chat_completed = true		#se vero, puo far partire la chiamata col numero corrente
 
 var stato_chiamata = 1			#indica quale timeline di chiamata attivare
 
@@ -281,6 +307,7 @@ var chat_jimmy_to_rapitore_atto2 = [
 ]
 
 var chat_rapitore_to_jimmy_atto3 = [
+
 	"Tic Tac il tempo sta per scadere,\n hai preso tutti i soldi?",
 	"Contento? questo è l’ultimo desiderio\n che ti lascio esprimere",
 	"Ora, tra circa 20 minuti\n il mio contatto sarà da te",
@@ -289,16 +316,19 @@ var chat_rapitore_to_jimmy_atto3 = [
 	"Mancano 10 minuti…",
 	"Mancano 5 minuti…",
 	"Non è un tuo problema,\n lo saprai quando serve",
+
 ]
 
 
 var chat_jimmy_to_rapitore_atto3 = [
+
 	"Ho tutti i soldi,\nma mandami una sua foto ti prego,\nvoglio sapere se sta bene",
 	"Ancora non li ho contati,\nmandami però una sua foto,\nvoglio capire se sta bene",
 	"Va bene, cosa devo fare?",
 	"Ok…",
 	"Ho tutto quello che mi hai chiesto,\n adesso devo metterli insieme",
 	"E’ tutto pronto",
+
 ]
 
 

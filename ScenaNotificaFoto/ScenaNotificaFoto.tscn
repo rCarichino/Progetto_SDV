@@ -2,7 +2,7 @@
 
 [ext_resource path="res://icone/fotopush.png" type="Texture" id=1]
 [ext_resource path="res://ScenaNotificaFoto/ScenaNotificaFoto.gd" type="Script" id=2]
-[ext_resource path="res://ScenaNotificaDiario/notificadiario.wav" type="AudioStream" id=3]
+[ext_resource path="res://suoni/suoni in wav/Camera Shutter Sound Effect.wav" type="AudioStream" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.607843, 0.117647, 0, 1 )
@@ -62,5 +62,5 @@ stream = ExtResource( 3 )
 bus = "Effetti"
 
 [connection signal="pressed" from="Controlpushfoto/chiudipushfoto" to="." method="_on_chiudipushfoto_pressed"]
-[connection signal="pressed" from="Controlpushfoto/chiudipushfoto/rimandopushfoto" to="Controlpushfoto" method="_on_rimandopushmsn_pressed"]
+[connection signal="pressed" from="Controlpushfoto/chiudipushfoto/rimandopushfoto" to="." method="_on_rimandopushfoto_pressed"]
 [connection signal="pressed" from="Controlpushfoto/chiudipushfoto/rimandopushfoto2" to="Controlpushfoto" method="_on_rimandopush2_pressed"]

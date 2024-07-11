@@ -61,5 +61,5 @@ stream = ExtResource( 3 )
 bus = "Effetti"
 
 [connection signal="pressed" from="Controlpushdiario/chiudipushdiario" to="." method="_on_chiudipushdiario_pressed"]
-[connection signal="pressed" from="Controlpushdiario/chiudipushdiario/rimandopushdiario" to="Controlpushdiario" method="_on_rimandopushmsn_pressed"]
+[connection signal="pressed" from="Controlpushdiario/chiudipushdiario/rimandopushdiario" to="." method="_on_rimandopushdiario_pressed"]
 [connection signal="pressed" from="Controlpushdiario/chiudipushdiario/rimandopushdiario2" to="Controlpushdiario" method="_on_rimandopush2_pressed"]

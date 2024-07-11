@@ -1,17 +1,15 @@
 extends Control
 
-
 var MessaggioRicevuto = preload("res://bubbleRicevuto/Speech.tscn")
 var MessaggioInviato  = preload("res://bubbleInvio/Speech.tscn")
 var ReceivedImageBubble = preload("res://bubbleImmagine/ImageBubble.tscn")  # Carica la nuova scena
-
 
 onready var scroll_container = $HBoxContainer/ChatContainer/ScrollContainer
 onready var message_container = $HBoxContainer/ChatContainer/ScrollContainer/VBoxContainer
 
 func _ready():
 	if(Global.fine_prologo == true):
-		$HBoxContainer/ChatListContainer/ItemList.add_item("User_454234",preload("res://icone/imgRapitore64.png"))
+		$HBoxContainer/ChatListContainer/ItemList.add_item("User_454234", preload("res://icone/imgRapitore64.png"))
 	
 	create_spacer()
 	
@@ -21,7 +19,6 @@ func _ready():
 	else:
 		load_messages()
 		check_where_stopped()
-
 
 func scroll_to_bottom():
 	scroll_container.scroll_vertical = scroll_container.get_v_scrollbar().max_value
@@ -96,32 +93,43 @@ func create_phrase_buttons(phrases):
 		vbox.remove_child(child)
 		child.queue_free()
 
-	for phrase in phrases:
+	for i in range(len(phrases)):
+		var phrase = phrases[i]
 		var button = Button.new()
 		button.flat = true
 		button.text = phrase
 		
-  # Imposta lo stile del bottone
+		# Imposta il puntatore a pointing hand
+		button.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		
+		# Imposta lo stile del bottone
 		var style_normal = StyleBoxFlat.new()
-		style_normal.bg_color = Color(0, 0, 0, 0) 
+		style_normal.bg_color = Color(0, 0, 0, 0)
 		
 		var style_hover = StyleBoxFlat.new()
-		style_hover.bg_color = Color(0, 0, 0, 0)  
+		style_hover.bg_color = Color(0, 0, 0, 0)
 		
 		var style_pressed = StyleBoxFlat.new()
-		style_pressed.bg_color = Color(0, 0, 0, 0)  
-
+		style_pressed.bg_color = Color(0, 0, 0, 0)
+		
 		var style_focus = StyleBoxEmpty.new()
 		
 		button.add_stylebox_override("normal", style_normal)
 		button.add_stylebox_override("hover", style_hover)
 		button.add_stylebox_override("pressed", style_pressed)
 		button.add_stylebox_override("focus", style_focus)
-		button.add_color_override("font_color", Color.black)  
-		button.add_color_override("font_color_hover", Color.black)  
-		button.add_color_override("font_color_pressed", Color.black) 
-		button.connect("pressed", self, "_on_phrase_button_pressed", [button,phrase])
+		button.add_color_override("font_color", Color.black)
+		button.add_color_override("font_color_hover", Color.black)
+		button.add_color_override("font_color_pressed", Color.black)
+		button.connect("pressed", self, "_on_phrase_button_pressed", [button, phrase])
 		vbox.add_child(button)
+
+		# Aggiungi una linea di separazione tra i bottoni
+		if i < len(phrases) - 1:
+			var separator = HSeparator.new()
+			separator.rect_min_size = Vector2(0, 2)
+			separator.modulate = Color(0, 0, 0)
+			vbox.add_child(separator)
 
 
 func _on_phrase_button_pressed(button,phrase):
@@ -206,13 +214,13 @@ func give_answer(question):
 
 		"Va bene…":
 			Global.modify_fine_atto1()
-			
 
 			if(Global.already_notified_rapitore == false):
 				$NotificaMSN.show_notify()
 				$NotificaDiario.show_notify_diario()
 				Global.yes_already_notified_carlo()
 				Global.save_progress_data()
+
 			
 			if(Global.sblocco_atto2_rapitore == true):
 				
@@ -271,7 +279,7 @@ func give_answer(question):
 				Global.modify_fine_atto2_rapitore()
 				if(Global.fine_atto2_carlo && Global.fine_atto2_rapitore):
 					Global.modify_fine_atto2()
-					
+
 
 				if(Global.already_notified_rapitore == false):
 					$NotificaDiario.show_notify_diario()

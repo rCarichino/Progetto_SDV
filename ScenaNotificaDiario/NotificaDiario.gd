@@ -10,6 +10,9 @@ extends Control
 func _ready():
 	pass
 
+func _on_rimandopushdiario_pressed():
+	get_tree().change_scene("res://Cartella_Appunti/CartellaAppunti.tscn")
+	
 func _on_chiudipushdiario_pressed():
 	$".".visible=false
 	pass # Replace with function body.
