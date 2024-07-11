@@ -3,7 +3,7 @@ extends Control
 
 var MessaggioRicevuto = preload("res://bubbleRicevuto/Speech.tscn")
 var MessaggioInviato  = preload("res://bubbleInvio/Speech.tscn")
-
+var SendImageBubble = preload("res://bubbleImmagine/ImageBubble.tscn")  # Carica la nuova scena
 
 onready var scroll_container = $HBoxContainer/ChatContainer/ScrollContainer
 onready var message_container = $HBoxContainer/ChatContainer/ScrollContainer/VBoxContainer
@@ -130,7 +130,11 @@ func create_phrase_buttons(phrases):
 
 
 func _on_phrase_button_pressed(button,phrase):
+
 	add_sent_message(phrase)
+	if(phrase == "Adesso ci credi?"):
+		add_send_image("res://fotoAlessia/foto_n1_chat.jpg")
+		
 	disable_all_buttons()
 	button.disabled =  true
 	give_answer(phrase)
@@ -206,7 +210,7 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[4]])
 				
-			"[Manda la foto in chat] Adesso ci credi?":
+			"Adesso ci credi?":
 				###INSERISCI IMMAGINE
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[5])
@@ -371,3 +375,43 @@ func load_answer(question):
 			"Okok e come ci sentiamo?":
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[17]])
 			
+
+
+func add_send_image(image_path):
+	var found = false
+	var bubble = SendImageBubble.instance()
+	var texture = load(image_path)
+	var texture_rect = bubble.get_node("VBoxContainer/TextureRect")
+	texture_rect.texture = texture
+	
+	if texture:
+		texture_rect.rect_min_size = Vector2(texture.get_width(), texture.get_height())
+		texture_rect.rect_size = Vector2(texture.get_width(), texture.get_height())
+
+
+	bubble.get_node("VBoxContainer").margin_left = -200
+
+	var hbox = HBoxContainer.new()
+	hbox.alignment = BoxContainer.ALIGN_END  
+	
+	var spacer_left = Control.new()
+	spacer_left.rect_min_size = Vector2(0, 80)
+	spacer_left.set_h_size_flags(Control.SIZE_EXPAND_FILL)
+	
+	var message_container_right = VBoxContainer.new()
+	message_container_right.add_child(bubble)
+	hbox.add_child(spacer_left)
+	hbox.add_child(message_container_right)
+	message_container.add_child(hbox)
+	yield(get_tree().create_timer(0.3),"timeout")
+	scroll_to_bottom()
+	
+	if(Global.chat_messages_carlo != []):
+		for message in Global.chat_messages_rapitore:
+			if image_path in message["text"]:
+				found = true
+				break
+		if(!found):
+			Global.add_message_carlo({"type": "received_image", "text": image_path})
+	else:
+		Global.add_message_carlo({"type": "received_image", "text": image_path})

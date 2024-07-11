@@ -150,6 +150,7 @@ func give_answer(question):
 			add_received_message(Global.chat_rapitore_to_jimmy_atto1[2])
 			yield(get_tree().create_timer(2),"timeout")
 			add_received_image("res://fotoAlessia/foto_n1_chat.jpg")
+			Global.modify_foto1()
 			yield(get_tree().create_timer(3),"timeout")
 			add_received_message(Global.chat_rapitore_to_jimmy_atto1[3])
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[3],Global.chat_jimmy_to_rapitore_atto1[4],
@@ -158,6 +159,7 @@ func give_answer(question):
 		"In k senso?":
 			yield(get_tree().create_timer(1),"timeout")
 			add_received_image("res://fotoAlessia/foto_n1_chat.jpg")
+			Global.modify_foto1()
 			yield(get_tree().create_timer(3),"timeout")
 			add_received_message(Global.chat_rapitore_to_jimmy_atto1[3])
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[3],Global.chat_jimmy_to_rapitore_atto1[4],
@@ -272,11 +274,32 @@ func load_answer(question):
 	match question:
 		"Ciao Jimmy, come sta Alessia?":
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[0]])
+			
 		"Beh, effettivamente come potresti saperlo! É qui con me":
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[1],Global.chat_jimmy_to_rapitore_atto1[2]])
+			
 		"Pensi che ti stia prendendo per il culo?":
+			yield(get_tree().create_timer(1),"timeout")
+			add_received_image("res://fotoAlessia/foto_n1_chat.jpg")
+			yield(get_tree().create_timer(2),"timeout")
+			add_received_message(Global.chat_rapitore_to_jimmy_atto1[3])
+			yield(get_tree().create_timer(2),"timeout")
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[3],Global.chat_jimmy_to_rapitore_atto1[4],
 			Global.chat_jimmy_to_rapitore_atto1[5],Global.chat_jimmy_to_rapitore_atto1[6]])
+			
+			
+		"res://fotoAlessia/foto_n1_chat.jpg":
+			add_received_message(Global.chat_rapitore_to_jimmy_atto1[3])
+			yield(get_tree().create_timer(2),"timeout")
+			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[3],Global.chat_jimmy_to_rapitore_atto1[4],
+			Global.chat_jimmy_to_rapitore_atto1[5],Global.chat_jimmy_to_rapitore_atto1[6]])
+			
+		"Non ti azzardare a contattare qualcuno,chiamare la polizia o a muoverti da quella di sedia, se non ho tue risposte entro 5 minuti Alessia raggiunge mamma e papà. E vedi di scrivere in modo decente…":
+			
+			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[3],Global.chat_jimmy_to_rapitore_atto1[4],
+			Global.chat_jimmy_to_rapitore_atto1[5],Global.chat_jimmy_to_rapitore_atto1[6]])
+			
+			
 		"Se ascolterai tutto quello che ti dico, forse non le accadrá nulla", \
 		"Lo scoprirai molto presto, per ora ascolta tutto quello che ti dico",\
 		"Inutile che provi a chiamare":
@@ -329,6 +352,8 @@ func load_answer(question):
 
 
 func add_received_image(image_path):
+	
+	var found = false
 	var bubble = ReceivedImageBubble.instance()
 	var texture = load(image_path)
 	var texture_rect = bubble.get_node("VBoxContainer/TextureRect")
@@ -356,5 +381,13 @@ func add_received_image(image_path):
 	
 	yield(get_tree().create_timer(0.3),"timeout")
 	scroll_to_bottom()
-	
-	Global.add_message_rapitore({"type": "received_image", "text": image_path})
+	if(Global.chat_messages_rapitore != []):
+		for message in Global.chat_messages_rapitore:
+			if image_path in message["text"]:
+				found = true
+				break
+		if(!found):
+			Global.add_message_rapitore({"type": "received_image", "text": image_path})
+	else:
+		Global.add_message_rapitore({"type": "received_image", "text": image_path})
+
