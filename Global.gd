@@ -252,47 +252,60 @@ var global_volumeCS: float = 0.4
 var global_volumesfx: float = 0.4
 var global_volumedialoghi: float = 0.4
 
-# Salva i dati globali su un file JSON
-func save_global_data():
-	var save_data = {
-		"fine_prologo": fine_prologo,
-		"fine_atto1": fine_atto1,
-		"fine_atto2": fine_atto2,
-		"fine_gioco": fine_gioco,
-		"foto1":foto1,
-		"foto2":foto2,
-		"chat_messages_carlo": chat_messages_carlo,
-		"chat_messages_rapitore": chat_messages_rapitore,
-		"global_volumeCS": global_volumeCS,
-		"global_volumesfx": global_volumesfx,
-		"global_volumedialoghi": global_volumedialoghi,
-
+func save_settings():
+	var save_settings={
+	"global_volumeCS": global_volumeCS,
+	"global_volumesfx": global_volumesfx,
+	"global_volumedialoghi": global_volumedialoghi
 	}
 	var file = File.new()
-	file.open("res://salvataggi/salvataggi_impostazioni/global_data.json", File.WRITE)
+	file.open("res://salvataggi/salvataggi_impostazioni/settings_data.json",File.WRITE)
+	file.store_string(JSON.print(save_settings))
+	print("Salvataggio effettuato impostazioni")
+	file.close()
+	
+func load_settings():
+	var filesettings = File.new()
+	if filesettings.file_exists("res://salvataggi/salvataggi_impostazioni/settings_data.json"):
+		filesettings.open("res://salvataggi/salvataggi_impostazioni/settings_data.json", File.READ)
+	var settings = JSON.parse(filesettings.get_as_text())
+	filesettings.close()
+	if settings.error == OK:
+		global_volumeCS = settings.result.get("global_volumeCS", 0.4)
+		global_volumesfx = settings.result.get("global_volumesfx", 0.4)
+		global_volumedialoghi = settings.result.get("global_volumedialoghi", 0.4)
+
+	# Salva i dati globali su un file JSON
+func save_progress_data():
+	var save_data = {
+	"fine_prologo": fine_prologo,
+	"fine_atto1": fine_atto1,
+	"fine_atto2": fine_atto2,
+	"fine_gioco": fine_gioco,
+	"chat_messages_carlo": chat_messages_carlo,
+	"chat_messages_rapitore": chat_messages_rapitore,
+	}
+	var file = File.new()
+	file.open("res://salvataggi/salvataggi_progressi/progressi_data.json", File.WRITE)
 	file.store_string(JSON.print(save_data))
 	print("Salvataggio effettuato")
 	file.close()
-# Carica i dati globali da un gile JSON
-func load_global_data():
-	print("entro")
+	
+	# Carica i dati globali da un gile JSON
+func load_progress_data():
+
 	var file = File.new()
-	if file.file_exists("res://salvataggi/salvataggi_impostazioni/global_data.json"):
+	if file.file_exists("res://salvataggi/salvataggi_progressi/progressi_data.json"):
 		print("cristo")
-		file.open("res://salvataggi/salvataggi_impostazioni/global_data.json", File.READ)
-		var data = JSON.parse(file.get_as_text())
-		print(data.error)
-		file.close()
-		if data.error == OK:
-			var save_data = data.result
-			fine_prologo = save_data.get("fine_prologo", false)
-			fine_atto1 = save_data.get("fine_atto1", false)
-			fine_atto2 = save_data.get("fine_atto2", false)
-			fine_gioco = save_data.get("fine_gioco", false)
-			foto1 = save_data.get("foto1",false)
-			foto2 = save_data.get("foto2",false)
-			chat_messages_carlo = save_data.get("chat_messages_carlo", [])
-			chat_messages_rapitore = save_data.get("chat_messages_rapitore", [])
-			global_volumeCS = save_data.get("global_volumeCS", 0.4)
-			global_volumesfx = save_data.get("global_volumesfx", 0.4)
-			global_volumedialoghi = save_data.get("global_volumedialoghi", 0.4)
+		file.open("res://salvataggi/salvataggi_progressi/progressi_data.json", File.READ)
+	var data = JSON.parse(file.get_as_text())
+	print(data.error)
+	file.close()
+	if data.error == OK:
+		var save_data = data.result
+		fine_prologo = save_data.get("fine_prologo", false)
+		fine_atto1 = save_data.get("fine_atto1", false)
+		fine_atto2 = save_data.get("fine_atto2", false)
+		fine_gioco = save_data.get("fine_gioco", false)
+		chat_messages_carlo = save_data.get("chat_messages_carlo", [])
+		chat_messages_rapitore = save_data.get("chat_messages_rapitore", [])
