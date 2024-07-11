@@ -175,18 +175,20 @@ func give_answer(question):
 			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[8]])
 		"AH kk":
 			Global.modify_fine_prologo()
-			$NotificaDiario.show_notify_diario()
+
 			if(Global.fine_prologo == true):
-				$HBoxContainer/ChatListContainer/ItemList.add_item("User_454234",preload("res://icone/imgRapitore64.png"))
-				$NotificaMSN.show_notify()
-				
+				if($HBoxContainer/ChatListContainer/ItemList.get_item_text(2)  != "User_454234"):
+					$HBoxContainer/ChatListContainer/ItemList.add_item("User_454234",preload("res://icone/imgRapitore64.png"))
+					$NotificaMSN.show_notify()
+					$NotificaDiario.show_notify_diario()
+					Global.save_progress_data()
 			if(Global.fine_atto1 == true):
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[0])
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[0],Global.chat_jimmy_to_carlo_atto2[1]])
-			#DA METTERE IL SALVATAGGIO
-			
+
+
 	if(Global.fine_atto1 == true):
 		match question: 
 			"Guarda non é il momento":
@@ -241,8 +243,8 @@ func give_answer(question):
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[9]])
 				
 			"[Chiama la polizia]":
-				print()
-				###inserire un finale
+				var finalePolizia = Dialogic.start('finale polizia')
+				add_child(finalePolizia)
 				
 			"Ho troppa paura…Non ce la faccio, ho paura che le faccia del male":
 				yield(get_tree().create_timer(2),"timeout")
@@ -285,6 +287,7 @@ func give_answer(question):
 				if(Global.fine_atto2_carlo && Global.fine_atto2_rapitore):
 					Global.modify_fine_atto2()
 					$NotificaDiario.show_notify_diario()
+					Global.save_progress_data()
 				
 			
 

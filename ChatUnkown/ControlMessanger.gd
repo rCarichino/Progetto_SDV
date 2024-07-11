@@ -176,20 +176,26 @@ func give_answer(question):
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[7]])
 
 		"[Chiama la polizia]":
-			###finale della chiamata alla polizia
 			var finalePolizia = Dialogic.start('finale polizia')
 			add_child(finalePolizia)
-			Global.modify_fine_atto1()
+
 
 		"[Chiama Alessia]":
 			##far partire uno squillo
 			yield(get_tree().create_timer(2),"timeout")
 			add_received_message(Global.chat_rapitore_to_jimmy_atto1[6])
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[7]])
-			
+
 		"Va bene…":
 			Global.modify_fine_atto1()
+
+			Global.save_progress_data()
+			
+			$NotificaMSN.show_notify()
+			$NotificaDiario.show_notify_diario()
+			
 			if(Global.sblocco_atto2_rapitore == true):
+				
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_rapitore_to_jimmy_atto2[0])
 				yield(get_tree().create_timer(2),"timeout")
@@ -240,7 +246,7 @@ func give_answer(question):
 				if(Global.fine_atto2_carlo && Global.fine_atto2_rapitore):
 					Global.modify_fine_atto2()
 					$NotificaDiario.show_notify_diario()
-				
+					Global.save_progress_data()
 
 
 

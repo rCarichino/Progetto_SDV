@@ -248,6 +248,29 @@ var chat_jimmy_to_rapitore_atto2 = [
 	"Io li cerco, ma tu non toccarla",
 ]
 
+var chat_rapitore_to_jimmy_atto3 = [
+	"Tic Tac il tempo sta per scadere, hai preso tutti i soldi?",
+	"Contento? questo è l’ultimo desiderio che ti lascio esprimere",
+	"Ora, tra circa 20 minuti il mio contatto sarà da te",
+	"Riempi un borsone e lascialo sotto casa esattamente quando te lo dico io",
+	"tic tac… tic tac…. tic tac…",
+	"Mancano 10 minuti…",
+	"Mancano 5 minuti…",
+	"non è un tuo problema, lo saprai quando serve",
+]
+
+
+var chat_jimmy_to_rapitore_atto3 = [
+	"Ho tutti i soldi, ma mandami una sua foto ti prego, voglio sapere se sta bene",
+	"Ancora non li ho contati, mandami però una sua foto, voglio capire se sta bene",
+	"Va bene, cosa devo fare?",
+	"Ok…",
+	"Ho tutto quello che mi hai chiesto, adesso devo metterli insieme",
+	"E’ tutto pronto",
+	"non è un tuo problema, lo saprai quando serve",
+]
+
+
 var global_volumeCS: float = 0.4
 var global_volumesfx: float = 0.4
 var global_volumedialoghi: float = 0.4
