@@ -4,8 +4,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-		print("ciao")
+		
 		print(Global.stato_chiamata)
+		##if (Global.fine_atto2)
 		seleziona_chiamata(Global.stato_chiamata)
 	
 	
@@ -140,6 +141,7 @@ func seleziona_chiamata(stato):
 
 func after_chiamata1(chiamata1):
 		print("fine chiamata numero 1")
+		Global.chiamata_1_finita = true
 		Global.stato_chiamata = 2
 		
 

@@ -9,7 +9,7 @@ extends Control
 func _ready():
 		print("ciao control")
 		print(Global.stato_chiamata)
-		seleziona_chiamata(Global.stato_chiamata)
+		##seleziona_chiamata(Global.stato_chiamata)
 	
 	
 func seleziona_chiamata(stato):

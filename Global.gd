@@ -1,5 +1,32 @@
 extends Node
 
+#trigger per coordinazione chat-telefonate
+
+var chiamata_1_finita = false	#carlo chiede la foto
+
+var chat_1_finita = false		#jimmy ottiene la foto
+
+
+var chiamata_2_finita = false	#carlo si mette in macchina
+
+var chat_2_finita = false
+
+
+var chiamata_3_finita = false
+
+var chat_3_finita = false
+
+
+var chiamata_4_finita = false
+
+var chat_4_finita = false
+
+
+var chiamata_5_finita = false
+
+var chat_5_finita = false
+
+
 #servono alla gestione dei dialoghi fade in
 var chat_completed = true		#se vero, puo far partire la chiamata col numero corrente
 
