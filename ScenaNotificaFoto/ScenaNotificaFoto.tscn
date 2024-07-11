@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://icone/fotopush.png" type="Texture" id=1]
+[ext_resource path="res://ScenaNotificaFoto/ScenaNotificaFoto.gd" type="Script" id=2]
+[ext_resource path="res://ScenaNotificaDiario/notificadiario.wav" type="AudioStream" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.607843, 0.117647, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.419608, 0.129412, 0.0627451, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.419608, 0.129412, 0.0627451, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.607843, 0.117647, 0, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Controlpushfoto" type="Control" parent="."]
+margin_left = 1.0
+margin_top = 101.0
+margin_right = 41.0
+margin_bottom = 141.0
+
+[node name="Sprite" type="Sprite" parent="Controlpushfoto"]
+position = Vector2( 148, 426 )
+scale = Vector2( 0.280189, 0.158491 )
+texture = ExtResource( 1 )
+
+[node name="chiudipushfoto" type="Button" parent="Controlpushfoto"]
+margin_left = 277.0
+margin_top = 384.0
+margin_right = 297.0
+margin_bottom = 402.0
+mouse_default_cursor_shape = 2
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "X"
+
+[node name="rimandopushfoto" type="Button" parent="Controlpushfoto/chiudipushfoto"]
+margin_left = -277.0
+margin_bottom = 84.0
+mouse_default_cursor_shape = 2
+flat = true
+
+[node name="rimandopushfoto2" type="Button" parent="Controlpushfoto/chiudipushfoto"]
+margin_top = 18.0
+margin_right = 19.0
+margin_bottom = 84.0
+flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "Effetti"
+
+[connection signal="pressed" from="Controlpushfoto/chiudipushfoto" to="." method="_on_chiudipushfoto_pressed"]
+[connection signal="pressed" from="Controlpushfoto/chiudipushfoto/rimandopushfoto" to="Controlpushfoto" method="_on_rimandopushmsn_pressed"]
+[connection signal="pressed" from="Controlpushfoto/chiudipushfoto/rimandopushfoto2" to="Controlpushfoto" method="_on_rimandopush2_pressed"]
