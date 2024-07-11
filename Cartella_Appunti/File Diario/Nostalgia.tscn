@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Cestino/Button.gd" type="Script" id=1]
+[ext_resource path="res://Cartella_Appunti/File Diario/Button1anno.gd" type="Script" id=1]
 [ext_resource path="res://Cartella_Appunti/File Diario/Immagini diario/document_note_text_file_icon_181575.png" type="Texture" id=3]
 [ext_resource path="res://menuiniziale/arial_narrow_7.ttf" type="DynamicFontData" id=4]
 
@@ -42,10 +42,10 @@ margin_right = 1025.0
 margin_bottom = 21.0
 custom_fonts/font = SubResource( 1 )
 custom_styles/normal = SubResource( 2 )
-text = "         Vita Jimmy - Blocco Note"
+text = "         Nostalgia - Blocco Note"
 valign = 1
 
-[node name="DesktopButton" type="Button" parent="Titolo"]
+[node name="Button1anno" type="Button" parent="Titolo"]
 margin_left = 1005.0
 margin_top = 1.0
 margin_right = 1025.0
@@ -93,4 +93,4 @@ pensasse, e dove fosse finito.
 
 "
 
-[connection signal="pressed" from="Titolo/DesktopButton" to="Titolo/DesktopButton" method="_on_Button_pressed"]
+[connection signal="pressed" from="Titolo/Button1anno" to="Titolo/Button1anno" method="_on_Button1anno_pressed"]

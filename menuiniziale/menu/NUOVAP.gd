@@ -18,4 +18,4 @@ func _ready():
 
 func _on_NUOVAP_pressed():
 	$"../../../../selezione".play()
-
+	$"../../../../HBoxContainer".show()

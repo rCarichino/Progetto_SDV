@@ -1,7 +1,6 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Desktop/door.gd" type="Script" id=1]
-[ext_resource path="res://Desktop/Control.gd" type="Script" id=2]
 [ext_resource path="res://Cestino/Cestino.gd" type="Script" id=3]
 [ext_resource path="res://icone/Internet_Explorer-Logo.wine.png" type="Texture" id=4]
 [ext_resource path="res://icone/folder.png" type="Texture" id=5]
@@ -14,7 +13,7 @@
 [ext_resource path="res://icone/impostazioni.png" type="Texture" id=12]
 [ext_resource path="res://Desktop/sospendi.png" type="Texture" id=13]
 [ext_resource path="res://Desktop/sospendi.gd" type="Script" id=14]
-[ext_resource path="res://Desktop/Node2D.gd" type="Script" id=15]
+[ext_resource path="res://ScenaNotificaDiario/NotificaDiario.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Desktop/Controlspegni.gd" type="Script" id=16]
 [ext_resource path="res://Desktop/impostazioni.gd" type="Script" id=17]
 [ext_resource path="res://Desktop/Si.gd" type="Script" id=18]
@@ -26,10 +25,8 @@
 [ext_resource path="res://Cartella_Appunti/Cartella_Appunti.gd" type="Script" id=24]
 [ext_resource path="res://icone/Sfondo Desktop.png" type="Texture" id=25]
 [ext_resource path="res://menuiniziale/arial_narrow_7.ttf" type="DynamicFontData" id=26]
-[ext_resource path="res://Desktop/msnpush.png" type="Texture" id=27]
-[ext_resource path="res://Desktop/Controlpushmsn.gd" type="Script" id=28]
-[ext_resource path="res://Desktop/diariopush.png" type="Texture" id=29]
 [ext_resource path="res://Desktop/Messanger.gd" type="Script" id=30]
+[ext_resource path="res://ScenaNotifica/Scenanotifica.tscn" type="PackedScene" id=31]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 26 )
@@ -46,20 +43,7 @@ font_data = ExtResource( 26 )
 [sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 26 )
 
-[sub_resource type="StyleBoxFlat" id=11]
-bg_color = Color( 0.607843, 0.117647, 0, 1 )
-
-[sub_resource type="StyleBoxFlat" id=12]
-bg_color = Color( 0.419608, 0.129412, 0.0627451, 1 )
-
-[sub_resource type="StyleBoxFlat" id=13]
-bg_color = Color( 0.419608, 0.129412, 0.0627451, 1 )
-
-[sub_resource type="StyleBoxFlat" id=14]
-bg_color = Color( 0.607843, 0.117647, 0, 1 )
-
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 15 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 0.0 ]
 }
@@ -72,7 +56,6 @@ texture = ExtResource( 25 )
 normal_map = ExtResource( 25 )
 
 [node name="Control" type="Control" parent="."]
-script = ExtResource( 2 )
 
 [node name="impostazioni" type="TextureButton" parent="Control"]
 margin_left = 879.0
@@ -334,83 +317,12 @@ position = Vector2( 655.5, -245.5 )
 scale = Vector2( 0.1675, 0.1645 )
 texture = ExtResource( 13 )
 
-[node name="Controlpushmsn" type="Control" parent="Control"]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 28 )
-
-[node name="Sprite" type="Sprite" parent="Control/Controlpushmsn"]
-position = Vector2( 148, 426 )
-scale = Vector2( 0.280189, 0.158491 )
-texture = ExtResource( 27 )
-
-[node name="chiudipushmsn" type="Button" parent="Control/Controlpushmsn"]
-margin_left = 277.0
-margin_top = 384.0
-margin_right = 297.0
-margin_bottom = 402.0
-mouse_default_cursor_shape = 2
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_styles/hover = SubResource( 11 )
-custom_styles/pressed = SubResource( 12 )
-custom_styles/focus = SubResource( 13 )
-custom_styles/normal = SubResource( 14 )
-text = "X"
-
-[node name="rimandopushmsn" type="Button" parent="Control/Controlpushmsn/chiudipushmsn"]
-margin_left = -277.0
-margin_bottom = 84.0
-mouse_default_cursor_shape = 2
-flat = true
-
-[node name="rimandopush2" type="Button" parent="Control/Controlpushmsn/chiudipushmsn"]
-margin_top = 18.0
-margin_right = 19.0
-margin_bottom = 84.0
-flat = true
-
-[node name="Controlpushdiario" type="Control" parent="Control"]
-visible = false
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 28 )
-
-[node name="Sprite" type="Sprite" parent="Control/Controlpushdiario"]
-position = Vector2( 148, 426 )
-scale = Vector2( 0.280189, 0.158491 )
-texture = ExtResource( 29 )
-
-[node name="chiudipushdiario" type="Button" parent="Control/Controlpushdiario"]
-margin_left = 277.0
-margin_top = 384.0
-margin_right = 297.0
-margin_bottom = 402.0
-mouse_default_cursor_shape = 2
-custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
-custom_styles/hover = SubResource( 11 )
-custom_styles/pressed = SubResource( 12 )
-custom_styles/focus = SubResource( 13 )
-custom_styles/normal = SubResource( 14 )
-text = "X"
-
-[node name="rimandopushdiario" type="Button" parent="Control/Controlpushdiario/chiudipushdiario"]
-margin_left = -277.0
-margin_bottom = 84.0
-mouse_default_cursor_shape = 2
-flat = true
-
-[node name="rimandopushdiario2" type="Button" parent="Control/Controlpushdiario/chiudipushdiario"]
-margin_top = 18.0
-margin_right = 19.0
-margin_bottom = 84.0
-flat = true
-
 [node name="Messanger" type="TextureButton" parent="Control"]
 margin_left = 21.0
 margin_top = 22.0
 margin_right = 145.0
 margin_bottom = 121.0
+mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 7 )
 expand = true
 script = ExtResource( 30 )
@@ -425,6 +337,12 @@ margin_bottom = 119.0
 rect_pivot_offset = Vector2( -567, 87 )
 custom_fonts/font = SubResource( 1 )
 text = "Messanger"
+
+[node name="Controlpushmsn" parent="Control" instance=ExtResource( 31 )]
+visible = false
+
+[node name="Controlpushdiario" parent="Control" instance=ExtResource( 15 )]
+visible = false
 
 [connection signal="mouse_entered" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_mouse_entered"]
 [connection signal="mouse_exited" from="Control/impostazioni" to="Control/impostazioni" method="_on_impostazioni_mouse_exited"]
@@ -461,10 +379,4 @@ text = "Messanger"
 [connection signal="pressed" from="Control/door/sospendi" to="Control" method="_on_sospendi_pressed"]
 [connection signal="pressed" from="Control/door/sospendi/Controlsospendi/Si" to="Control/door/sospendi/Controlsospendi" method="_on_Si_pressed"]
 [connection signal="pressed" from="Control/door/sospendi/Controlsospendi/NO" to="Control/door/sospendi/Controlsospendi" method="_on_NO_pressed"]
-[connection signal="pressed" from="Control/Controlpushmsn/chiudipushmsn" to="Control/Controlpushmsn" method="_on_chiudipushmsn_pressed"]
-[connection signal="pressed" from="Control/Controlpushmsn/chiudipushmsn/rimandopushmsn" to="Control/Controlpushmsn" method="_on_rimandopushmsn_pressed"]
-[connection signal="pressed" from="Control/Controlpushmsn/chiudipushmsn/rimandopush2" to="Control/Controlpushmsn" method="_on_rimandopush2_pressed"]
-[connection signal="pressed" from="Control/Controlpushdiario/chiudipushdiario" to="Control/Controlpushdiario" method="_on_chiudipushdiario_pressed"]
-[connection signal="pressed" from="Control/Controlpushdiario/chiudipushdiario/rimandopushdiario" to="Control/Controlpushdiario" method="_on_rimandopushdiario_pressed"]
-[connection signal="pressed" from="Control/Controlpushdiario/chiudipushdiario/rimandopushdiario2" to="Control/Controlpushdiario" method="_on_rimandopushdiario2_pressed"]
 [connection signal="pressed" from="Control/Messanger" to="Control/Messanger" method="_on_Messanger_pressed"]
