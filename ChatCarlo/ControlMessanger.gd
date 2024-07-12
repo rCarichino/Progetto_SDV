@@ -187,10 +187,10 @@ func give_answer(question):
 			if(Global.fine_prologo == true):
 				if($HBoxContainer/ChatListContainer/ItemList.get_item_text(2)  != "User_454234"):
 					$HBoxContainer/ChatListContainer/ItemList.add_item("User_454234",preload("res://icone/imgRapitore64.png"))
-					if(Global.already_notified_Carlo == false):
+					if(Global.already_notified_carlo == false):
 						$NotificaMSN.show_notify()
 						$NotificaDiario.show_notify_diario()
-						Global.yes_already_notified_Carlo()
+						Global.yes_already_notified_carlo()
 						Global.save_progress_data()
 
 

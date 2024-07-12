@@ -226,6 +226,7 @@ config/icon="res://icone/icon.png"
 
 Global="*res://Global.gd"
 Colonnesonore="*res://suoni/colonne_sonore/Scena_colonne_sonore/colonnesonore.tscn"
+Colonnasonorachill="*res://suoni/colonne_sonore/Scena_colonne_sonore/colonnasonorachill.tscn"
 
 [display]
 
