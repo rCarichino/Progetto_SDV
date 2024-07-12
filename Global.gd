@@ -155,7 +155,7 @@ func get_foto2():
 
 func switchcolonnasonora():
 	if(fine_prologo==true):
-		Colonnasonorachill.switchcolonnachill()
+		Colonnasonorachill.switchcolonnaSad()
 
 
 var chat_messages_alessia = [
@@ -231,7 +231,7 @@ var chat_jimmy_to_rapitore_atto1 = [
 
 var chat_carlo_to_jimmy_atto2 = [
 	"Ue ho finito, vuoi giocare???",
-	"“k succ?”",
+	"k succ?",
 	"[ARRIVA UN ALTRO TRILLO]",
 	"Dai nn dire ste cazzate neanche x scherzo",
 	"Cazzo dici, ma smettila",
@@ -267,7 +267,7 @@ var chat_jimmy_to_carlo_atto2 = [
 	"Devo continuare a rispondergli",
 	"Fra dovrai essere le mie gambe,\ndevi andare tu al posto mio",
 	"Ma quindi sei vestito?",
-	"Non lo so mi verrá in mente dopo,\n tu esci di casa e vai in macchina",
+	"Non lo so mi verrá in mente dopo,\ntu esci di casa e vai in macchina",
 	"Per ora vai in macchina",
 	"Con il telefono deficiente",
 ]
@@ -314,8 +314,8 @@ var chat_rapitore_to_jimmy_atto3 = [
 
 var chat_jimmy_to_rapitore_atto3 = [
 
-	"Ho tutti i soldi,\nma mandami una sua foto ti prego,\nvoglio sapere se sta bene",
-	"Ancora non li ho contati,\nmandami però una sua foto,\nvoglio capire se sta bene",
+	"Ma mandami una sua foto ti prego,\nvoglio sapere se sta bene",
+	"Mandami però una sua foto,\nvoglio capire se sta bene",
 	"Va bene, cosa devo fare?",
 	"Ok…",
 	"Ho tutto quello che mi hai chiesto,\n adesso devo metterli insieme",

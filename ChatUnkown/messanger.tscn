@@ -37,8 +37,6 @@ bg_color = Color( 0.607843, 0.117647, 0, 1 )
 [node name="Node2D" type="Node2D"]
 position = Vector2( -1, 2 )
 
-[node name="Control" parent="." instance=ExtResource( 15 )]
-
 [node name="ControlMessanger" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -221,15 +219,13 @@ scale = Vector2( 0.1705, 0.149625 )
 texture = ExtResource( 1 )
 offset = Vector2( 2011.73, 1350.04 )
 
-[node name="Controlpushdiario" parent="ControlMessanger" instance=ExtResource( 12 )]
-visible = false
-margin_right = 983.0
-margin_bottom = 557.0
-
-[node name="Controlpushmsn" parent="ControlMessanger" instance=ExtResource( 13 )]
+[node name="NotificaDiario" parent="ControlMessanger" instance=ExtResource( 12 )]
 visible = false
 
-[node name="Controlpushfoto" parent="ControlMessanger" instance=ExtResource( 15 )]
+[node name="NotificaMSN" parent="ControlMessanger" instance=ExtResource( 13 )]
+visible = false
+
+[node name="NotificaFoto" parent="ControlMessanger" instance=ExtResource( 15 )]
 visible = false
 
 [connection signal="pressed" from="ControlMessanger/Titolo/Button" to="ControlMessanger/Titolo/Button" method="_on_Button_pressed"]
