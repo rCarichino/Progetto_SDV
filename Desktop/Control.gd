@@ -4,56 +4,68 @@ extends Control
 
 
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-		if Global.chat_finished == true:
-			print(Global.stato_chiamata)
-			seleziona_chiamata(Global.stato_chiamata)
+	print(Global.chat_completed)
+	print(Global.timer_expired)
+	print(Global.stato_chiamata)
+	print(Global.step)
 	
-	
+	if (Global.chat_completed == true && Global.timer_expired == true):
+		Global.timer_expired = false
+		seleziona_chiamata(Global.stato_chiamata)
+		
+		if(Global.residence_as_first == false && Global.stato_chiamata > 2):
+			match Global.step:
+				0:
+					Global.chat_tictac = true
+					$Controlpushmsn.show_notify()
+				1:
+					Global.chat_10minuti = true
+					$Controlpushmsn.show_notify()
+				2:
+					Global.chat_5minuti = true
+					$Controlpushmsn.show_notify()
+			Global.step = Global.step + 1
+
 func seleziona_chiamata(stato):
-	
+
 		if(stato == 1):
 			var new_dialog = Dialogic.start('chiamata1')
 			add_child(new_dialog)
 			new_dialog.connect("timeline_end", self, 'after_chiamata1')
-			
-			
+
+
 		elif(stato == 2):
 			var second_dialog = Dialogic.start('chiamata2')
 			add_child(second_dialog)
 			second_dialog.connect("timeline_end", self, 'after_chiamata2')
 			second_dialog.connect("dialogic_signal",self, 'signal_chiamata2')
-			
-		
+
+
 		#scelta residence come primo luogo da visitare	
 		elif(stato == 3):
-			Global.residence_as_first = true
+
 			var third_dialog = Dialogic.start('Scelta2_Residence')
 			add_child(third_dialog)
 			third_dialog.connect("timeline_end", self, 'Scelta2_Residence')
 			third_dialog.connect("dialogic_signal",self, 'signal_residence')
-		
-			
-		
+
+
 		#scelta centro sportivo come primo posto da visitare
 		elif(stato == 4):
 			var fourth_dialog = Dialogic.start('Scelta3_CentroSportivo')
 			add_child(fourth_dialog)
 			fourth_dialog.connect("dialogic_signal",self, 'signal_centrosportivo')
-			
-		
+
+
 		#scelta prefabbricato successiva alla visita del centro sportivo
 		elif(stato == 5):
 			var fifth_dialog = Dialogic.start('Scelta1_Prefabbricato')
 			add_child(fifth_dialog)
-			Global.residence_as_first = false
 			print("tempo scaduto, alessia morta")
 			# nessuna funzione signal perche comprende la morte
-			
-			
-		
+
+
 		#scelta residence successiva alla visita del centro sportivo o prefabbricato
 		elif(stato == 6):
 			var sixth_dialog = Dialogic.start('Scelta2_Residence')
@@ -61,13 +73,12 @@ func seleziona_chiamata(stato):
 			sixth_dialog.connect("dialogic_signal",self, 'signal_residence')
 			
 			
-		
+
+
 		#teatro del residence	
 		elif(stato == 7):
-			
 			var seventh_dialog = Dialogic.start('teatro_first')
 			add_child(seventh_dialog)
-			Global.residence_as_first = false
 			print("alessia morta")
 			#nessuna funzione signal perche comprende la morte
 			
@@ -76,7 +87,6 @@ func seleziona_chiamata(stato):
 		elif (stato == 8):
 			var eighth_dialog = Dialogic.start('reception_first')
 			add_child(eighth_dialog)
-			Global.residence_as_first = false
 			print("alessia morta")
 			
 
@@ -84,18 +94,17 @@ func seleziona_chiamata(stato):
 		elif (stato == 9):
 			var ninth_dialog = Dialogic.start('appartamenti_inizio')
 			add_child(ninth_dialog)
-			print("prima parte appartamenti...")
-			#da togliere, in realta si passa alla seconda parte solo dopo che vai su MSN e mandi il trillo!
+			Global.chat_trillo_esca = true
 			Global.stato_chiamata = 10 
-			
-		
+
+
 		#appartamenti del residence fine
 		elif(stato == 10):
 			var tenth_dialog = Dialogic.start('appartamenti_fine')
 			add_child(tenth_dialog)
 			print("seconda parte appartamenti, Alessia salvata!")
-			
-		
+
+
 		#scelta del prefabbricato come primo luogo da visitare
 		elif(stato == 11):
 			var dialog_11 = Dialogic.start('prefabbricato_2')
@@ -106,24 +115,23 @@ func seleziona_chiamata(stato):
 		elif(stato == 12):
 			var dialog_12 = Dialogic.start('centro_sportivo_morte')
 			add_child(dialog_12)
-			Global.residence_as_first = false
 			print("alessia morta")
 			#nessun signal perche comprende la morte
-			
-		
-		
+
+
 		#scelta teatro del residence, se si è scelto il residence per primo	
 		elif(stato == 13):
 			var dialog_13 = Dialogic.start('teatro_positivo')
 			add_child(dialog_13)
 			dialog_13.connect("dialogic_signal",self, 'signal_teatropositivo')
-			
+
+
 		#scelta reception, se si arriva da teatro e si è scelto residence per primo	
 		elif(stato == 14):
 			var dialog_14 = Dialogic.start('reception_1')
 			add_child(dialog_14)
 			Global.stato_chiamata = 9 #perchè puoi andare solo agli appartamenti
-		
+			Global.fake_call_timer(10)
 		#scelta reception del residence, se si è scelto il residence per primo	
 		elif(stato == 15):
 			var dialog_15 = Dialogic.start('reception_positivo')
@@ -135,14 +143,12 @@ func seleziona_chiamata(stato):
 			var dialog_16 = Dialogic.start('teatro_post_reception')
 			add_child(dialog_16)
 			Global.stato_chiamata = 9 #perchè puoi andare solo agli appartamenti
-		
-			
-
-	
+			Global.fake_call_timer(10)
 
 
 func after_chiamata1(chiamata1):
-		print("fine chiamata numero 1")
+		Global.chiamata_1_finita = true
+		$Controlpushmsn.show_notify()
 		Global.stato_chiamata = 2
 		
 
@@ -151,24 +157,19 @@ func after_chiamata2(chiamata2):
 		print("fine chiamata numero 2")
 
 
-
-		
-
 # in base alla decisione presa in chiamata 2, la terza chiamata puo avere 3 opzioni diverse		
 func signal_chiamata2(argument):
 		if(argument == 'residence'):
 			print("ha scelto residence")
 			Global.stato_chiamata = 3
+			Global.residence_as_first = true
 		if(argument == 'centrosportivo'):
 			print("ha scelto centrosportivo")
 			Global.stato_chiamata = 4
 		if(argument == 'prefabbricato'):
 			print("ha scelto prefabbricato")
 			Global.stato_chiamata = 11
-
-
-
-
+		Global.fake_call_timer(10)
 
 
 #sei al centro sportivo, in base alla scelta vai a prefabbricato o a residence			
@@ -181,22 +182,20 @@ func signal_centrosportivo (arg):
 		Global.stato_chiamata = 6
 
 
-
-
 #sei al residence dopo il centro, in base alla scelta vai a teatro, app, o reception
 func signal_residence(arg):
 	if(Global.residence_as_first == true):
-		print("hai scelto residence per primo")
+
 		if arg == 'residence_teatro':
-			print("va nel teatro del residence")
+
 			Global.stato_chiamata = 13
 		if arg == 'residence_reception':
-			print("va nella reception del residence")
+
 			Global.stato_chiamata = 15
 		if arg == 'residence_appartamenti':
-			print("va negli appartamenti del residence")
+			
 			Global.stato_chiamata = 9
-
+		Global.fake_call_timer(10)
 		
 	else:
 		if arg == 'residence_teatro':
@@ -230,7 +229,7 @@ func signal_teatropositivo(arg):
 			Global.stato_chiamata = 14
 		if arg == 'teatro_to_appartamenti':
 			Global.stato_chiamata = 9
-
+		Global.fake_call_timer(10)
 
 
 
@@ -240,7 +239,7 @@ func signal_receptionpositivo(arg):
 			Global.stato_chiamata = 16
 		if arg == 'reception_to_appartamenti':
 			Global.stato_chiamata = 9
-			
+		Global.fake_call_timer(10)
 
 
 			

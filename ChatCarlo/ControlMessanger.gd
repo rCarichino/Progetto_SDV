@@ -190,6 +190,7 @@ func give_answer(question):
 					if(Global.already_notified_carlo == false):
 						$NotificaMSN.show_notify()
 						$NotificaDiario.show_notify_diario()
+						Global.switchcolonnasonora()
 						Global.yes_already_notified_carlo()
 						Global.save_progress_data()
 
@@ -255,13 +256,13 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[9])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[10]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[10],Global.chat_jimmy_to_carlo_atto2[11]])
 				
 			"Ho paura a chiamare la polizia,\n mi ha detto di non farlo":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[10])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[11]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[10],Global.chat_jimmy_to_carlo_atto2[11]])
 				
 			"[Chiama la polizia]":
 				var finalePolizia = Dialogic.start('finale polizia')
@@ -271,7 +272,9 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[11])
 				Global.modify_sblocco_atto2_rapitore()
-
+				if(Global.already_notified_carlo):
+					$NotificaMSN.show_notify()
+					Global.yes_already_notified_carlo()
 
 				
 				
@@ -289,13 +292,13 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[15]])
 				
-			"Fra dovrai essere le mie gambe,\n devi andare tu al posto mio":
+			"Fra dovrai essere le mie gambe,\ndevi andare tu al posto mio":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[14])
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[17],Global.chat_jimmy_to_carlo_atto2[18]])
 				
-			"Non lo so mi verrá in mente dopo,\n tu esci di casa e vai in macchina","Per ora vai in macchina":
+			"Non lo so mi verrá in mente dopo,\ntu esci di casa e vai in macchina","Per ora vai in macchina":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[15])
 				yield(get_tree().create_timer(2),"timeout")
@@ -305,8 +308,10 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[16])
 				Global.modify_fine_atto2_carlo()
-				if(Global.fine_atto2_carlo && Global.fine_atto2_rapitore):
+				if(Global.fine_atto2_carlo == true && Global.fine_atto2_rapitore == true):
 					Global.modify_fine_atto2()
+					Global.chat_completed = true
+					Global.fake_call_timer(10)
 
 				if(Global.already_notified_carlo == false):
 					$NotificaDiario.show_notify_diario()

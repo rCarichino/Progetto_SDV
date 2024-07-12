@@ -1,8 +1,5 @@
 extends Node
 
-var chat_finished = false
-#trigger per coordinazione chat-telefonate
-
 var chiamata_1_finita = false	#carlo chiede la foto
 
 var chat_1_finita = false		#jimmy ottiene la foto
@@ -12,6 +9,9 @@ var chat_10minuti = false
 var chat_5minuti = false
 var chat_trillo_esca = false
 
+var timer_expired = false
+
+var step = 0
 
 #servono alla gestione dei dialoghi fade in
 var chat_completed = false		#se vero, puo far partire la chiamata col numero corrente
@@ -28,33 +28,33 @@ var already_notified_carlo = false
 
 var already_notified_rapitore = false
 
-var sblocco_atto2_rapitore = false #AGGIUNGERE AL SAVE
+var sblocco_atto2_rapitore = false 
 
-var sblocco_atto2_carlo = false #AGGIUNGERE AL SAVE
+var sblocco_atto2_carlo = false 
 
-var fine_prologo = false #SAVE
+var fine_prologo = false 
 
-var fine_atto1 = false #SAVE
+var fine_atto1 = false 
 
-var fine_atto2_carlo = false #AGGIUNGERE AL SAVE
+var fine_atto2_carlo = false 
 
-var fine_atto2_rapitore = false #AGGIUNGERE AL SAVE
+var fine_atto2_rapitore = false 
 
-var fine_atto2 = false #SAVE
+var fine_atto2 = false 
 
-var fine_gioco = false #SAVE
+var fine_gioco = false 
 
-var foto1 = false #AGGIUNGERE AL SAVE
+var foto1 = false 
 
-var foto2 = false #AGGIUNGERE AL SAVE
+var foto2 = false 
 
-var setnotifica = false #serve a gestire l'arrivo dei messaggi
+var setnotifica = false 
 
-var setnotificaDiario = false #serve per gestire la notifica del diario
+var setnotificaDiario = false 
 
-var chat_messages_carlo = [] #SAVE
+var chat_messages_carlo = [] 
 
-var chat_messages_rapitore = [] #SAVE
+var chat_messages_rapitore = [] 
 
 func add_message_carlo(message):
 	chat_messages_carlo.append(message)
@@ -155,8 +155,8 @@ func get_foto2():
 
 func switchcolonnasonora():
 	if(fine_prologo==true):
-		Colonnasonorachill.switchcolonnachill()
 		Colonnasonorachill.switchcolonnaSad()
+
 
 var chat_messages_alessia = [
 	{"type": "received", "text": "fratello ma stasera 6 a casa?"},
@@ -231,7 +231,7 @@ var chat_jimmy_to_rapitore_atto1 = [
 
 var chat_carlo_to_jimmy_atto2 = [
 	"Ue ho finito, vuoi giocare???",
-	"“k succ?”",
+	"k succ?",
 	"[ARRIVA UN ALTRO TRILLO]",
 	"Dai nn dire ste cazzate neanche x scherzo",
 	"Cazzo dici, ma smettila",
@@ -267,7 +267,7 @@ var chat_jimmy_to_carlo_atto2 = [
 	"Devo continuare a rispondergli",
 	"Fra dovrai essere le mie gambe,\ndevi andare tu al posto mio",
 	"Ma quindi sei vestito?",
-	"Non lo so mi verrá in mente dopo,\n tu esci di casa e vai in macchina",
+	"Non lo so mi verrá in mente dopo,\ntu esci di casa e vai in macchina",
 	"Per ora vai in macchina",
 	"Con il telefono deficiente",
 ]
@@ -314,11 +314,12 @@ var chat_rapitore_to_jimmy_atto3 = [
 
 var chat_jimmy_to_rapitore_atto3 = [
 
-	"Ho tutti i soldi,\nma mandami una sua foto ti prego,\nvoglio sapere se sta bene",
-	"Ancora non li ho contati,\nmandami però una sua foto,\nvoglio capire se sta bene",
+	"Ma mandami una sua foto ti prego,\nvoglio sapere se sta bene",
+	"Mandami però una sua foto,\nvoglio capire se sta bene",
 	"Va bene, cosa devo fare?",
 	"Ok…",
 	"Ho tutto quello che mi hai chiesto,\n adesso devo metterli insieme",
+	"E’ tutto pronto, dammi un attimo",
 	"E’ tutto pronto",
 	"A che punto è il tuo contatto?"
 
@@ -328,6 +329,9 @@ var chat_jimmy_to_rapitore_atto3 = [
 var global_volumeCS: float = 0.4
 var global_volumesfx: float = 0.4
 var global_volumedialoghi: float = 0.4
+
+
+
 
 func save_settings():
 	var save_settings={
@@ -399,3 +403,10 @@ func load_progress_data():
 		foto2 = save_data.get("foto2", false)
 		chat_messages_carlo = save_data.get("chat_messages_carlo", [])
 		chat_messages_rapitore = save_data.get("chat_messages_rapitore", [])
+		
+func fake_call_timer(time_sec):
+	if(timer_expired == false):
+		timer_expired = true
+		yield(get_tree().create_timer(time_sec),"timeout")
+		get_tree().change_scene("res://Desktop/Node2D.tscn")
+	
