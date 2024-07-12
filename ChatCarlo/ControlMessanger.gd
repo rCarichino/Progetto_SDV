@@ -389,27 +389,27 @@ func load_answer(question):
 			"k succ?":
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[2]])
 			"Dai nn dire ste cazzate neanche x scherzo":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[3]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[5]])
 			"Cazzo dici, ma smettila":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[4]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[6]])
 			"Oh cazzo":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[6])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[5]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[7]])
 			"Sicuro sia lei?":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[5]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[7]])
 			"Cazzo hai ragione":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[8])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[6],Global.chat_jimmy_to_carlo_atto2[7]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[8],Global.chat_jimmy_to_carlo_atto2[9]])
 			"Chiama immediatamente la polizia":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[6],Global.chat_jimmy_to_carlo_atto2[7]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[8],Global.chat_jimmy_to_carlo_atto2[9]])
 			"CHIAMA LA POLIZIA":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[8],Global.chat_jimmy_to_carlo_atto2[9]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[10],Global.chat_jimmy_to_carlo_atto2[11]])
 			"BRUTTO COGLIONE CHIAMA LA POLIZIA":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[8],Global.chat_jimmy_to_carlo_atto2[9]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[10],Global.chat_jimmy_to_carlo_atto2[11]])
 
 	if(Global.sblocco_atto2_carlo == true):
 		match question:
