@@ -16,3 +16,5 @@ func _ready():
 #	pass
 
 
+func _on_Sisos_pressed():
+	get_tree().change_scene("res://menuiniziale/menu/menuiniziale.tscn")
