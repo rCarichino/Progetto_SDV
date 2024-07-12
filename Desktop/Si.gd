@@ -1,4 +1,8 @@
 extends Button
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 var dir = "res://salvataggi/salvataggi_progressi/progressi_data.json"
 var dirimp = "res://salvataggi/salvataggi_impostazioni/settings_data.json"
 # Declare member variables here. Examples:
@@ -13,15 +17,21 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
-#	pass
 
 
 
+<<<<<<< Updated upstream
 
 func _on_Siriavv_pressed():
 	var file = File.new()
 	var file2 = File.new()
 	if file.file_exists(dir) && file2.file_exists(dirimp):
 		Global.load_global_data()
+=======
+func _on_Siriavv_pressed():
+	var file = File.new()
+	if file.file_exists(dir):
+		Global.load_progress_data()
+>>>>>>> Stashed changes
 		Global.load_settings()
 		get_tree().change_scene("res://Desktop/Node2D.tscn")

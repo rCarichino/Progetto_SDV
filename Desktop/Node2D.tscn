@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=41 format=2]
+=======
+[gd_scene load_steps=37 format=2]
+>>>>>>> Stashed changes
 
 [ext_resource path="res://Desktop/door.gd" type="Script" id=1]
 [ext_resource path="res://Desktop/Control.gd" type="Script" id=2]
@@ -26,9 +30,15 @@
 [ext_resource path="res://Cartella_Appunti/Cartella_Appunti.gd" type="Script" id=24]
 [ext_resource path="res://icone/Sfondo Desktop.png" type="Texture" id=25]
 [ext_resource path="res://menuiniziale/arial_narrow_7.ttf" type="DynamicFontData" id=26]
+<<<<<<< Updated upstream
 [ext_resource path="res://Desktop/msnpush.png" type="Texture" id=27]
 [ext_resource path="res://Desktop/Controlpushmsn.gd" type="Script" id=28]
 [ext_resource path="res://Desktop/diariopush.png" type="Texture" id=29]
+=======
+[ext_resource path="res://Desktop/Node2D.gd" type="Script" id=27]
+[ext_resource path="res://Desktop/Control.gd" type="Script" id=28]
+[ext_resource path="res://Desktop/Sisos.gd" type="Script" id=29]
+>>>>>>> Stashed changes
 [ext_resource path="res://Desktop/Messanger.gd" type="Script" id=30]
 [ext_resource path="res://Desktop/Sisos.gd" type="Script" id=31]
 
@@ -317,7 +327,11 @@ rect_pivot_offset = Vector2( 238, 10 )
 mouse_default_cursor_shape = 2
 text = "SI"
 flat = true
+<<<<<<< Updated upstream
 script = ExtResource( 31 )
+=======
+script = ExtResource( 29 )
+>>>>>>> Stashed changes
 
 [node name="NO" type="Button" parent="Control/door/sospendi/Controlsospendi"]
 margin_left = 854.0
@@ -450,9 +464,15 @@ text = "Messanger"
 [connection signal="mouse_exited" from="Control/door/riavvio" to="Control/door/riavvio" method="_on_riavvio_mouse_exited"]
 [connection signal="pressed" from="Control/door/riavvio" to="Control" method="_on_riavvio_pressed"]
 [connection signal="pressed" from="Control/door/riavvio/Controlriavvio/Siriavv" to="Control/door/riavvio/Controlriavvio/Siriavv" method="_on_Siriavv_pressed"]
+<<<<<<< Updated upstream
 [connection signal="mouse_entered" from="Control/door/riavvio/Controlriavvio/NOriavv" to="Control" method="_on_NO_mouse_entered"]
 [connection signal="mouse_exited" from="Control/door/riavvio/Controlriavvio/NOriavv" to="Control" method="_on_NO_mouse_exited"]
 [connection signal="pressed" from="Control/door/riavvio/Controlriavvio/NOriavv" to="Control/door/riavvio/Controlriavvio" method="_on_NO_pressed"]
+=======
+[connection signal="mouse_entered" from="Control/door/riavvio/Controlriavvio/NO" to="Control" method="_on_NO_mouse_entered"]
+[connection signal="mouse_exited" from="Control/door/riavvio/Controlriavvio/NO" to="Control" method="_on_NO_mouse_exited"]
+[connection signal="pressed" from="Control/door/riavvio/Controlriavvio/NO" to="Control/door/riavvio/Controlriavvio" method="_on_NO_pressed"]
+>>>>>>> Stashed changes
 [connection signal="mouse_entered" from="Control/door/arresto" to="Control/door/arresto" method="_on_arresto_mouse_entered"]
 [connection signal="mouse_exited" from="Control/door/arresto" to="Control/door/arresto" method="_on_arresto_mouse_exited"]
 [connection signal="pressed" from="Control/door/arresto" to="Control" method="_on_arresto_pressed"]
