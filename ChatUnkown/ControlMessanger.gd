@@ -165,6 +165,7 @@ func give_answer(question):
 			add_received_message(Global.chat_rapitore_to_jimmy_atto1[2])
 			yield(get_tree().create_timer(2),"timeout")
 			add_received_image("res://fotoAlessia/foto_n1_chat.jpg")
+			$NotificaFoto.show_notify_foto()
 			Global.modify_foto1()
 			yield(get_tree().create_timer(1),"timeout")
 			add_received_message(Global.chat_rapitore_to_jimmy_atto1[3])
@@ -185,9 +186,20 @@ func give_answer(question):
 		"In k senso?":
 			yield(get_tree().create_timer(1),"timeout")
 			add_received_image("res://fotoAlessia/foto_n1_chat.jpg")
+			$NotificaFoto.show_notify_foto()
 			Global.modify_foto1()
-			yield(get_tree().create_timer(3),"timeout")
-			add_received_message(Global.chat_rapitore_to_jimmy_atto1[9])
+			yield(get_tree().create_timer(1),"timeout")
+			add_received_message(Global.chat_rapitore_to_jimmy_atto1[3])
+			yield(get_tree().create_timer(2),"timeout")
+			add_received_message(Global.chat_rapitore_to_jimmy_atto1[4])
+			yield(get_tree().create_timer(2),"timeout")
+			add_received_message(Global.chat_rapitore_to_jimmy_atto1[5])
+			yield(get_tree().create_timer(2),"timeout")
+			add_received_message(Global.chat_rapitore_to_jimmy_atto1[6])
+			yield(get_tree().create_timer(2),"timeout")
+			add_received_message(Global.chat_rapitore_to_jimmy_atto1[7])
+			yield(get_tree().create_timer(2),"timeout")
+			add_received_message(Global.chat_rapitore_to_jimmy_atto1[8])
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[3],Global.chat_jimmy_to_rapitore_atto1[4],
 			Global.chat_jimmy_to_rapitore_atto1[5],Global.chat_jimmy_to_rapitore_atto1[6]])
 
@@ -295,6 +307,7 @@ func give_answer(question):
 			"Ma mandami una sua foto ti prego,\nvoglio sapere se sta bene","Mandami però una sua foto,\nvoglio capire se sta bene":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_image("res://fotoAlessia/foto_n2_chat.jpg")
+				$NotificaFoto.show_notify_foto()
 				Global.modify_foto2()
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_rapitore_to_jimmy_atto3[1])
