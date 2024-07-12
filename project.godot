@@ -227,6 +227,7 @@ config/icon="res://icone/icon.png"
 GlobalTimer="*res://Timer/GlobalTimer.gd"
 Global="*res://Global.gd"
 Colonnesonore="*res://suoni/colonne_sonore/Scena_colonne_sonore/colonnesonore.tscn"
+Colonnasonorachill="*res://suoni/colonne_sonore/Scena_colonne_sonore/colonnasonorachill.tscn"
 
 [display]
 

@@ -153,7 +153,10 @@ func modify_foto2():
 func get_foto2():
 	return foto2
 
-
+func switchcolonnasonora():
+	if(fine_prologo==true):
+		Colonnasonorachill.switchcolonnachill()
+		Colonnasonorachill.switchcolonnaSad()
 
 var chat_messages_alessia = [
 	{"type": "received", "text": "fratello ma stasera 6 a casa?"},
