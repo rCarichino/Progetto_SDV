@@ -303,7 +303,39 @@ func give_answer(question):
 				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[3]])
 			"Ok…":
 				Global.chat_1_finita = true
-			
+				if(Global.chat_tictac == true):
+					yield(get_tree().create_timer(2),"timeout")
+					add_received_message(Global.chat_rapitore_to_jimmy_atto3[4])
+					yield(get_tree().create_timer(2),"timeout")
+					create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[4]])
+	if(Global.chat_tictac == true):
+		match question:
+			"Ho tutto quello che mi hai chiesto,\n adesso devo metterli insieme":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto3[4])
+	if(Global.chat_10minuti == true):
+		match question:
+			"E’ tutto pronto":
+				if(Global.chat_5minuti == true):
+					yield(get_tree().create_timer(2),"timeout")
+					add_received_message(Global.chat_rapitore_to_jimmy_atto3[6])
+					yield(get_tree().create_timer(2),"timeout")
+					create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[5]])
+	if(Global.chat_5minuti == true):
+		match question:
+			"E’ tutto pronto":
+				if(Global.chat_trillo_esca == true):
+					yield(get_tree().create_timer(2),"timeout")
+					add_received_message(Global.chat_rapitore_to_jimmy_atto3[7])
+					Global.trillo_unloked_rapitore = true
+	
+	if(Global.chat_trillo_esca == true):
+		match question:
+			"A che punto è il tuo contatto?":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto3[7])
+				Global.trillo_unloked_rapitore = true
+
 
 func load_messages():
 	# Carica i messaggi dal singleton
@@ -545,7 +577,23 @@ func load_answer(question):
 			"Riempi un borsone e lascialo sotto casa\n esattamente quando te lo dico io":
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[3]])
+				if(Global.chat_tictac == true):
+					yield(get_tree().create_timer(2),"timeout")
+					add_received_message(Global.chat_rapitore_to_jimmy_atto3[4])
+					yield(get_tree().create_timer(2),"timeout")
+					create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[4]])
 
+	if(Global.chat_tictac == true):
+		match question:
+			"tic tac… tic tac…. tic tac…":
+				if(Global.chat_10minuti == true):
+					yield(get_tree().create_timer(2),"timeout")
+					add_received_message(Global.chat_rapitore_to_jimmy_atto3[5])
+					yield(get_tree().create_timer(2),"timeout")
+					create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[5]])
+			
+		
+		
 func add_received_image(image_path):
 	var found = false
 	var bubble = ReceivedImageBubble.instance()

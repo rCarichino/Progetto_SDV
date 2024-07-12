@@ -7,23 +7,10 @@ var chiamata_1_finita = false	#carlo chiede la foto
 
 var chat_1_finita = false		#jimmy ottiene la foto
 
-var tictac_centrosportivo_scelta3 = false
-var _10minuti_prefabbricato_scelta3 = false
-var _5minuti_residence_scelta3 = false
-var trillo_esca_scelta3 = false
-
-var tictac_prefabbricato_scelta2 = false
-var _10minuti_centrosportivo_scelta2 = false
-var _5minuti_residence_scelta2 = false
-var trillo_esca_scelta2 = false
-
-var _5minuti_residence_scelta1 = false
-var esca_trillo_residence_scelta1 = false
-var contatto_esca_trillo_scelta1 = false
-var contatto_esca_trillo_scelta_appartamenti = false
-
-
-
+var chat_tictac = false
+var chat_10minuti = false
+var chat_5minuti = false
+var chat_trillo_esca = false
 
 
 #servono alla gestione dei dialoghi fade in
@@ -34,6 +21,8 @@ var stato_chiamata = 1			#indica quale timeline di chiamata attivare
 var residence_as_first = false	#se si è scelto il residence come prima opzione, allora è vera
 
 var trillo = false
+
+var trillo_unloked_rapitore = false
 
 var already_notified_carlo = false
 
@@ -328,6 +317,7 @@ var chat_jimmy_to_rapitore_atto3 = [
 	"Ok…",
 	"Ho tutto quello che mi hai chiesto,\n adesso devo metterli insieme",
 	"E’ tutto pronto",
+	"A che punto è il tuo contatto?"
 
 ]
 
