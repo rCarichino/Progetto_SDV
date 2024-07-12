@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://suoni/colonne_sonore/audio_colonne_sonore/colonnasonorachill.mp3" type="AudioStream" id=2]
+[ext_resource path="res://suoni/colonne_sonore/audio_colonne_sonore/depressa.mp3" type="AudioStream" id=3]
+[ext_resource path="res://suoni/colonne_sonore/Scena_colonne_sonore/ControlChill.gd" type="Script" id=4]
+[ext_resource path="res://suoni/colonne_sonore/Scena_colonne_sonore/ControlSad.gd" type="Script" id=5]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ControlChill" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 4 )
+
+[node name="colonnasonorachill" type="AudioStreamPlayer" parent="ControlChill"]
+stream = ExtResource( 2 )
+autoplay = true
+bus = "Colonna_Sonora"
+
+[node name="ControlSad" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 5 )
+
+[node name="colonnasonorasad" type="AudioStreamPlayer" parent="ControlSad"]
+stream = ExtResource( 3 )
+volume_db = -14.81

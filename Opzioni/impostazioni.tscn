@@ -60,9 +60,10 @@ text = "         Impostazioni"
 valign = 1
 
 [node name="DesktopButton" type="Button" parent="Control/Titolo2"]
-margin_left = 1007.0
-margin_right = 1027.0
-margin_bottom = 23.0
+margin_left = 1006.0
+margin_top = 2.0
+margin_right = 1025.0
+margin_bottom = 22.0
 mouse_default_cursor_shape = 2
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_styles/hover = SubResource( 11 )
