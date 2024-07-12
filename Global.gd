@@ -13,7 +13,7 @@ var sblocco_atto2_rapitore = false #AGGIUNGERE AL SAVE
 
 var sblocco_atto2_carlo = false #AGGIUNGERE AL SAVE
 
-var fine_prologo = true #SAVE
+var fine_prologo = false #SAVE
 
 var fine_atto1 = false #SAVE
 

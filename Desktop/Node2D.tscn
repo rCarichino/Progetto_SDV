@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Desktop/door.gd" type="Script" id=1]
 [ext_resource path="res://Desktop/Control.gd" type="Script" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://Desktop/Controlpushmsn.gd" type="Script" id=28]
 [ext_resource path="res://Desktop/diariopush.png" type="Texture" id=29]
 [ext_resource path="res://Desktop/Messanger.gd" type="Script" id=30]
+[ext_resource path="res://Desktop/Sisos.gd" type="Script" id=31]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 26 )
@@ -219,7 +220,7 @@ margin_right = -261.5
 margin_bottom = 65.5
 script = ExtResource( 16 )
 
-[node name="Si" type="Button" parent="Control/door/riavvio/Controlriavvio"]
+[node name="Siriavv" type="Button" parent="Control/door/riavvio/Controlriavvio"]
 margin_left = 529.0
 margin_top = -143.0
 margin_right = 569.0
@@ -230,7 +231,7 @@ text = "SI"
 flat = true
 script = ExtResource( 18 )
 
-[node name="NO" type="Button" parent="Control/door/riavvio/Controlriavvio"]
+[node name="NOriavv" type="Button" parent="Control/door/riavvio/Controlriavvio"]
 margin_left = 955.0
 margin_top = -146.0
 margin_right = 996.0
@@ -307,7 +308,7 @@ margin_right = -157.5
 margin_bottom = -3.5
 script = ExtResource( 16 )
 
-[node name="Si" type="Button" parent="Control/door/sospendi/Controlsospendi"]
+[node name="Sisos" type="Button" parent="Control/door/sospendi/Controlsospendi"]
 margin_left = 428.0
 margin_top = -129.0
 margin_right = 463.0
@@ -316,7 +317,7 @@ rect_pivot_offset = Vector2( 238, 10 )
 mouse_default_cursor_shape = 2
 text = "SI"
 flat = true
-script = ExtResource( 18 )
+script = ExtResource( 31 )
 
 [node name="NO" type="Button" parent="Control/door/sospendi/Controlsospendi"]
 margin_left = 854.0
@@ -448,10 +449,10 @@ text = "Messanger"
 [connection signal="mouse_entered" from="Control/door/riavvio" to="Control/door/riavvio" method="_on_riavvio_mouse_entered"]
 [connection signal="mouse_exited" from="Control/door/riavvio" to="Control/door/riavvio" method="_on_riavvio_mouse_exited"]
 [connection signal="pressed" from="Control/door/riavvio" to="Control" method="_on_riavvio_pressed"]
-[connection signal="pressed" from="Control/door/riavvio/Controlriavvio/Si" to="Control/door/riavvio/Controlriavvio" method="_on_Si_pressed"]
-[connection signal="mouse_entered" from="Control/door/riavvio/Controlriavvio/NO" to="Control" method="_on_NO_mouse_entered"]
-[connection signal="mouse_exited" from="Control/door/riavvio/Controlriavvio/NO" to="Control" method="_on_NO_mouse_exited"]
-[connection signal="pressed" from="Control/door/riavvio/Controlriavvio/NO" to="Control/door/riavvio/Controlriavvio" method="_on_NO_pressed"]
+[connection signal="pressed" from="Control/door/riavvio/Controlriavvio/Siriavv" to="Control/door/riavvio/Controlriavvio/Siriavv" method="_on_Siriavv_pressed"]
+[connection signal="mouse_entered" from="Control/door/riavvio/Controlriavvio/NOriavv" to="Control" method="_on_NO_mouse_entered"]
+[connection signal="mouse_exited" from="Control/door/riavvio/Controlriavvio/NOriavv" to="Control" method="_on_NO_mouse_exited"]
+[connection signal="pressed" from="Control/door/riavvio/Controlriavvio/NOriavv" to="Control/door/riavvio/Controlriavvio" method="_on_NO_pressed"]
 [connection signal="mouse_entered" from="Control/door/arresto" to="Control/door/arresto" method="_on_arresto_mouse_entered"]
 [connection signal="mouse_exited" from="Control/door/arresto" to="Control/door/arresto" method="_on_arresto_mouse_exited"]
 [connection signal="pressed" from="Control/door/arresto" to="Control" method="_on_arresto_pressed"]
@@ -460,7 +461,7 @@ text = "Messanger"
 [connection signal="mouse_entered" from="Control/door/sospendi" to="Control/door/sospendi" method="_on_sospendi_mouse_entered"]
 [connection signal="mouse_exited" from="Control/door/sospendi" to="Control/door/sospendi" method="_on_sospendi_mouse_exited"]
 [connection signal="pressed" from="Control/door/sospendi" to="Control" method="_on_sospendi_pressed"]
-[connection signal="pressed" from="Control/door/sospendi/Controlsospendi/Si" to="Control/door/sospendi/Controlsospendi" method="_on_Si_pressed"]
+[connection signal="pressed" from="Control/door/sospendi/Controlsospendi/Sisos" to="Control/door/sospendi/Controlsospendi/Sisos" method="_on_Sisos_pressed"]
 [connection signal="pressed" from="Control/door/sospendi/Controlsospendi/NO" to="Control/door/sospendi/Controlsospendi" method="_on_NO_pressed"]
 [connection signal="pressed" from="Control/Controlpushmsn/chiudipushmsn" to="Control/Controlpushmsn" method="_on_chiudipushmsn_pressed"]
 [connection signal="pressed" from="Control/Controlpushmsn/chiudipushmsn/rimandopushmsn" to="Control/Controlpushmsn" method="_on_rimandopushmsn_pressed"]
