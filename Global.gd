@@ -52,6 +52,8 @@ var setnotifica = false
 
 var setnotificaDiario = false 
 
+var mappa = ""
+
 var chat_messages_carlo = [] 
 
 var chat_messages_rapitore = [] 
@@ -264,7 +266,7 @@ var chat_jimmy_to_carlo_atto2 = [
 	"Non so cosa fare…",
 	"Ho paura a chiamare la polizia,\n mi ha detto di non farlo",
 	"[Chiama la polizia]",
-	"Ho troppa paura…\nNon ce la faccio, ho paura che le faccia del male",
+	"Ho troppa paura…\n Non ce la faccio, ho paura che le faccia del male",
 	"Fra, sei vestito",
 	"Io non posso muovermi",
 	"Devo continuare a rispondergli",
@@ -279,7 +281,7 @@ var chat_rapitore_to_jimmy_atto2 = [
 	"Adesso è arrivato il momento di dimostrare\n quanto ci tieni a tua sorella.",
 	"Voglio 20 mila euro in contanti",
 	"Dovrai lasciare i soldi vicino casa tua",
-	"E alle ore “X” passerà un mio contatto a ritirarli.",
+	"E alle ore 18.30 passerà un mio contatto a ritirarli.",
 	"Non devi assolutamente avere niente\n a che fare con il contatto", 
 	"Altrimenti succederà qualcosa a tua sorella",
 	"Perchè mi stai mentendo?\n Non tieni abbastanza a tua sorella a quanto pare",
@@ -409,7 +411,7 @@ func load_progress_data():
 		
 func fake_call_timer(time_sec):
 	if(timer_expired == false):
-		timer_expired = true
 		yield(get_tree().create_timer(time_sec),"timeout")
+		timer_expired = true
 		get_tree().change_scene("res://Desktop/Node2D.tscn")
 	

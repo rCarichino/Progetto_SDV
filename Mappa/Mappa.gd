@@ -27,6 +27,3 @@ func double_click_detect():
 func _on_impostazioni_pressed():
 	if double_click_detect():
 		get_tree().change_scene("res://Mappa/Mappa.tscn")
-		
-
-
