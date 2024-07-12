@@ -205,7 +205,7 @@ func give_answer(question):
 	if(Global.fine_atto1 == true):
 		match question: 
 			"Guarda non é il momento":
-				Global.not_already_notified_Carlo()
+				Global.not_already_notified_carlo()
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[1])
 				yield(get_tree().create_timer(2),"timeout")
@@ -216,11 +216,11 @@ func give_answer(question):
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[0]])
 
 				if(Global.already_notified_carlo):
-					$NotificaMSN.show_notify_diario()
+					$NotificaMSN.show_notify()
 					Global.yes_already_notified_carlo()
 				
 			"Senti Carlo é successa una cosa grave...":
-				Global.not_already_notified_Carlo()
+				Global.not_already_notified_carlo()
 				yield(get_tree().create_timer(2),"timeout")
 				add_sent_message(Global.chat_jimmy_to_carlo_atto2[3])
 				yield(get_tree().create_timer(2),"timeout")
@@ -278,29 +278,29 @@ func give_answer(question):
 				
 	if(Global.sblocco_atto2_carlo == true):
 		match question: 
-			"Fra, sei vestito","Io non posso muovermi":
+			"Io non posso muovermi":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[12])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[12]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[14]])
 				
 			"Devo continuare a rispondergli":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[13])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[13]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[15]])
 				
 			"Fra dovrai essere le mie gambe,\n devi andare tu al posto mio":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[14])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[15],Global.chat_jimmy_to_carlo_atto2[16]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[17],Global.chat_jimmy_to_carlo_atto2[18]])
 				
 			"Non lo so mi verrá in mente dopo,\n tu esci di casa e vai in macchina","Per ora vai in macchina":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[15])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[17]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[19]])
 				
 			"Con il telefono deficiente":
 				yield(get_tree().create_timer(2),"timeout")
@@ -396,15 +396,15 @@ func load_answer(question):
 	if(Global.sblocco_atto2_carlo == true):
 		match question:
 			"Dimmi come vuoi che ti aiuti se posso":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[11]])
-			"In che senso non puoi muoverti?":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[12]])
-			"Quindi cosa vuoi che faccia?":
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[13]])
+			"In che senso non puoi muoverti?":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[14]])
+			"Quindi cosa vuoi che faccia?":
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[15]])
 			"Eh e quale sarebbe il piano?":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[15],Global.chat_jimmy_to_carlo_atto2[16]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[17],Global.chat_jimmy_to_carlo_atto2[18]])
 			"Okok e come ci sentiamo?":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[17]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[19]])
 			
 
 

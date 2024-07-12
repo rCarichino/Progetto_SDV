@@ -14,7 +14,7 @@ var timer_expired = false
 var step = 0
 
 #servono alla gestione dei dialoghi fade in
-var chat_completed = true		#se vero, puo far partire la chiamata col numero corrente
+var chat_completed = false		#se vero, puo far partire la chiamata col numero corrente
 
 var stato_chiamata = 1			#indica quale timeline di chiamata attivare
 
@@ -209,7 +209,7 @@ var chat_rapitore_to_jimmy_atto1 = [
 	"Pensi che ti stia prendendo per il culo?",
 	"Non ti azzardare a contattare qualcuno",
 	"Chiamare la polizia",
-	"O a muoverti da quella di sedia",
+	"O a muoverti da quella cazzo di sedia",
 	"Se non ho tue risposte entro 5 minuti",
 	"Alessia raggiunge mamma e papà.",
 	"E vedi di scrivere in modo decente…",
