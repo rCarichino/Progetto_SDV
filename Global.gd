@@ -1,8 +1,8 @@
 extends Node
 
-var chiamata_1_finita = false	#carlo chiede la foto
+var chiamata_1_finita = false   #carlo chiede la foto
 
-var chat_1_finita = false		#jimmy ottiene la foto
+var chat_1_finita = false    #jimmy ottiene la foto
 
 var chat_tictac = false
 var chat_10minuti = false
@@ -14,11 +14,11 @@ var timer_expired = false
 var step = 0
 
 #servono alla gestione dei dialoghi fade in
-var chat_completed = false		#se vero, puo far partire la chiamata col numero corrente
+var chat_completed = false  #se vero, puo far partire la chiamata col numero corrente
 
-var stato_chiamata = 1			#indica quale timeline di chiamata attivare
+var stato_chiamata = 1  #indica quale timeline di chiamata attivare
 
-var residence_as_first = false	#se si è scelto il residence come prima opzione, allora è vera
+var residence_as_first = false   #se si è scelto il residence come prima opzione, allora è vera
 
 var trillo = false
 
@@ -34,7 +34,7 @@ var sblocco_atto2_carlo = false
 
 var fine_prologo = false 
 
-var fine_atto1 = false 
+var fine_atto1 = false
 
 var fine_atto2_carlo = false 
 
@@ -153,10 +153,13 @@ func modify_foto2():
 func get_foto2():
 	return foto2
 
-func switchcolonnasonora():
+func switchcolonnasonoraSad():
 	if(fine_prologo==true):
 		Colonnasonorachill.switchcolonnaSad()
 
+func switchcolonnasonorachill():
+	if(fine_prologo==true):
+		Colonnasonorachill.switchcolonnachill()
 
 var chat_messages_alessia = [
 	{"type": "received", "text": "fratello ma stasera 6 a casa?"},
@@ -253,8 +256,8 @@ var chat_jimmy_to_carlo_atto2 = [
 	"Guarda non é il momento",
 	"[Ignora Carlo]",
 	"Senti Carlo é successa una cosa grave...", 
-	"qualcuno mi ha contattato", 
-	"e dice di aver rapito Ale e mi chiede dei soldi",
+	"Qualcuno mi ha contattato", 
+	"E dice di aver rapito Ale, credo voglia dei soldi",
 	"Fra ti giuro, non credo sia uno scherzo, ho paura…",
 	"Adesso ci credi?",
 	"Guarda il tatuaggio sul braccio…",
@@ -357,7 +360,7 @@ func load_settings():
 		global_volumedialoghi = settings.result.get("global_volumedialoghi", 0.4)
 		
 
-	# Salva i dati globali su un file JSON
+# Salva i dati globali su un file JSON
 func save_progress_data():
 	var save_data = {
 	"sblocco_atto2_rapitore": sblocco_atto2_rapitore,

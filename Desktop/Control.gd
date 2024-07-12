@@ -115,7 +115,7 @@ func seleziona_chiamata(stato):
 		elif(stato == 12):
 			var dialog_12 = Dialogic.start('centro_sportivo_morte')
 			add_child(dialog_12)
-			print("alessia morta")
+
 			#nessun signal perche comprende la morte
 
 
@@ -154,20 +154,20 @@ func after_chiamata1(chiamata1):
 
 
 func after_chiamata2(chiamata2):
-		print("fine chiamata numero 2")
+		print()
 
 
 # in base alla decisione presa in chiamata 2, la terza chiamata puo avere 3 opzioni diverse		
 func signal_chiamata2(argument):
 		if(argument == 'residence'):
-			print("ha scelto residence")
+			Global.mappa = "Residence"
 			Global.stato_chiamata = 3
 			Global.residence_as_first = true
 		if(argument == 'centrosportivo'):
-			print("ha scelto centrosportivo")
+			Global.mappa = "CentroSportivo"
 			Global.stato_chiamata = 4
 		if(argument == 'prefabbricato'):
-			print("ha scelto prefabbricato")
+			Global.mappa = "Prefabbricato"
 			Global.stato_chiamata = 11
 		Global.fake_call_timer(10)
 
@@ -175,10 +175,10 @@ func signal_chiamata2(argument):
 #sei al centro sportivo, in base alla scelta vai a prefabbricato o a residence			
 func signal_centrosportivo (arg):
 	if arg == 'centro_to_pref':
-		print("va da centro sportivo a prefabbricato")
+		Global.mappa = "Prefabbricato"
 		Global.stato_chiamata = 5
 	elif arg =='centro_to_residence':
-		print("va da centro sportivo a residence")
+		Global.mappa = "Residence"
 		Global.stato_chiamata = 6
 
 
@@ -199,13 +199,13 @@ func signal_residence(arg):
 		
 	else:
 		if arg == 'residence_teatro':
-			print("va nel teatro del residence")
+
 			Global.stato_chiamata = 7
 		if arg == 'residence_reception':
-			print("va nella reception del residence")
+
 			Global.stato_chiamata = 8
 		if arg == 'residence_appartamenti':
-			print("va negli appartamenti del residence")
+
 			Global.stato_chiamata = 9
 
 
@@ -213,10 +213,10 @@ func signal_residence(arg):
 #sei al prefabbricato come primo luogo, in base alla scelta vai a residence o centro sportivo
 func signal_prefabbricato(arg):
 		if arg == 'prefabbricato_to_residence':
-			print("va da prefabbricato a residence")
+			Global.mappa = "Residence"
 			Global.stato_chiamata = 6
 		if arg == 'prefabbricato_to_centrosportivo':
-			print("va da prefabbricato a centro sportivo")
+			Global.mappa = "CentroSportivo"
 			Global.stato_chiamata = 12
 			
 

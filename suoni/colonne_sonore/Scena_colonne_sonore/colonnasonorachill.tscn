@@ -26,3 +26,4 @@ margin_bottom = 40.0
 [node name="colonnasonorasad" type="AudioStreamPlayer" parent="ControlSad"]
 stream = ExtResource( 3 )
 volume_db = -14.81
+bus = "Colonna_Sonora"

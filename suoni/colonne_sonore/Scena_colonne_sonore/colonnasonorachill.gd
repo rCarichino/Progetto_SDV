@@ -8,3 +8,8 @@ func switchcolonnaSad():
 	$ControlChill/colonnasonorachill.stream_paused=true
 	$ControlSad/colonnasonorasad.play()
 	$".".show()
+
+
+func switchcolonnachill():
+	$ControlSad/colonnasonorasad.stream_paused=true
+	$ControlChill/colonnasonorachill.play()

@@ -38,7 +38,7 @@ margin_top = -1.0
 margin_right = 1026.0
 margin_bottom = 21.0
 custom_styles/normal = SubResource( 1 )
-text = "         Messanger"
+text = "         Messenger"
 valign = 1
 
 [node name="Button" type="Button" parent="ControlMessanger/Titolo"]
@@ -109,7 +109,7 @@ bbcode_text = "
 
 														
 																[color=black] Ciao!!!
-							Bevenuto su messanger, seleziona una chat per iniziare!!!"
+							Benvenuto su messenger, seleziona una chat per iniziare!!!"
 text = "													
 													
 													
@@ -127,7 +127,7 @@ text = "
 
 														
 																 Ciao!!!
-							Bevenuto su messanger, seleziona una chat per iniziare!!!"
+							Benvenuto su messenger, seleziona una chat per iniziare!!!"
 fit_content_height = true
 __meta__ = {
 "_editor_description_": ""

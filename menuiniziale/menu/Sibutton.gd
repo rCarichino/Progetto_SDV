@@ -6,25 +6,35 @@ func nuova_p():
 	var file = File.new()
 	if file.file_exists(dir):
 		file.file.remove("res://salvataggi/salvataggi_impostazioni/global_data.json")
-		Global.chat_completed = false		#se vero, puo far partire la chiamata col numero corrente
-		Global.stato_chiamata = 1			#indica quale timeline di chiamata attivare
-		Global.residence_as_first = false	#se si è scelto il residence come prima opzione, allora è vera
-		Global.trillo = false
-		Global.sblocco_atto2_rapitore = false #AGGIUNGERE AL SAVE
-		Global.sblocco_atto2_carlo = false #AGGIUNGERE AL SAVE
-		Global.fine_prologo = false #SAVE
-		Global.fine_atto1 = false #SAVE
-		Global.fine_atto2_carlo = false #AGGIUNGERE AL SAVE
-		Global.fine_atto2_rapitore = false #AGGIUNGERE AL SAVE
-		Global.fine_atto2 = false #SAVE
-		Global.fine_gioco = false #SAVE
-		Global.foto1 = false #AGGIUNGERE AL SAVE
-		Global.foto2 = false #AGGIUNGERE AL SAVE
-		Global.setnotifica = false #serve a gestire l'arrivo dei messaggi
-		Global.setnotificaDiario = false #serve per gestire la notifica del diario
-		Global.chat_messages_carlo = [] #SAVE
-		Global.chat_messages_rapitore = [] #SAVE
-
+	Global.chiamata_1_finita = false
+	Global.chat_1_finita = false 
+	Global.chat_tictac = false
+	Global.chat_10minuti = false
+	Global.chat_5minuti = false
+	Global.chat_trillo_esca = false
+	Global.timer_expired = false
+	Global.step = 0
+	Global.chat_completed = false 
+	Global.stato_chiamata = 1  
+	Global.residence_as_first = false 
+	Global.trillo = false
+	Global.trillo_unloked_rapitore = false
+	Global.already_notified_carlo = false
+	Global.already_notified_rapitore = false
+	Global.sblocco_atto2_rapitore = false 
+	Global.sblocco_atto2_carlo = false 
+	Global.fine_prologo = false 
+	Global.fine_atto1 = false
+	Global.fine_atto2_carlo = false 
+	Global.fine_atto2_rapitore = false 
+	Global.fine_atto2 = false 
+	Global.fine_gioco = false 
+	Global.foto1 = false 
+	Global.foto2 = false 
+	Global.setnotifica = false 
+	Global.setnotificaDiario = false 
+	Global.chat_messages_carlo = [] 
+	Global.chat_messages_rapitore = [] 
 
 func _on_Sibutton_pressed():
 	nuova_p()

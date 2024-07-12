@@ -26,3 +26,4 @@ func _on_CARICA_pressed():
 		Global.load_progress_data()
 		Global.load_settings()
 		get_tree().change_scene("res://Desktop/Node2D.tscn")
+		Global.switchcolonnasonoraSad()

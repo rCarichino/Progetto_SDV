@@ -49,7 +49,7 @@ margin_top = -1.0
 margin_right = 1026.0
 margin_bottom = 21.0
 custom_styles/normal = SubResource( 1 )
-text = "         Messanger"
+text = "         Messenger"
 valign = 1
 
 [node name="Button" type="Button" parent="ControlMessanger/Titolo"]
