@@ -388,7 +388,7 @@ func check_where_stopped():
 
 	var length = Global.chat_messages_rapitore.size()
 	var question = ""
-	if(Global.chat_messages_rapitore[length-1].type == "received"):
+	if(Global.chat_messages_rapitore[length-1].type == "received" || Global.chat_messages_rapitore[length-1].type == "received_image"):
 		question = Global.chat_messages_rapitore[length-1].text
 		load_answer(question)
 	elif(Global.chat_messages_rapitore[length-1].type == "sent"):

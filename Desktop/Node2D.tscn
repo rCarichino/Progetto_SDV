@@ -343,7 +343,7 @@ margin_right = 116.0
 margin_bottom = 119.0
 rect_pivot_offset = Vector2( -567, 87 )
 custom_fonts/font = SubResource( 1 )
-text = "Messanger"
+text = "Messenger"
 
 [node name="Controlpushmsn" parent="Control" instance=ExtResource( 31 )]
 visible = false

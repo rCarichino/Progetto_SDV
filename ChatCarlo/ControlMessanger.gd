@@ -190,7 +190,7 @@ func give_answer(question):
 					if(Global.already_notified_carlo == false):
 						$NotificaMSN.show_notify()
 						$NotificaDiario.show_notify_diario()
-						Global.switchcolonnasonora()
+						Global.switchcolonnasonoraSad()
 						Global.yes_already_notified_carlo()
 						Global.save_progress_data()
 
@@ -215,7 +215,7 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[0]])
 
-				if(Global.already_notified_carlo):
+				if(Global.already_notified_carlo ==  false):
 					$NotificaMSN.show_notify()
 					Global.yes_already_notified_carlo()
 				
@@ -230,6 +230,20 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[5]])
 				
+			"Qualcuno mi ha contattato":
+				yield(get_tree().create_timer(2),"timeout")
+				add_sent_message(Global.chat_jimmy_to_carlo_atto2[4])
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[3])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[5]])
+
+			"E dice di aver rapito Ale, credo voglia dei soldi":
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_carlo_to_jimmy_atto2[3])
+				yield(get_tree().create_timer(2),"timeout")
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[5]])
+
 			"Fra ti giuro, non credo sia uno scherzo, ho paura…":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[4])
@@ -272,7 +286,8 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[11])
 				Global.modify_sblocco_atto2_rapitore()
-				if(Global.already_notified_carlo):
+				
+				if(Global.already_notified_carlo == false):
 					$NotificaMSN.show_notify()
 					Global.yes_already_notified_carlo()
 
@@ -330,7 +345,8 @@ func load_messages():
 			add_sent_message(message["text"])
 		elif message["type"] == "received":
 			add_received_message(message["text"])
-			
+		elif message["type"] == "sent_image":
+			add_send_image(message["text"])
 
 
 func create_spacer():
@@ -445,11 +461,11 @@ func add_send_image(image_path):
 				found = true
 				break
 		if(!found):
-			Global.add_message_carlo({"type": "received_image", "text": image_path})
+			Global.add_message_carlo({"type": "sent_image", "text": image_path})
 	else:
-		Global.add_message_carlo({"type": "received_image", "text": image_path})
+		Global.add_message_carlo({"type": "sent_image", "text": image_path})
 
 
 func _on_Trillo_pressed():
 	$HBoxContainer/InfoBox/BottoniBox/Trillo/AudioStreamPlayer.play()
-	pass # Replace with function body.
+
