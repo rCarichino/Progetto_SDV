@@ -193,12 +193,12 @@ func give_answer(question):
 
 		"Va bene come vuoi tu, non farle del male perfavore":
 			yield(get_tree().create_timer(2),"timeout")
-			add_received_message(Global.chat_rapitore_to_jimmy_atto1[10])
+			add_received_message(Global.chat_rapitore_to_jimmy_atto1[9])
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[7]])
 
 		"Ok ma cosa vuoi da noi":
 			yield(get_tree().create_timer(2),"timeout")
-			add_received_message(Global.chat_rapitore_to_jimmy_atto1[11])
+			add_received_message(Global.chat_rapitore_to_jimmy_atto1[10])
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[7]])
 
 		"[Chiama la polizia]":
@@ -209,7 +209,7 @@ func give_answer(question):
 		"[Chiama Alessia]":
 			##far partire uno squillo
 			yield(get_tree().create_timer(2),"timeout")
-			add_received_message(Global.chat_rapitore_to_jimmy_atto1[12])
+			add_received_message(Global.chat_rapitore_to_jimmy_atto1[11])
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[7]])
 
 		"Va bene…":
@@ -218,7 +218,7 @@ func give_answer(question):
 			if(Global.already_notified_rapitore == false):
 				$NotificaMSN.show_notify()
 				$NotificaDiario.show_notify_diario()
-				Global.yes_already_notified_carlo()
+				Global.yes_already_notified_rapitore()
 				Global.save_progress_data()
 
 			
@@ -231,6 +231,12 @@ func give_answer(question):
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_rapitore_to_jimmy_atto2[2])
 				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[3])
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[4])
+				yield(get_tree().create_timer(2),"timeout")
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[5])
+				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[0], 
 				Global.chat_jimmy_to_rapitore_atto2[1],Global.chat_jimmy_to_rapitore_atto2[2]])
 				
@@ -240,25 +246,26 @@ func give_answer(question):
 			"Non ho tutti quei soldi":
 				Global.not_already_notified_rapitore()
 				yield(get_tree().create_timer(2),"timeout")
-				add_received_message(Global.chat_rapitore_to_jimmy_atto2[3])
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[6])
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[3]])
 				
 			"Come fai a sapere dove abito?":
 				yield(get_tree().create_timer(2),"timeout")
-				add_received_message(Global.chat_rapitore_to_jimmy_atto2[4])
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[7])
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[4]])
+				
 			"Come posso fidarmi di te?\n Dopo che ti avrò dato i soldi libererai mia sorella?":
 				yield(get_tree().create_timer(2),"timeout")
-				add_received_message(Global.chat_rapitore_to_jimmy_atto2[5])
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[8])
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[5]])
 				
 			"Ti sto dicendo la verità, non ho tutti quei soldi","In ogni caso non ho tutti quei soldi",\
 			"Non ho scelta ma non neanche tutti quei soldi":
 				yield(get_tree().create_timer(2),"timeout")
-				add_received_message(Global.chat_rapitore_to_jimmy_atto2[6])
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[9])
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[6]])
 				Global.modify_sblocco_atto2_carlo()
@@ -270,12 +277,12 @@ func give_answer(question):
 			"Ok, dammi un po’ di tempo che trovo i soldi":
 				Global.not_already_notified_rapitore()
 				yield(get_tree().create_timer(2),"timeout")
-				add_received_message(Global.chat_rapitore_to_jimmy_atto2[7])
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[10])
 				yield(get_tree().create_timer(2),"timeout")
 				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[7]])
 			"Io li cerco, ma tu non toccarla":
 				yield(get_tree().create_timer(2),"timeout")
-				add_received_message(Global.chat_rapitore_to_jimmy_atto2[8])
+				add_received_message(Global.chat_rapitore_to_jimmy_atto2[11])
 				Global.modify_fine_atto2_rapitore()
 				if(Global.fine_atto2_carlo && Global.fine_atto2_rapitore):
 					Global.modify_fine_atto2()
