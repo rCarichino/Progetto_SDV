@@ -542,7 +542,7 @@ func load_answer(question):
 				Global.chat_jimmy_to_rapitore_atto2[1],Global.chat_jimmy_to_rapitore_atto2[2]])
 				
 				
-			"E alle ore “X” passerà un mio contatto a ritirarli.":
+			"E alle ore 18.30 passerà un mio contatto a ritirarli.":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_rapitore_to_jimmy_atto2[4])
 				yield(get_tree().create_timer(2),"timeout")

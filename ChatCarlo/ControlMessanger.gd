@@ -268,7 +268,7 @@ func give_answer(question):
 				var finalePolizia = Dialogic.start('finale polizia')
 				add_child(finalePolizia)
 				
-			"Ho troppa paura…\nNon ce la faccio, ho paura che le faccia del male":
+			"Ho troppa paura…\n Non ce la faccio, ho paura che le faccia del male":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[11])
 				Global.modify_sblocco_atto2_rapitore()

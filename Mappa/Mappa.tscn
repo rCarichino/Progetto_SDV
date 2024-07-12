@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Mappa/Immagini/social_g_logo_google_icon_133201.png" type="Texture" id=1]
 [ext_resource path="res://Mappa/Immagini/back_arrow_14447.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://ScenaNotifica/Scenanotifica.tscn" type="PackedScene" id=17]
 [ext_resource path="res://ScenaNotificaDiario/NotificaDiario.tscn" type="PackedScene" id=18]
 [ext_resource path="res://ScenaNotificaFoto/ScenaNotificaFoto.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Mappa/ControlMappa.gd" type="Script" id=21]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.752941, 0.752941, 0.752941, 1 )
@@ -216,7 +217,21 @@ scale = Vector2( 0.0595703, 0.0498048 )
 texture = ExtResource( 14 )
 normal_map = ExtResource( 14 )
 
-[node name="Label Residence" type="Label" parent="."]
+[node name="Controlpushmsn" parent="." instance=ExtResource( 17 )]
+visible = false
+
+[node name="Controlpushdiario" parent="." instance=ExtResource( 18 )]
+visible = false
+
+[node name="Controlpushfoto" parent="." instance=ExtResource( 19 )]
+visible = false
+
+[node name="ControlMappa" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 21 )
+
+[node name="LabelResidence" type="Label" parent="ControlMappa"]
 margin_left = 913.0
 margin_top = 465.0
 margin_right = 979.0
@@ -225,20 +240,19 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 text = "Residence"
 
-[node name="Residence" type="Sprite" parent="Label Residence"]
+[node name="Residence" type="Sprite" parent="ControlMappa/LabelResidence"]
 position = Vector2( 33, -13 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 15 )
 normal_map = ExtResource( 15 )
 
-[node name="Carlo Residence" type="Sprite" parent="Label Residence"]
-visible = false
-position = Vector2( 34, -16 )
-scale = Vector2( 0.0742187, 0.0576172 )
+[node name="CarloResidence" type="Sprite" parent="ControlMappa/LabelResidence"]
+position = Vector2( 33, -13 )
+scale = Vector2( 0.0859375, 0.0697021 )
 texture = ExtResource( 16 )
 normal_map = ExtResource( 16 )
 
-[node name="Label Campo Sportivo" type="Label" parent="."]
+[node name="LabelCampoSportivo" type="Label" parent="ControlMappa"]
 margin_left = 12.0
 margin_top = 427.0
 margin_right = 112.0
@@ -247,20 +261,19 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 text = "Campo Sportivo"
 
-[node name="Campo Sportivo Abbandonato" type="Sprite" parent="Label Campo Sportivo"]
+[node name="Campo Sportivo Abbandonato" type="Sprite" parent="ControlMappa/LabelCampoSportivo"]
 position = Vector2( 50, -18 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 15 )
 normal_map = ExtResource( 15 )
 
-[node name="Carlo Campo Sportivo" type="Sprite" parent="Label Campo Sportivo"]
-visible = false
-position = Vector2( 50.0001, -20.9999 )
-scale = Vector2( 0.0742187, 0.0576172 )
+[node name="CarloCampoSportivo" type="Sprite" parent="ControlMappa/LabelCampoSportivo"]
+position = Vector2( 50, -18 )
+scale = Vector2( 0.086, 0.07 )
 texture = ExtResource( 16 )
 normal_map = ExtResource( 16 )
 
-[node name="Label Prefabbricato" type="Label" parent="."]
+[node name="LabelPrefabbricato" type="Label" parent="ControlMappa"]
 margin_left = 251.0
 margin_top = 373.0
 margin_right = 335.0
@@ -269,26 +282,19 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 text = "Prefabbricato"
 
-[node name="Prefabbricato" type="Sprite" parent="Label Prefabbricato"]
+[node name="Prefabbricato" type="Sprite" parent="ControlMappa/LabelPrefabbricato"]
 position = Vector2( 41, -14 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 15 )
 normal_map = ExtResource( 15 )
 
-[node name="Carlo Prefabbricato" type="Sprite" parent="Label Prefabbricato"]
-visible = false
-position = Vector2( 41, -15.9999 )
-scale = Vector2( 0.0742187, 0.0576172 )
+[node name="CarloPrefabbricato" type="Sprite" parent="ControlMappa/LabelPrefabbricato"]
+position = Vector2( 41, -14 )
+scale = Vector2( 0.086, 0.07 )
 texture = ExtResource( 16 )
 normal_map = ExtResource( 16 )
 
-[node name="Carlo Inizio" type="Sprite" parent="."]
-position = Vector2( 319, 200 )
-scale = Vector2( 0.0742187, 0.0576172 )
-texture = ExtResource( 16 )
-normal_map = ExtResource( 16 )
-
-[node name="Leggenda" type="Label" parent="."]
+[node name="Leggenda" type="Label" parent="ControlMappa"]
 margin_left = 12.0
 margin_top = 90.0
 margin_right = 188.0
@@ -300,31 +306,28 @@ CARLO=
 
 Luoghi d'interesse ="
 
-[node name="Jimmy" type="Sprite" parent="Leggenda"]
+[node name="Jimmy" type="Sprite" parent="ControlMappa/Leggenda"]
 position = Vector2( 67, 7 )
 scale = Vector2( 0.0493164, 0.0424805 )
 texture = ExtResource( 14 )
 normal_map = ExtResource( 14 )
 
-[node name="Carlo" type="Sprite" parent="Leggenda"]
+[node name="Carlo" type="Sprite" parent="ControlMappa/Leggenda"]
 position = Vector2( 62, 41 )
 scale = Vector2( 0.0742187, 0.0576172 )
 texture = ExtResource( 16 )
 normal_map = ExtResource( 16 )
 
-[node name="Luighi d\'interesse" type="Sprite" parent="Leggenda"]
+[node name="Luighi d\'interesse" type="Sprite" parent="ControlMappa/Leggenda"]
 position = Vector2( 138, 76 )
 scale = Vector2( 0.195312, 0.191895 )
 texture = ExtResource( 15 )
 normal_map = ExtResource( 15 )
 
-[node name="Controlpushmsn" parent="." instance=ExtResource( 17 )]
-visible = false
-
-[node name="Controlpushdiario" parent="." instance=ExtResource( 18 )]
-visible = false
-
-[node name="Controlpushfoto" parent="." instance=ExtResource( 19 )]
-visible = false
+[node name="CarloInizio" type="Sprite" parent="ControlMappa"]
+position = Vector2( 319, 200 )
+scale = Vector2( 0.0742187, 0.0576172 )
+texture = ExtResource( 16 )
+normal_map = ExtResource( 16 )
 
 [connection signal="pressed" from="Titolo/DesktopButton" to="Titolo/DesktopButton" method="_on_Button_pressed"]
