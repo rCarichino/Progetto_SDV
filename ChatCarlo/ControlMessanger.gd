@@ -190,6 +190,7 @@ func give_answer(question):
 					if(Global.already_notified_carlo == false):
 						$NotificaMSN.show_notify()
 						$NotificaDiario.show_notify_diario()
+						Global.switchcolonnasonora()
 						Global.yes_already_notified_carlo()
 						Global.save_progress_data()
 

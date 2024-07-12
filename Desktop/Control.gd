@@ -91,7 +91,8 @@ func seleziona_chiamata(stato):
 		elif (stato == 9):
 			var ninth_dialog = Dialogic.start('appartamenti_inizio')
 			add_child(ninth_dialog)
-			print("prima parte appartamenti...")
+			Global.chat_trillo_esca = true
+			
 			Global.stato_chiamata = 10 
 			
 		
