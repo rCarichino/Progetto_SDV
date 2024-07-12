@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://background.jpg" type="Texture" id=1]
 [ext_resource path="res://icone/imgAlessia64.png" type="Texture" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://ChatUnkown/ControlMessanger.gd" type="Script" id=11]
 [ext_resource path="res://ScenaNotificaDiario/NotificaDiario.tscn" type="PackedScene" id=12]
 [ext_resource path="res://ScenaNotifica/Scenanotifica.tscn" type="PackedScene" id=13]
+[ext_resource path="res://ChatUnkown/Trillo.gd" type="Script" id=14]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.0862745, 0.129412, 0.788235, 1 )
@@ -164,6 +165,7 @@ margin_right = 174.0
 margin_bottom = 38.0
 mouse_default_cursor_shape = 2
 icon = ExtResource( 7 )
+script = ExtResource( 14 )
 
 [node name="InfoHBox" type="HBoxContainer" parent="ControlMessanger/HBoxContainer/InfoBox"]
 margin_top = 291.0
@@ -222,3 +224,4 @@ visible = false
 
 [connection signal="pressed" from="ControlMessanger/Titolo/Button" to="ControlMessanger/Titolo/Button" method="_on_Button_pressed"]
 [connection signal="item_selected" from="ControlMessanger/HBoxContainer/ChatListContainer/ItemList" to="ControlMessanger/HBoxContainer/ChatListContainer" method="_on_ItemList_item_selected"]
+[connection signal="pressed" from="ControlMessanger/HBoxContainer/InfoBox/BottoniBox/Trillo" to="ControlMessanger/HBoxContainer/InfoBox/BottoniBox/Trillo" method="_on_Trillo_pressed"]
