@@ -1,8 +1,5 @@
 extends Node
 
-var chat_finished = true
-#trigger per coordinazione chat-telefonate
-
 var chiamata_1_finita = false	#carlo chiede la foto
 
 var chat_1_finita = false		#jimmy ottiene la foto
@@ -12,6 +9,9 @@ var chat_10minuti = false
 var chat_5minuti = false
 var chat_trillo_esca = false
 
+var timer_expired = false
+
+var step = 0
 
 #servono alla gestione dei dialoghi fade in
 var chat_completed = true		#se vero, puo far partire la chiamata col numero corrente
@@ -28,33 +28,33 @@ var already_notified_carlo = false
 
 var already_notified_rapitore = false
 
-var sblocco_atto2_rapitore = false #AGGIUNGERE AL SAVE
+var sblocco_atto2_rapitore = false 
 
-var sblocco_atto2_carlo = false #AGGIUNGERE AL SAVE
+var sblocco_atto2_carlo = false 
 
-var fine_prologo = false #SAVE
+var fine_prologo = false 
 
-var fine_atto1 = false #SAVE
+var fine_atto1 = false 
 
-var fine_atto2_carlo = false #AGGIUNGERE AL SAVE
+var fine_atto2_carlo = false 
 
-var fine_atto2_rapitore = false #AGGIUNGERE AL SAVE
+var fine_atto2_rapitore = false 
 
-var fine_atto2 = false #SAVE
+var fine_atto2 = false 
 
-var fine_gioco = false #SAVE
+var fine_gioco = false 
 
-var foto1 = false #AGGIUNGERE AL SAVE
+var foto1 = false 
 
-var foto2 = false #AGGIUNGERE AL SAVE
+var foto2 = false 
 
-var setnotifica = false #serve a gestire l'arrivo dei messaggi
+var setnotifica = false 
 
-var setnotificaDiario = false #serve per gestire la notifica del diario
+var setnotificaDiario = false 
 
-var chat_messages_carlo = [] #SAVE
+var chat_messages_carlo = [] 
 
-var chat_messages_rapitore = [] #SAVE
+var chat_messages_rapitore = [] 
 
 func add_message_carlo(message):
 	chat_messages_carlo.append(message)
@@ -316,6 +316,7 @@ var chat_jimmy_to_rapitore_atto3 = [
 	"Va bene, cosa devo fare?",
 	"Ok…",
 	"Ho tutto quello che mi hai chiesto,\n adesso devo metterli insieme",
+	"E’ tutto pronto, dammi un attimo",
 	"E’ tutto pronto",
 	"A che punto è il tuo contatto?"
 
@@ -325,6 +326,9 @@ var chat_jimmy_to_rapitore_atto3 = [
 var global_volumeCS: float = 0.4
 var global_volumesfx: float = 0.4
 var global_volumedialoghi: float = 0.4
+
+
+
 
 func save_settings():
 	var save_settings={
@@ -396,3 +400,10 @@ func load_progress_data():
 		foto2 = save_data.get("foto2", false)
 		chat_messages_carlo = save_data.get("chat_messages_carlo", [])
 		chat_messages_rapitore = save_data.get("chat_messages_rapitore", [])
+		
+func fake_call_timer(time_sec):
+	if(timer_expired == false):
+		timer_expired = true
+		yield(get_tree().create_timer(time_sec),"timeout")
+		get_tree().change_scene("res://Desktop/Node2D.tscn")
+	

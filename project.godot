@@ -224,6 +224,7 @@ config/icon="res://icone/icon.png"
 
 [autoload]
 
+GlobalTimer="*res://Timer/GlobalTimer.gd"
 Global="*res://Global.gd"
 Colonnesonore="*res://suoni/colonne_sonore/Scena_colonne_sonore/colonnesonore.tscn"
 

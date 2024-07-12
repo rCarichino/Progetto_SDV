@@ -279,6 +279,8 @@ func give_answer(question):
 				Global.modify_fine_atto2_rapitore()
 				if(Global.fine_atto2_carlo && Global.fine_atto2_rapitore):
 					Global.modify_fine_atto2()
+					Global.chat_completed(true)
+					Global.fake_call_timer(10)
 					if(Global.already_notified_rapitore == false):
 						$NotificaDiario.show_notify_diario()
 						Global.yes_already_notified_rapitore()
@@ -303,6 +305,7 @@ func give_answer(question):
 				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[3]])
 			"Ok…":
 				Global.chat_1_finita = true
+				Global.fake_call_timer(10)
 				if(Global.chat_tictac == true):
 					yield(get_tree().create_timer(2),"timeout")
 					add_received_message(Global.chat_rapitore_to_jimmy_atto3[4])
@@ -313,9 +316,11 @@ func give_answer(question):
 			"Ho tutto quello che mi hai chiesto,\n adesso devo metterli insieme":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_rapitore_to_jimmy_atto3[4])
+				Global.fake_call_timer(10)
 	if(Global.chat_10minuti == true):
 		match question:
-			"E’ tutto pronto":
+			"E’ tutto pronto, dammi un attimo":
+				Global.fake_call_timer(10)
 				if(Global.chat_5minuti == true):
 					yield(get_tree().create_timer(2),"timeout")
 					add_received_message(Global.chat_rapitore_to_jimmy_atto3[6])
@@ -324,6 +329,7 @@ func give_answer(question):
 	if(Global.chat_5minuti == true):
 		match question:
 			"E’ tutto pronto":
+				Global.fake_call_timer(10)
 				if(Global.chat_trillo_esca == true):
 					yield(get_tree().create_timer(2),"timeout")
 					add_received_message(Global.chat_rapitore_to_jimmy_atto3[7])

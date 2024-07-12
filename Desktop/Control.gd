@@ -4,21 +4,32 @@ extends Control
 
 
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-		if Global.chat_finished == true:
-			print(Global.stato_chiamata)
-			seleziona_chiamata(Global.stato_chiamata)
-	
-	
+	if (Global.chat_completed == true && Global.timer_expired == true):
+		Global.timer_expired = false
+		seleziona_chiamata(Global.stato_chiamata)
+		
+		if(Global.residence_as_first == false || Global.stato_chiamata > 2):
+			Global.step = Global.step + 1
+			match Global.step:
+				0:
+					Global.chat_tictac = true
+					$Controlpushmsn.show_notify()
+				1:
+					Global.chat_10minuti = true
+					$Controlpushmsn.show_notify()
+				2:
+					Global.chat_5minuti = true
+					$Controlpushmsn.show_notify()
+
+
 func seleziona_chiamata(stato):
-	
+		
 		if(stato == 1):
 			var new_dialog = Dialogic.start('chiamata1')
 			add_child(new_dialog)
 			new_dialog.connect("timeline_end", self, 'after_chiamata1')
-			
+
 			
 		elif(stato == 2):
 			var second_dialog = Dialogic.start('chiamata2')
@@ -34,8 +45,7 @@ func seleziona_chiamata(stato):
 			add_child(third_dialog)
 			third_dialog.connect("timeline_end", self, 'Scelta2_Residence')
 			third_dialog.connect("dialogic_signal",self, 'signal_residence')
-		
-			
+
 		
 		#scelta centro sportivo come primo posto da visitare
 		elif(stato == 4):
@@ -48,7 +58,6 @@ func seleziona_chiamata(stato):
 		elif(stato == 5):
 			var fifth_dialog = Dialogic.start('Scelta1_Prefabbricato')
 			add_child(fifth_dialog)
-			Global.residence_as_first = false
 			print("tempo scaduto, alessia morta")
 			# nessuna funzione signal perche comprende la morte
 			
@@ -67,7 +76,6 @@ func seleziona_chiamata(stato):
 			
 			var seventh_dialog = Dialogic.start('teatro_first')
 			add_child(seventh_dialog)
-			Global.residence_as_first = false
 			print("alessia morta")
 			#nessuna funzione signal perche comprende la morte
 			
@@ -76,7 +84,6 @@ func seleziona_chiamata(stato):
 		elif (stato == 8):
 			var eighth_dialog = Dialogic.start('reception_first')
 			add_child(eighth_dialog)
-			Global.residence_as_first = false
 			print("alessia morta")
 			
 
@@ -85,7 +92,6 @@ func seleziona_chiamata(stato):
 			var ninth_dialog = Dialogic.start('appartamenti_inizio')
 			add_child(ninth_dialog)
 			print("prima parte appartamenti...")
-			#da togliere, in realta si passa alla seconda parte solo dopo che vai su MSN e mandi il trillo!
 			Global.stato_chiamata = 10 
 			
 		
@@ -106,7 +112,6 @@ func seleziona_chiamata(stato):
 		elif(stato == 12):
 			var dialog_12 = Dialogic.start('centro_sportivo_morte')
 			add_child(dialog_12)
-			Global.residence_as_first = false
 			print("alessia morta")
 			#nessun signal perche comprende la morte
 			
@@ -117,6 +122,7 @@ func seleziona_chiamata(stato):
 			var dialog_13 = Dialogic.start('teatro_positivo')
 			add_child(dialog_13)
 			dialog_13.connect("dialogic_signal",self, 'signal_teatropositivo')
+			
 			
 		#scelta reception, se si arriva da teatro e si è scelto residence per primo	
 		elif(stato == 14):
@@ -136,13 +142,11 @@ func seleziona_chiamata(stato):
 			add_child(dialog_16)
 			Global.stato_chiamata = 9 #perchè puoi andare solo agli appartamenti
 		
-			
-
-	
 
 
 func after_chiamata1(chiamata1):
-		print("fine chiamata numero 1")
+		Global.chiamata_1_finita = true
+		$Controlpushmsn.show_notify()
 		Global.stato_chiamata = 2
 		
 
@@ -150,9 +154,6 @@ func after_chiamata1(chiamata1):
 func after_chiamata2(chiamata2):
 		print("fine chiamata numero 2")
 
-
-
-		
 
 # in base alla decisione presa in chiamata 2, la terza chiamata puo avere 3 opzioni diverse		
 func signal_chiamata2(argument):
@@ -167,10 +168,6 @@ func signal_chiamata2(argument):
 			Global.stato_chiamata = 11
 
 
-
-
-
-
 #sei al centro sportivo, in base alla scelta vai a prefabbricato o a residence			
 func signal_centrosportivo (arg):
 	if arg == 'centro_to_pref':
@@ -179,8 +176,6 @@ func signal_centrosportivo (arg):
 	elif arg =='centro_to_residence':
 		print("va da centro sportivo a residence")
 		Global.stato_chiamata = 6
-
-
 
 
 #sei al residence dopo il centro, in base alla scelta vai a teatro, app, o reception

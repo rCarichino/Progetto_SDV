@@ -307,6 +307,8 @@ func give_answer(question):
 				Global.modify_fine_atto2_carlo()
 				if(Global.fine_atto2_carlo && Global.fine_atto2_rapitore):
 					Global.modify_fine_atto2()
+					Global.chat_completed(true)
+					Global.fake_call_timer(10)
 
 				if(Global.already_notified_carlo == false):
 					$NotificaDiario.show_notify_diario()
