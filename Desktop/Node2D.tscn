@@ -198,6 +198,7 @@ margin_left = 105.0
 margin_top = -16.0
 margin_right = 305.0
 margin_bottom = 34.0
+mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource( 22 )
 
@@ -242,6 +243,7 @@ margin_left = 105.0
 margin_top = -69.0
 margin_right = 305.0
 margin_bottom = -18.0
+mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource( 23 )
 
@@ -286,6 +288,7 @@ margin_left = 105.0
 margin_top = 36.0
 margin_right = 305.0
 margin_bottom = 87.0
+mouse_default_cursor_shape = 2
 flat = true
 script = ExtResource( 14 )
 

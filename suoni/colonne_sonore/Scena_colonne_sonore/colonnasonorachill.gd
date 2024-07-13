@@ -2,14 +2,15 @@ extends Control
 
 func _ready():
 	$ControlChill/colonnasonorachill.play()
-	
+	$ControlSad/colonnasonorasad.play()
+	$ControlSad/colonnasonorasad.stream_paused=true
 
 func switchcolonnaSad():
 	$ControlChill/colonnasonorachill.stream_paused=true
-	$ControlSad/colonnasonorasad.play()
+	$ControlSad/colonnasonorasad.stream_paused= false
 	$".".show()
-
 
 func switchcolonnachill():
 	$ControlSad/colonnasonorasad.stream_paused=true
-	$ControlChill/colonnasonorachill.play()
+	$ControlChill/colonnasonorachill.stream_paused=false
+	$".".show()

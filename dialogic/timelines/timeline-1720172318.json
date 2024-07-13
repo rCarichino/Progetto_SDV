@@ -41,14 +41,14 @@
 			"question": "Jimmy chiama la polizia, ma il rapitore sente la comunicazione arrivare sulla sua radio, in quanto è un poliziotto. Accorgendosi di questo, decide di uccidere Alessia"
 		},
 		{
-			"choice": "Torna al menù principale",
+			"choice": "Continua...",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
 		},
 		{
-			"change_scene": "res://menuiniziale/menu/menuiniziale.tscn",
+			"change_scene": "res://TitoliDiCoda/TitoliDiCoda.tscn",
 			"event_id": "dialogic_041"
 		},
 		{

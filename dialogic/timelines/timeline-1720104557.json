@@ -47,21 +47,14 @@
 			"waiting_skippable": false
 		},
 		{
-			"choice": "Rigioca",
+			"choice": "Continua...",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
 		},
 		{
-			"choice": "Torna al menù principale",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"change_scene": "res://menuiniziale/menu/menuiniziale.tscn",
+			"change_scene": "res://TitoliDiCoda/TitoliDiCoda.tscn",
 			"event_id": "dialogic_041"
 		},
 		{

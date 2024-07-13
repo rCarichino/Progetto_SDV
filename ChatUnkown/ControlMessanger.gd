@@ -296,11 +296,13 @@ func give_answer(question):
 				if(Global.fine_atto2_carlo == true && Global.fine_atto2_rapitore == true):
 					Global.modify_fine_atto2()
 					Global.chat_completed = true
-					Global.fake_call_timer(10)
-					if(Global.already_notified_rapitore == false):
-						$NotificaDiario.show_notify_diario()
-						Global.yes_already_notified_rapitore()
-						Global.save_progress_data()
+					if(Global.chiamata_1_finita == false || Global.already_started == false):
+						Global.already_started = true
+						Global.fake_call_timer(10)
+						if(Global.already_notified_rapitore == false):
+							$NotificaDiario.show_notify_diario()
+							Global.yes_already_notified_rapitore()
+
 						
 	if(Global.chiamata_1_finita):
 		match question:
@@ -324,6 +326,7 @@ func give_answer(question):
 				Global.chat_1_finita = true
 
 				if(Global.chat_tictac == true):
+					print("entra")
 					yield(get_tree().create_timer(2),"timeout")
 					add_received_message(Global.chat_rapitore_to_jimmy_atto3[4])
 					yield(get_tree().create_timer(2),"timeout")
@@ -331,8 +334,9 @@ func give_answer(question):
 				elif(Global.chat_trillo_esca == true):
 					yield(get_tree().create_timer(2),"timeout")
 					create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto3[7]])
-				else:
+				elif(Global.fine_seconda_chiamata == false):
 					Global.fake_call_timer(10)
+					Global.fine_seconda_chiamata = true
 
 	if(Global.chat_tictac == true):
 		match question:
@@ -397,7 +401,7 @@ func check_where_stopped():
 	
 
 func load_answer(question):
-	print(question)
+
 	match question:
 		"Ciao Jimmy, come sta Alessia?":
 			create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto1[0]])
@@ -580,6 +584,16 @@ func load_answer(question):
 				create_phrase_buttons([Global.chat_jimmy_to_rapitore_atto2[7]])
 				
 			"Non fai tu le regole,\n sbrigati che il tempo scorre":
+				Global.modify_fine_atto2_rapitore()
+				if(Global.fine_atto2_carlo == true && Global.fine_atto2_rapitore == true):
+					Global.modify_fine_atto2()
+					Global.chat_completed = true
+					if(Global.chiamata_1_finita == false):
+						Global.fake_call_timer(10)
+					if(Global.already_notified_rapitore == false):
+						$NotificaDiario.show_notify_diario()
+						Global.yes_already_notified_rapitore()
+						Global.save_progress_data()
 				if(Global.chiamata_1_finita):
 					yield(get_tree().create_timer(2),"timeout")
 					add_received_message(Global.chat_rapitore_to_jimmy_atto3[0])

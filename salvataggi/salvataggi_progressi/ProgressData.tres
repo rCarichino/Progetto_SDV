@@ -1,0 +1,57 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://salvataggi/salvataggi_progressi/ProgressData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+sblocco_atto2_rapitore = false
+sblocco_atto2_carlo = false
+fine_prologo = false
+fine_atto1 = false
+fine_atto2_carlo = false
+fine_atto2_rapitore = false
+fine_atto2 = false
+fine_gioco = false
+foto1 = false
+foto2 = false
+chat_messages_carlo = [ {
+"text": "Ehy Jimmy, cm va? ma l’hai comprato
+ alla fine il nuovo CoD",
+"type": "received"
+}, {
+"text": "Ehy Carlo!, tt bn!!
+ Sì, l’ho comprato, tu?",
+"type": "sent"
+}, {
+"text": "Sì anche io, prime impressioni?",
+"type": "received"
+}, {
+"text": "Mi sta piacendo un sacco",
+"type": "sent"
+}, {
+"text": "A me sta piacendo un sacco",
+"type": "received"
+}, {
+"text": "K fai?",
+"type": "received"
+}, {
+"text": "Ho finito adesso a lavoro, tu?",
+"type": "sent"
+}, {
+"text": "Bro, nn faccio nulla tt il giorno cm sempre xD",
+"type": "received"
+}, {
+"text": "Cmq, tua sorella cm sta? :P",
+"type": "received"
+}, {
+"text": "Si è vista cn un ragazzo l’altro giorno,
+ dovresti dirmelo tu? xD",
+"type": "sent"
+}, {
+"text": "??",
+"type": "received"
+}, {
+"text": "nn ero io, cmq ora stacco e vado a mangiare",
+"type": "received"
+} ]
+chat_messages_rapitore = [  ]

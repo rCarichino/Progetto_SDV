@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/foto_n2.jpg-ddfab370fa3f9ccc9a236a1817be9d33.stex"
+path="res://.import/IMG_20240713_002544_262.png-198915bbc12a5ba4c5fe053f0d6f1cc1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fotoAlessia/foto_n2.jpg"
-dest_files=[ "res://.import/foto_n2.jpg-ddfab370fa3f9ccc9a236a1817be9d33.stex" ]
+source_file="res://menuiniziale/menu/IMG_20240713_002544_262.png"
+dest_files=[ "res://.import/IMG_20240713_002544_262.png-198915bbc12a5ba4c5fe053f0d6f1cc1.stex" ]
 
 [params]
 

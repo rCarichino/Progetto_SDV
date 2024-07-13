@@ -4,6 +4,14 @@ var chiamata_1_finita = false   #carlo chiede la foto
 
 var chat_1_finita = false    #jimmy ottiene la foto
 
+var already_started = false 
+var fine_seconda_chiamata = false 
+var tictac_displayed = false
+var chat10_displayed = false
+var chat5_displayed = false
+
+
+
 var chat_tictac = false
 var chat_10minuti = false
 var chat_5minuti = false
@@ -160,8 +168,7 @@ func switchcolonnasonoraSad():
 		Colonnasonorachill.switchcolonnaSad()
 
 func switchcolonnasonorachill():
-	if(fine_prologo==true):
-		Colonnasonorachill.switchcolonnachill()
+	Colonnasonorachill.switchcolonnachill()
 
 var chat_messages_alessia = [
 	{"type": "received", "text": "fratello ma stasera 6 a casa?"},
@@ -335,83 +342,95 @@ var global_volumeCS: float = 0.4
 var global_volumesfx: float = 0.4
 var global_volumedialoghi: float = 0.4
 
-
-
-
 func save_settings():
-	var save_settings={
-	"global_volumeCS": global_volumeCS,
-	"global_volumesfx": global_volumesfx,
-	"global_volumedialoghi": global_volumedialoghi
-	}
-	var file = File.new()
-	file.open("res://salvataggi/salvataggi_impostazioni/settings_data.json",File.WRITE)
-	file.store_string(JSON.print(save_settings))
-	print("Salvataggio effettuato impostazioni")
-	file.close()
+	var settings = SettingsData.new()
+	settings.global_volumeCS = global_volumeCS
+	settings.global_volumesfx = global_volumesfx
+	settings.global_volumedialoghi = global_volumedialoghi
 	
+	var err = ResourceSaver.save("res://salvataggi/salvataggi_impostazioni/SettingsData.tres", settings)
+	if err == OK:
+		print("Settings saved successfully.")
+	else:
+		print("Error saving settings: ", err)
+
 func load_settings():
-	var filesettings = File.new()
-	if filesettings.file_exists("res://salvataggi/salvataggi_impostazioni/settings_data.json"):
-		filesettings.open("res://salvataggi/salvataggi_impostazioni/settings_data.json", File.READ)
-	var settings = JSON.parse(filesettings.get_as_text())
-	filesettings.close()
-	if settings.error == OK:
-		global_volumeCS = settings.result.get("global_volumeCS", 0.4)
-		global_volumesfx = settings.result.get("global_volumesfx", 0.4)
-		global_volumedialoghi = settings.result.get("global_volumedialoghi", 0.4)
-		
+	var settings = ResourceLoader.load("res://salvataggi/salvataggi_impostazioni/SettingsData.tres") as SettingsData
+	if settings:
+		global_volumeCS = settings.global_volumeCS
+		global_volumesfx = settings.global_volumesfx
+		global_volumedialoghi = settings.global_volumedialoghi
+		print("Settings loaded successfully.")
+	else:
+		print("Error loading settings.")
 
 # Salva i dati globali su un file JSON
 func save_progress_data():
-	var save_data = {
-	"sblocco_atto2_rapitore": sblocco_atto2_rapitore,
-	"sblocco_atto2_carlo" : sblocco_atto2_carlo,
-	"fine_prologo": fine_prologo,
-	"fine_atto1": fine_atto1,
-	"fine_atto2_carlo" : fine_atto2_carlo,
-	"fine_atto2_rapitore" : fine_atto2_rapitore,
-	"fine_atto2": fine_atto2,
-	"fine_gioco": fine_gioco,
-	"foto1": foto1,
-	"foto2": foto2,
-	"chat_messages_carlo": chat_messages_carlo,
-	"chat_messages_rapitore": chat_messages_rapitore,
-	}
-	var file = File.new()
-	file.open("res://salvataggi/salvataggi_progressi/progressi_data.json", File.WRITE)
-	file.store_string(JSON.print(save_data))
-	print("Salvataggio effettuato")
-	file.close()
+	var progress = ProgressData.new()
+	progress.sblocco_atto2_rapitore = sblocco_atto2_rapitore
+	progress.sblocco_atto2_carlo = sblocco_atto2_carlo
+	progress.fine_prologo = fine_prologo
+	progress.fine_atto1 = fine_atto1
+	progress.fine_atto2_carlo = fine_atto2_carlo
+	progress.fine_atto2_rapitore = fine_atto2_rapitore
+	progress.fine_atto2 = fine_atto2
+	progress.fine_gioco = fine_gioco
+	progress.foto1 = foto1
+	progress.foto2 = foto2
+	progress.chat_messages_carlo = chat_messages_carlo
+	progress.chat_messages_rapitore = chat_messages_rapitore
 	
-	# Carica i dati globali da un file JSON
+	var err = ResourceSaver.save("res://salvataggi/salvataggi_progressi/ProgressData.tres", progress)
+	if err == OK:
+		print("Progress saved successfully.")
+	else:
+		print("Error saving progress: ", err)
+	
 func load_progress_data():
-	var file = File.new()
-	if file.file_exists("res://salvataggi/salvataggi_progressi/progressi_data.json"):
-		print("cristo")
-		file.open("res://salvataggi/salvataggi_progressi/progressi_data.json", File.READ)
-	var data = JSON.parse(file.get_as_text())
-	print(data.error)
-	file.close()
-	
-	if data.error == OK:
-		var save_data = data.result
-		sblocco_atto2_rapitore = save_data.get("sblocco_atto2_rapitore",false)
-		sblocco_atto2_carlo = save_data.get("sblocco_atto2_carlo",false)
-		fine_prologo = save_data.get("fine_prologo", false)
-		fine_atto1 = save_data.get("fine_atto1", false)
-		fine_atto2_carlo =  save_data.get("fine_atto2_carlo", false)
-		fine_atto2_rapitore =  save_data.get("fine_atto2_rapitore", false)
-		fine_atto2 = save_data.get("fine_atto2", false)
-		fine_gioco = save_data.get("fine_gioco", false)
-		foto1 = save_data.get("foto1", false)
-		foto2 = save_data.get("foto2", false)
-		chat_messages_carlo = save_data.get("chat_messages_carlo", [])
-		chat_messages_rapitore = save_data.get("chat_messages_rapitore", [])
+	var progress = ResourceLoader.load("res://salvataggi/salvataggi_progressi/ProgressData.tres") as ProgressData
+	if progress:
+		sblocco_atto2_rapitore = progress.sblocco_atto2_rapitore
+		sblocco_atto2_carlo = progress.sblocco_atto2_carlo
+		fine_prologo = progress.fine_prologo
+		fine_atto1 = progress.fine_atto1
+		fine_atto2_carlo = progress.fine_atto2_carlo
+		fine_atto2_rapitore = progress.fine_atto2_rapitore
+		fine_atto2 = progress.fine_atto2
+		fine_gioco = progress.fine_gioco
+		foto1 = progress.foto1
+		foto2 = progress.foto2
+		chat_messages_carlo = progress.chat_messages_carlo
+		chat_messages_rapitore = progress.chat_messages_rapitore
+
+
 		
 func fake_call_timer(time_sec):
 	if(timer_expired == false):
 		yield(get_tree().create_timer(time_sec),"timeout")
 		timer_expired = true
+		set_bus_volume(-25)
+		DialogicLogic.seleziona_chiamata(stato_chiamata)
 		get_tree().change_scene("res://Desktop/Node2D.tscn")
-	
+		
+
+var original_volume = 0.0
+var bus_name = "Colonna_Sonora"
+
+
+
+
+func save_original_volume():
+	var bus_index = AudioServer.get_bus_index(bus_name)
+	original_volume = AudioServer.get_bus_volume_db(bus_index)
+
+
+func set_bus_volume(volume_db: float):
+	var bus_index = AudioServer.get_bus_index(bus_name)
+	AudioServer.set_bus_volume_db(bus_index, volume_db)
+	var current_volume = AudioServer.get_bus_volume_db(bus_index)
+
+
+func restore_volume():
+	var bus_index = AudioServer.get_bus_index(bus_name)
+	AudioServer.set_bus_volume_db(bus_index, original_volume)
+	var restored_volume = AudioServer.get_bus_volume_db(bus_index)
