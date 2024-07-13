@@ -39,17 +39,17 @@
 
 			],
 			"portrait": "",
-			"question": " Carlo andando prima alla reception (che trova libera) e poi agli appartamenti perde troppo tempo e il rapitore decide di ammazzare Alessia strangolandola, perché il suo contatto è passato sotto casa di Jimmy e non ha trovato il borsone con i soldi. Il rapitore scappa e Carlo, una volta arrivato agli appartamenti,scopre il corpo di Alessia senza vita."
+			"question": "Carlo andando prima alla reception (che trova libera) e poi agli appartamenti perde troppo tempo e il rapitore decide di ammazzare Alessia strangolandola, perché il suo contatto è passato sotto casa di Jimmy e non ha trovato il borsone con i soldi. Il rapitore scappa e Carlo, una volta arrivato agli appartamenti,scopre il corpo di Alessia senza vita."
 		},
 		{
-			"choice": "Torna al menù principale",
+			"choice": "Continua...",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
 		},
 		{
-			"change_scene": "res://menuiniziale/menu/menuiniziale.tscn",
+			"change_scene": "res://TitoliDiCoda/TitoliDiCoda.tscn",
 			"event_id": "dialogic_041"
 		},
 		{

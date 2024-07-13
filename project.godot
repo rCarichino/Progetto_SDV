@@ -69,6 +69,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://label_font_auto_sizer/label_auto_sizer.gd"
 }, {
+"base": "Resource",
+"class": "ProgressData",
+"language": "GDScript",
+"path": "res://salvataggi/salvataggi_progressi/ProgressData.gd"
+}, {
 "base": "RichTextLabel",
 "class": "RichLabelAutoSizer",
 "language": "GDScript",
@@ -178,6 +183,11 @@ _global_script_classes=[ {
 "class": "SVGValueConstant",
 "language": "GDScript",
 "path": "res://addons/godot_svg/utility/svg_value_constant.gd"
+}, {
+"base": "Resource",
+"class": "SettingsData",
+"language": "GDScript",
+"path": "res://salvataggi/salvataggi_impostazioni/SettingsData.gd"
 } ]
 _global_script_class_icons={
 "DTS": "",
@@ -192,6 +202,7 @@ _global_script_class_icons={
 "DialogicUtil": "",
 "HistoryRow": "",
 "LabelAutoSizer": "",
+"ProgressData": "",
 "RichLabelAutoSizer": "",
 "SVGArcs": "",
 "SVGAttributeParser": "",
@@ -213,19 +224,20 @@ _global_script_class_icons={
 "SVGResourceFormatSaver": "",
 "SVGTessellation": "",
 "SVGTriangulation": "",
-"SVGValueConstant": ""
+"SVGValueConstant": "",
+"SettingsData": ""
 }
 
 [application]
 
 config/name="Trillo"
-run/main_scene="res://Desktop/Node2D.tscn"
-config/icon="res://icone/icon.png"
+run/main_scene="res://menuiniziale/menu/menuiniziale.tscn"
+config/icon="res://icone/IMG_20240713_021631_676.png"
 
 [autoload]
 
 Global="*res://Global.gd"
-Colonnesonore="*res://suoni/colonne_sonore/Scena_colonne_sonore/colonnesonore.tscn"
+DialogicLogic="*res://DialogicLogic.gd"
 Colonnasonorachill="*res://suoni/colonne_sonore/Scena_colonne_sonore/colonnasonorachill.tscn"
 
 [display]

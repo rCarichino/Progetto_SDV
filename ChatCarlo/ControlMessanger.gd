@@ -326,13 +326,16 @@ func give_answer(question):
 				if(Global.fine_atto2_carlo == true && Global.fine_atto2_rapitore == true):
 					Global.modify_fine_atto2()
 					Global.chat_completed = true
-					Global.fake_call_timer(10)
+					if(Global.chiamata_1_finita == false && Global.already_started == false):
+						Global.already_started = true
+						Global.fake_call_timer(10)
+						if(Global.already_notified_carlo == false):
+							$NotificaDiario.show_notify_diario()
+							Global.yes_already_notified_carlo()
 
-				if(Global.already_notified_carlo == false):
-					$NotificaDiario.show_notify_diario()
-					Global.yes_already_notified_carlo()
+							Global.save_progress_data()
 
-					Global.save_progress_data()
+				
 				
 			
 
@@ -369,7 +372,7 @@ func check_where_stopped():
 
 
 func load_answer(question):
-	print(question)
+
 	match question:
 		"Ehy Jimmy, cm va? ma l’hai comprato\n alla fine il nuovo CoD":
 			create_phrase_buttons([Global.chat_jimmy_to_carlo_prologo[0]])
@@ -389,27 +392,27 @@ func load_answer(question):
 			"k succ?":
 				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[2]])
 			"Dai nn dire ste cazzate neanche x scherzo":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[3]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[5]])
 			"Cazzo dici, ma smettila":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[4]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[6]])
 			"Oh cazzo":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[6])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[5]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[7]])
 			"Sicuro sia lei?":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[5]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[7]])
 			"Cazzo hai ragione":
 				yield(get_tree().create_timer(2),"timeout")
 				add_received_message(Global.chat_carlo_to_jimmy_atto2[8])
 				yield(get_tree().create_timer(2),"timeout")
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[6],Global.chat_jimmy_to_carlo_atto2[7]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[8],Global.chat_jimmy_to_carlo_atto2[9]])
 			"Chiama immediatamente la polizia":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[6],Global.chat_jimmy_to_carlo_atto2[7]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[8],Global.chat_jimmy_to_carlo_atto2[9]])
 			"CHIAMA LA POLIZIA":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[8],Global.chat_jimmy_to_carlo_atto2[9]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[10],Global.chat_jimmy_to_carlo_atto2[11]])
 			"BRUTTO COGLIONE CHIAMA LA POLIZIA":
-				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[8],Global.chat_jimmy_to_carlo_atto2[9]])
+				create_phrase_buttons([Global.chat_jimmy_to_carlo_atto2[10],Global.chat_jimmy_to_carlo_atto2[11]])
 
 	if(Global.sblocco_atto2_carlo == true):
 		match question:
@@ -452,6 +455,9 @@ func add_send_image(image_path):
 	hbox.add_child(spacer_left)
 	hbox.add_child(message_container_right)
 	message_container.add_child(hbox)
+	
+	create_spacer()
+
 	yield(get_tree().create_timer(0.3),"timeout")
 	scroll_to_bottom()
 	

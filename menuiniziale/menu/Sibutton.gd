@@ -35,6 +35,11 @@ func nuova_p():
 	Global.setnotificaDiario = false 
 	Global.chat_messages_carlo = [] 
 	Global.chat_messages_rapitore = [] 
+	Global.already_started = false 
+	Global.fine_seconda_chiamata = false 
+	Global.tictac_displayed = false
+	Global.chat10_displayed = false
+	Global.chat5_displayed = false
 
 func _on_Sibutton_pressed():
 	nuova_p()

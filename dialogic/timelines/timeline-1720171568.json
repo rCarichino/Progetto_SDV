@@ -41,14 +41,14 @@
 			"question": "Il corpo di Alessia, la sorella di Jimmy,è stata ritrovato al Residence privo di vita da Carlo. Carlo non ha fatto in tempo ad arrivarci. Il contatto del rapitore è passato dal luogo di incontro ma non c’era il borsone con i soldi. Il rapitore ha deciso di uccidere Alessia soffocandola.\n"
 		},
 		{
-			"choice": "Torna al menù principale",
+			"choice": "Continua...",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
 			"value": ""
 		},
 		{
-			"change_scene": "res://menuiniziale/menu/menuiniziale.tscn",
+			"change_scene": "res://TitoliDiCoda/TitoliDiCoda.tscn",
 			"event_id": "dialogic_041"
 		},
 		{

@@ -232,6 +232,7 @@ margin_bottom = 40.0
 script = ExtResource( 21 )
 
 [node name="LabelResidence" type="Label" parent="ControlMappa"]
+visible = false
 margin_left = 913.0
 margin_top = 465.0
 margin_right = 979.0
@@ -247,12 +248,14 @@ texture = ExtResource( 15 )
 normal_map = ExtResource( 15 )
 
 [node name="CarloResidence" type="Sprite" parent="ControlMappa/LabelResidence"]
+visible = false
 position = Vector2( 33, -13 )
 scale = Vector2( 0.0859375, 0.0697021 )
 texture = ExtResource( 16 )
 normal_map = ExtResource( 16 )
 
 [node name="LabelCampoSportivo" type="Label" parent="ControlMappa"]
+visible = false
 margin_left = 12.0
 margin_top = 427.0
 margin_right = 112.0
@@ -268,12 +271,14 @@ texture = ExtResource( 15 )
 normal_map = ExtResource( 15 )
 
 [node name="CarloCampoSportivo" type="Sprite" parent="ControlMappa/LabelCampoSportivo"]
+visible = false
 position = Vector2( 50, -18 )
 scale = Vector2( 0.086, 0.07 )
 texture = ExtResource( 16 )
 normal_map = ExtResource( 16 )
 
 [node name="LabelPrefabbricato" type="Label" parent="ControlMappa"]
+visible = false
 margin_left = 251.0
 margin_top = 373.0
 margin_right = 335.0
@@ -289,6 +294,7 @@ texture = ExtResource( 15 )
 normal_map = ExtResource( 15 )
 
 [node name="CarloPrefabbricato" type="Sprite" parent="ControlMappa/LabelPrefabbricato"]
+visible = false
 position = Vector2( 41, -14 )
 scale = Vector2( 0.086, 0.07 )
 texture = ExtResource( 16 )
