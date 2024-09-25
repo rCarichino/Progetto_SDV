@@ -588,8 +588,6 @@ func load_answer(question):
 				if(Global.fine_atto2_carlo == true && Global.fine_atto2_rapitore == true):
 					Global.modify_fine_atto2()
 					Global.chat_completed = true
-					if(Global.chiamata_1_finita == false):
-						Global.fake_call_timer(10)
 					if(Global.already_notified_rapitore == false):
 						$NotificaDiario.show_notify_diario()
 						Global.yes_already_notified_rapitore()

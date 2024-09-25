@@ -6,7 +6,7 @@
 script = ExtResource( 1 )
 sblocco_atto2_rapitore = false
 sblocco_atto2_carlo = false
-fine_prologo = false
+fine_prologo = true
 fine_atto1 = false
 fine_atto2_carlo = false
 fine_atto2_rapitore = false

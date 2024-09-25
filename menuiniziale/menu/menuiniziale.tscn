@@ -147,6 +147,7 @@ margin_bottom = 350.0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 2 )
+disabled = true
 text = "CARICA PARTITA"
 flat = true
 script = ExtResource( 6 )

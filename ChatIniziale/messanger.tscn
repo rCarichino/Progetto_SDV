@@ -34,7 +34,7 @@ script = ExtResource( 7 )
 
 [node name="Titolo" type="Label" parent="ControlMessanger"]
 margin_left = 1.0
-margin_top = -1.0
+margin_top = -2.0
 margin_right = 1026.0
 margin_bottom = 21.0
 custom_styles/normal = SubResource( 1 )
@@ -43,8 +43,8 @@ valign = 1
 
 [node name="Button" type="Button" parent="ControlMessanger/Titolo"]
 margin_left = 1000.0
-margin_right = 1025.0
-margin_bottom = 22.0
+margin_right = 1024.0
+margin_bottom = 23.0
 mouse_default_cursor_shape = 2
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 3 )
@@ -142,8 +142,8 @@ size_flags_stretch_ratio = 0.4
 
 [node name="sfondo" type="Sprite" parent="ControlMessanger"]
 show_behind_parent = true
-position = Vector2( 172, 96 )
-scale = Vector2( 0.1705, 0.149625 )
+position = Vector2( 172, 98.7221 )
+scale = Vector2( 0.1705, 0.148812 )
 texture = ExtResource( 1 )
 offset = Vector2( 2011.73, 1350.04 )
 

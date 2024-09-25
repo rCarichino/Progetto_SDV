@@ -85,8 +85,8 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Sfondo_Cartelle" type="Sprite" parent="Control"]
-position = Vector2( 502, 281 )
-scale = Vector2( 0.171, 0.15025 )
+position = Vector2( 502, 281.25 )
+scale = Vector2( 0.171, 0.150375 )
 texture = ExtResource( 6 )
 
 [node name="Label2" type="Label" parent="Control"]
@@ -108,8 +108,8 @@ valign = 1
 
 [node name="DesktopButton" type="Button" parent="Titolo"]
 margin_left = 1007.0
-margin_right = 1027.0
-margin_bottom = 23.0
+margin_right = 1025.0
+margin_bottom = 21.0
 mouse_default_cursor_shape = 2
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_styles/hover = SubResource( 1 )

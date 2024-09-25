@@ -7,15 +7,6 @@ var progress_path = "res://salvataggi/salvataggi_progressi/ProgressData.tres"
 # var b = "text"
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	var file = File.new()
-	var progress = ResourceLoader.load("res://salvataggi/salvataggi_progressi/ProgressData.tres") as ProgressData
-	print(progress.fine_prologo)
-	if progress.fine_prologo == true:
-		disabled = false  # Disabilita il bottone se il file non esiste
-	else:
-		disabled = true  # Abilita il bottone se il file esiste
 
 
 
