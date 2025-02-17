@@ -1,7 +1,7 @@
 extends Control
 
-# Chiave API di Google Gemini (sostituiscila con la tua)
-var api_key = "AIzaSyDqQySQL25eKGVo8s3TPxrBSGQHEddivV4"
+# Chiave API di Google Gemini
+var api_key = "no"
 
 # URL dell'API di Google Gemini
 var api_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=" + api_key
