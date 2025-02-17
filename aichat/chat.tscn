@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://aichat/chat.gd" type="Script" id=1]
+[ext_resource path="res://addons/bitmap_font_importer/arial_narrow_7.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=2]
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="ChatUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ChatDisplay" type="RichTextLabel" parent="."]
+margin_right = 728.0
+margin_bottom = 559.0
+bbcode_enabled = true
+scroll_following = true
+
+[node name="UserInput" type="LineEdit" parent="."]
+margin_top = 561.0
+margin_right = 659.0
+margin_bottom = 600.0
+custom_fonts/font = SubResource( 2 )
+placeholder_text = "Type here...."
+
+[node name="SendButton" type="Button" parent="."]
+margin_left = 659.0
+margin_top = 561.0
+margin_right = 728.0
+margin_bottom = 600.0
+custom_fonts/font = SubResource( 1 )
+text = "INVIA"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="SendButton" to="." method="_on_SendButton_pressed"]

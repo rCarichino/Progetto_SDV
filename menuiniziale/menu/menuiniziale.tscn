@@ -184,6 +184,142 @@ text = "ESCI"
 flat = true
 script = ExtResource( 3 )
 
+[node name="MarginContainer2" type="MarginContainer" parent="menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 12
+custom_constants/margin_top = 12
+custom_constants/margin_left = 12
+custom_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu/MarginContainer2"]
+margin_left = 12.0
+margin_top = 12.0
+margin_right = 1010.0
+margin_bottom = 588.0
+custom_constants/separation = 60
+
+[node name="separator" type="Control" parent="menu/MarginContainer2/VBoxContainer"]
+margin_right = 998.0
+
+[node name="Titolo" type="Label" parent="menu/MarginContainer2/VBoxContainer"]
+margin_top = 60.0
+margin_right = 998.0
+margin_bottom = 134.0
+custom_fonts/font = SubResource( 1 )
+text = "TRILLO"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="menu/MarginContainer2"]
+margin_left = 12.0
+margin_top = 12.0
+margin_right = 1010.0
+margin_bottom = 588.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu/MarginContainer2/HBoxContainer"]
+margin_left = 400.0
+margin_right = 598.0
+margin_bottom = 576.0
+custom_constants/separation = 25
+alignment = 1
+
+[node name="separator2" type="Control" parent="menu/MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 59.0
+margin_right = 198.0
+margin_bottom = 59.0
+
+[node name="separator3" type="Control" parent="menu/MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 84.0
+margin_right = 198.0
+margin_bottom = 84.0
+
+[node name="separator4" type="Control" parent="menu/MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 109.0
+margin_right = 198.0
+margin_bottom = 109.0
+
+[node name="separator8" type="Control" parent="menu/MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 134.0
+margin_right = 198.0
+margin_bottom = 134.0
+
+[node name="separator9" type="Control" parent="menu/MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 159.0
+margin_right = 198.0
+margin_bottom = 159.0
+
+[node name="separator10" type="Control" parent="menu/MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 184.0
+margin_right = 198.0
+margin_bottom = 184.0
+
+[node name="separator11" type="Control" parent="menu/MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 209.0
+margin_right = 198.0
+margin_bottom = 209.0
+
+[node name="NUOVAP" type="Button" parent="menu/MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 234.0
+margin_right = 198.0
+margin_bottom = 267.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "NUOVA PARTITA"
+flat = true
+script = ExtResource( 7 )
+
+[node name="separator5" type="Control" parent="menu/MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 292.0
+margin_right = 198.0
+margin_bottom = 292.0
+
+[node name="CARICA" type="Button" parent="menu/MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 317.0
+margin_right = 198.0
+margin_bottom = 350.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "CARICA PARTITA"
+flat = true
+script = ExtResource( 6 )
+
+[node name="separator6" type="Control" parent="menu/MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 375.0
+margin_right = 198.0
+margin_bottom = 375.0
+
+[node name="IMPOSTAZIONI" type="Button" parent="menu/MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 400.0
+margin_right = 198.0
+margin_bottom = 433.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "IMPOSTAZIONI"
+flat = true
+script = ExtResource( 2 )
+
+[node name="separator7" type="Control" parent="menu/MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 458.0
+margin_right = 198.0
+margin_bottom = 458.0
+
+[node name="ESCI" type="Button" parent="menu/MarginContainer2/HBoxContainer/VBoxContainer"]
+margin_top = 483.0
+margin_right = 198.0
+margin_bottom = 516.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "ESCI"
+flat = true
+script = ExtResource( 3 )
+
 [node name="selezione" type="AudioStreamPlayer2D" parent="menu"]
 stream = ExtResource( 8 )
 volume_db = 17.362
@@ -245,5 +381,9 @@ flat = true
 [connection signal="pressed" from="menu/MarginContainer/HBoxContainer/VBoxContainer/CARICA" to="menu/MarginContainer/HBoxContainer/VBoxContainer/CARICA" method="_on_CARICA_pressed"]
 [connection signal="pressed" from="menu/MarginContainer/HBoxContainer/VBoxContainer/IMPOSTAZIONI" to="menu/MarginContainer/HBoxContainer/VBoxContainer/IMPOSTAZIONI" method="_on_IMPOSTAZIONI_pressed"]
 [connection signal="pressed" from="menu/MarginContainer/HBoxContainer/VBoxContainer/ESCI" to="menu/MarginContainer/HBoxContainer/VBoxContainer/ESCI" method="_on_ESCI_pressed"]
+[connection signal="pressed" from="menu/MarginContainer2/HBoxContainer/VBoxContainer/NUOVAP" to="menu/MarginContainer2/HBoxContainer/VBoxContainer/NUOVAP" method="_on_NUOVAP_pressed"]
+[connection signal="pressed" from="menu/MarginContainer2/HBoxContainer/VBoxContainer/CARICA" to="menu/MarginContainer2/HBoxContainer/VBoxContainer/CARICA" method="_on_CARICA_pressed"]
+[connection signal="pressed" from="menu/MarginContainer2/HBoxContainer/VBoxContainer/IMPOSTAZIONI" to="menu/MarginContainer2/HBoxContainer/VBoxContainer/IMPOSTAZIONI" method="_on_IMPOSTAZIONI_pressed"]
+[connection signal="pressed" from="menu/MarginContainer2/HBoxContainer/VBoxContainer/ESCI" to="menu/MarginContainer2/HBoxContainer/VBoxContainer/ESCI" method="_on_ESCI_pressed"]
 [connection signal="pressed" from="menu/HBoxContainer/Sprite/Sibutton" to="menu/HBoxContainer/Sprite/Sibutton" method="_on_Sibutton_pressed"]
 [connection signal="pressed" from="menu/HBoxContainer/Sprite/Nobutton" to="menu/HBoxContainer" method="_on_Nobutton_pressed"]
